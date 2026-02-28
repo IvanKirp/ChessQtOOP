@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ChessQtOOP.dir/link.d"
+  "CMakeFiles/ChessQtOOP_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/ChessQtOOP_autogen.dir/ParseCache.txt"
+  "ChessQtOOP_autogen"
+  "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/king.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/king.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/knight.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/knight.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/main.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/main.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/rook.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/rook.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/scene.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/scene.cpp.o.d"
+  "ChessQtOOP"
+  "ChessQtOOP.pdb"
+  "ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp"
+  "ChessQtOOP_autogen/mocs_compilation.cpp"
+  "ChessQtOOP_autogen/timestamp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/ChessQtOOP.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

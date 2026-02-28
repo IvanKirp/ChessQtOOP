@@ -1,0 +1,9 @@
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/install.dir
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP_autogen_timestamp_deps.dir
+/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP_autogen.dir
