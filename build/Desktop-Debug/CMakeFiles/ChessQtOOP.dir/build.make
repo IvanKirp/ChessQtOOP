@@ -78,22 +78,22 @@ ChessQtOOP_autogen/timestamp: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
 
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/resources.qrc
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: CMakeFiles/ChessQtOOP_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/whiteKing.png
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/ok.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/black_pawn.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/black_bishop.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/white_bishop.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/blackBishop.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/blackRook.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/whiteBishop.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/blackKing.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/blackQueen.png
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/next_window.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/white_pawn.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/black_rook.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/blackKnight.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/whiteQueen.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/whiteKnight.png
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/cancel.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/black_king.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/black_knight.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/white_rook.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/black_queen.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/white_knight.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/whitePawn.png
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/start_window.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/white_king.png
-ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/white_queen.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/whiteRook.png
+ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/images/blackPawn.png
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /usr/lib/qt5/bin/rcc
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /usr/lib/qt5/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for resources.qrc"
@@ -228,19 +228,19 @@ CMakeFiles/ChessQtOOP.dir/bishop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/bishop.cpp.s"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.cpp -o CMakeFiles/ChessQtOOP.dir/bishop.cpp.s
 
-CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
-CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/qeuen.cpp
-CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o"
-	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o -MF CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/qeuen.cpp
+CMakeFiles/ChessQtOOP.dir/queen.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
+CMakeFiles/ChessQtOOP.dir/queen.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp
+CMakeFiles/ChessQtOOP.dir/queen.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ChessQtOOP.dir/queen.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/queen.cpp.o -MF CMakeFiles/ChessQtOOP.dir/queen.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/queen.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp
 
-CMakeFiles/ChessQtOOP.dir/qeuen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/qeuen.cpp.i"
-	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/qeuen.cpp > CMakeFiles/ChessQtOOP.dir/qeuen.cpp.i
+CMakeFiles/ChessQtOOP.dir/queen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/queen.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp > CMakeFiles/ChessQtOOP.dir/queen.cpp.i
 
-CMakeFiles/ChessQtOOP.dir/qeuen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/qeuen.cpp.s"
-	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/qeuen.cpp -o CMakeFiles/ChessQtOOP.dir/qeuen.cpp.s
+CMakeFiles/ChessQtOOP.dir/queen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/queen.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp -o CMakeFiles/ChessQtOOP.dir/queen.cpp.s
 
 CMakeFiles/ChessQtOOP.dir/king.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
 CMakeFiles/ChessQtOOP.dir/king.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/king.cpp
@@ -270,10 +270,38 @@ CMakeFiles/ChessQtOOP.dir/pawn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/pawn.cpp.s"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.cpp -o CMakeFiles/ChessQtOOP.dir/pawn.cpp.s
 
+CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
+CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.cpp
+CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o -MF CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.cpp
+
+CMakeFiles/ChessQtOOP.dir/classicgame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/classicgame.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.cpp > CMakeFiles/ChessQtOOP.dir/classicgame.cpp.i
+
+CMakeFiles/ChessQtOOP.dir/classicgame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/classicgame.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.cpp -o CMakeFiles/ChessQtOOP.dir/classicgame.cpp.s
+
+CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
+CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp
+CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o -MF CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp
+
+CMakeFiles/ChessQtOOP.dir/gamemode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/gamemode.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp > CMakeFiles/ChessQtOOP.dir/gamemode.cpp.i
+
+CMakeFiles/ChessQtOOP.dir/gamemode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/gamemode.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp -o CMakeFiles/ChessQtOOP.dir/gamemode.cpp.s
+
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o -MF CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp
 
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
@@ -295,9 +323,11 @@ ChessQtOOP_OBJECTS = \
 "CMakeFiles/ChessQtOOP.dir/rook.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/knight.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o" \
-"CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o" \
+"CMakeFiles/ChessQtOOP.dir/queen.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/king.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o" \
+"CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o" \
+"CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 
 # External object files for target ChessQtOOP
@@ -312,9 +342,11 @@ ChessQtOOP: CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/rook.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/knight.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/bishop.cpp.o
-ChessQtOOP: CMakeFiles/ChessQtOOP.dir/qeuen.cpp.o
+ChessQtOOP: CMakeFiles/ChessQtOOP.dir/queen.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/king.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/pawn.cpp.o
+ChessQtOOP: CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o
+ChessQtOOP: CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/build.make
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
@@ -322,7 +354,7 @@ ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable ChessQtOOP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable ChessQtOOP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChessQtOOP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

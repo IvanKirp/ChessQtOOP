@@ -1,13 +1,20 @@
 #ifndef BISHOP_H
 #define BISHOP_H
+#include <QString>
 #include "chesspiece.h"
 
-class Bishop : ChessPiece {
+class Bishop : public ChessPiece {
    public:
-    QPointF position;
-    Bishop(QPointF coordinates) : position(coordinates) {}
+    bool isProtected;
 
-    QList<QPointF> possibleMoves() const override;
+    Bishop(QPointF position, QString color, bool isProtected)
+        : ChessPiece(position, color), isProtected(isProtected) {}
+
+    QList<QPointF> possibleMoves(int cellSize,
+                                 QList<QPointF> coordinatesOfAllPieces,
+                                 QList<QPointF> coordinatesOfWhitePieces,
+                                 QList<QPointF> coordinatesOfBlackPieces,
+                                 int counterOfMoves) const override;
 };
 
 #endif	// BISHOP_H

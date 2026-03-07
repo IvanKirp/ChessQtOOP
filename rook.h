@@ -2,12 +2,18 @@
 #define ROOK_H
 #include "chesspiece.h"
 
-class Rook : ChessPiece {
+class Rook : public ChessPiece {
    public:
-    QPointF position;
-    Rook(QPointF coordinates) : position(coordinates) {}
+    bool isProtected;
 
-    QList<QPointF> possibleMoves() const override;
+    Rook(QPointF position, QString color, bool isProtected)
+        : ChessPiece(position, color), isProtected(isProtected) {}
+
+    QList<QPointF> possibleMoves(int cellSize,
+                                 QList<QPointF> coordinatesOfAllPieces,
+                                 QList<QPointF> coordinatesOfWhitePieces,
+                                 QList<QPointF> coordinatesOfBlackPieces,
+                                 int counterOfMoves) const override;
 };
 
 #endif	// ROOK_H

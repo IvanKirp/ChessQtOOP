@@ -2,12 +2,17 @@
 #define KING_H
 #include "chesspiece.h"
 
-class King : ChessPiece {
+class King : public ChessPiece {
    public:
-    QPointF position;
-    King(QPointF coordinates) : position(coordinates) {}
+    bool isProtected;
+    King(QPointF position, QString color, bool isProtected)
+        : ChessPiece(position, color), isProtected(isProtected) {}
 
-    QList<QPointF> possibleMoves() const override;
+    QList<QPointF> possibleMoves(int cellSize,
+                                 QList<QPointF> coordinatesOfAllPieces,
+                                 QList<QPointF> coordinatesOfWhitePieces,
+                                 QList<QPointF> coordinatesOfBlackPieces,
+                                 int counterOfMoves) const override;
 };
 
 #endif	// KING_H

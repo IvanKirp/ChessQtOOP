@@ -3,12 +3,18 @@
 
 #include <QGraphicsItem>
 #include <QGraphicsScene>
-
+#include <QGraphicsView>
+#include <QPushButton>
+#include "chesspiece.h"
 class ChessBoard {
    public:
-    ChessBoard();
-    QRectF boundingRect() const;
-    void drawChessboard(QGraphicsScene* scene);
+    QGraphicsScene* scene;
+    QGraphicsView* view;
+
+    ChessBoard(QGraphicsScene* scene, QGraphicsView* view)
+        : scene(scene), view(view) {}
+    void drawChessboard();
+    QPushButton* addToChessboard(ChessPiece* piece);
 
    public:
     int cellSize = 100;

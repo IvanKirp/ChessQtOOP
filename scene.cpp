@@ -1,19 +1,14 @@
 #include "scene.h"
 #include "chessboard.h"
 
-Scene::Scene() {}
-
-void Scene::drawScene(QGraphicsScene* scene, QGraphicsView* view,
-                      QTableWidget* notation) {
+void Scene::drawScene() {
     scene->clear();
     view->setFixedSize(800, 800);
     view->setFocusPolicy(Qt::NoFocus);
-    scene->setSceneRect(0, 0, 800, 800);
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-    ChessBoard* newBoard = new ChessBoard();
-    newBoard->drawChessboard(scene);
+    newBoard->drawChessboard();
 
     notation->setGeometry(850, 0, 223, 625);
     notation->setRowCount(20);

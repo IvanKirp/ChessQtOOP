@@ -10,6 +10,10 @@ ChessQtOOP_autogen/timestamp: \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+	/home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.cpp \
+	/home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
+	/home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp \
+	/home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/king.cpp \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/knight.cpp \
@@ -19,8 +23,8 @@ ChessQtOOP_autogen/timestamp: \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.cpp \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
-	/home/ivan/Документы/453503/ООП/ChessQtOOP/qeuen.cpp \
-	/home/ivan/Документы/453503/ООП/ChessQtOOP/qeuen.h \
+	/home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp \
+	/home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/resources.qrc \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/rook.cpp \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
@@ -290,7 +294,9 @@ ChessQtOOP_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
@@ -364,6 +370,7 @@ ChessQtOOP_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
@@ -379,8 +386,10 @@ ChessQtOOP_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
@@ -391,8 +400,10 @@ ChessQtOOP_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \

@@ -330,34 +330,40 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
@@ -372,4 +378,16 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter

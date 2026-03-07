@@ -1,6 +1,18 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "bishop.h"
+#include "chessboard.h"
+#include "chesspiece.h"
+#include "classicgame.h"
+#include "gamemode.h"
+#include "king.h"
+#include "knight.h"
+#include "pawn.h"
+#include "queen.h"
+#include "rook.h"
+#include "scene.h"
+
 #include <QAbstractButton>
 #include <QGraphicsScene>
 #include <QGraphicsView>
@@ -24,6 +36,7 @@ class MainWindow : public QMainWindow {
 
     QGraphicsScene* scene = new QGraphicsScene(this);
     QGraphicsView* view = new QGraphicsView(scene);
+    ChessBoard* newBoard = new ChessBoard(scene, view);
     QTableWidget* notation;
     QPushButton *startButton, *readButton, *exitButton;
     void startWindow();

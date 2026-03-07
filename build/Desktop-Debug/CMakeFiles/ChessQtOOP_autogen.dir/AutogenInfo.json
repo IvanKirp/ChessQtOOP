@@ -106,6 +106,18 @@
 			null
 		],
 		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/classicgame.h",
+			"MU",
+			"EWIEGA46WW/moc_classicgame.cpp",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/gamemode.h",
+			"MU",
+			"EWIEGA46WW/moc_gamemode.cpp",
+			null
+		],
+		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/king.h",
 			"MU",
 			"EWIEGA46WW/moc_king.cpp",
@@ -130,9 +142,9 @@
 			null
 		],
 		[
-			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/qeuen.h",
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/queen.h",
 			"MU",
-			"EWIEGA46WW/moc_qeuen.cpp",
+			"EWIEGA46WW/moc_queen.cpp",
 			null
 		],
 		[
@@ -215,6 +227,16 @@
 			null
 		],
 		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/classicgame.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/gamemode.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/king.cpp",
 			"MU",
 			null
@@ -240,7 +262,7 @@
 			null
 		],
 		[
-			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/qeuen.cpp",
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/queen.cpp",
 			"MU",
 			null
 		],

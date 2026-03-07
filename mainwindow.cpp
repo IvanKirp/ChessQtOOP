@@ -1,14 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "bishop.h"
-#include "chessboard.h"
-#include "chesspiece.h"
-#include "king.h"
-#include "knight.h"
-#include "pawn.h"
-#include "qeuen.h"
-#include "rook.h"
-#include "scene.h"
+
+#include <QDebug>
+#include <typeinfo>
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -94,6 +88,9 @@ void MainWindow::drawScene() {
 
     notation = new QTableWidget(this);
     setCentralWidget(view);
-    Scene* myScene = new Scene();
-    myScene->drawScene(scene, view, notation);
+    Scene* myScene = new Scene(scene, view, newBoard, notation);
+    myScene->drawScene();
+
+    ClassicGame* game = new ClassicGame(newBoard);
+    game->ChessPieceManager(100);
 }

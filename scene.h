@@ -6,15 +6,22 @@
 #include <QHeaderView>
 #include <QPushButton>
 #include <QTableWidget>
+#include "chessboard.h"
 
 class Scene {
    public:
-    Scene();
+    QGraphicsScene* scene;
+    QGraphicsView* view;
+    ChessBoard* newBoard;
+    QTableWidget* notation;
+
+    Scene(QGraphicsScene* scene, QGraphicsView* view, ChessBoard* newBoard,
+          QTableWidget* notation)
+        : scene(scene), view(view), newBoard(newBoard), notation(notation) {}
 
     QPushButton *giveUpButton, *drawButton, *homeButton;
 
-    void drawScene(QGraphicsScene* scene, QGraphicsView* view,
-                   QTableWidget* notation);
+    void drawScene();
 };
 
 #endif	// SCENE_H

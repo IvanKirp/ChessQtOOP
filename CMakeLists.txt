@@ -45,9 +45,11 @@ else()
             rook.h rook.cpp
             knight.h knight.cpp
             bishop.h bishop.cpp
-            qeuen.h qeuen.cpp
+            queen.h queen.cpp
             king.h king.cpp
             pawn.h pawn.cpp
+            classicgame.h classicgame.cpp
+            gamemode.h gamemode.cpp
         )
     endif()
 endif()

@@ -2,12 +2,18 @@
 #define PAWN_H
 #include "chesspiece.h"
 
-class Pawn : ChessPiece {
+class Pawn : public ChessPiece {
    public:
-    QPointF position;
-    Pawn(QPointF coordinates) : position(coordinates) {}
+    bool isProtected;
 
-    QList<QPointF> possibleMoves() const override;
+    Pawn(QPointF position, QString color, bool isProtected)
+        : ChessPiece(position, color), isProtected(isProtected) {}
+
+    QList<QPointF> possibleMoves(int cellSize,
+                                 QList<QPointF> coordinatesOfAllPieces,
+                                 QList<QPointF> coordinatesOfWhitePieces,
+                                 QList<QPointF> coordinatesOfBlackPieces,
+                                 int counterOfMoves) const override;
 };
 
 #endif	// PAWN_H

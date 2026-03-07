@@ -2,11 +2,22 @@
 #define CHESSPIECE_H
 
 #include <QPointF>
+#include <QString>
 class ChessPiece {
    public:
-    ChessPiece();
+    QPointF position;
+    QString color;
 
-    virtual QList<QPointF> possibleMoves() const = 0;
+    ChessPiece();
+    ChessPiece(QPointF position, QString color)
+        : position(position), color(color) {}
+
+    bool isWhite();
+    bool isBlack();
+    virtual QList<QPointF> possibleMoves(
+        int cellSize, QList<QPointF> coordinatesOfAllPieces,
+        QList<QPointF> coordinatesOfWhitePieces,
+        QList<QPointF> coordinatesOfBlackPieces, int counterOfMoves) const = 0;
 };
 
 #endif	// CHESSPIECE_H

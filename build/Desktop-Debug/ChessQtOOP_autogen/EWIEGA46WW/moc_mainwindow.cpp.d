@@ -1,5 +1,16 @@
 /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/moc_predefs.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
@@ -238,7 +249,9 @@
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
@@ -312,6 +325,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
@@ -327,8 +341,10 @@
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
@@ -339,8 +355,10 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
