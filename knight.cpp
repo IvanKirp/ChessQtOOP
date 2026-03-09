@@ -24,20 +24,17 @@ QList<QPointF> Knight::possibleMoves(
         newY = y + helpCoordinates[i].y();
         if (newX >= 0 && newX <= 7 * cellSize && newY >= 0 &&
             newY <= 7 * cellSize) {
-            if (2 % 2 != 0) {
-                if (!coordinatesOfWhitePieces.contains(QPointF(newX, newY))) {
+            if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
+                knightPossibleMoves_.append(QPointF(newX, newY));
+            } else {
+                if (color == "white" &&
+                    !coordinatesOfWhitePieces.contains(QPointF(newX, newY))) {
                     knightPossibleMoves_.append(QPointF(newX, newY));
-                } /*else if (coordinatesOfWhitePieces.contains(
-                                   QPointF(newX, newY))) {
-                        isProtectedByWhite.append(QPointF(newX, newY));
-                    }*/
-            } else if (2 % 2 == 0) {
-                if (!coordinatesOfBlackPieces.contains(QPointF(newX, newY))) {
+                } else if (color == "black" &&
+                           !coordinatesOfBlackPieces.contains(
+                               QPointF(newX, newY))) {
                     knightPossibleMoves_.append(QPointF(newX, newY));
                 }
-                /*if (coordinatesOfBlackPieces.contains(QPointF(newX, newY))) {
-                        isProtectedByBlack.append(QPointF(newX, newY));
-                    }*/
             }
         }
     }

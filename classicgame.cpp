@@ -49,6 +49,11 @@ void ClassicGame::ChessPieceManager(int cellSize) {
             newBoard->addToChessboard(allChessPieces[i]));
     }
 
+    allChessPieces.append(new Bishop(QPointF(300, 400), "white", false));
+    allChessPieces.append(new Knight(QPointF(500, 300), "black", false));
+    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[32]));
+    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[33]));
+
     updateCoordinates();
     for (int i = 0; i < allChessPieces.size(); i++) {
         QObject::connect(allChessPieceButtons[i], &QPushButton::clicked,
