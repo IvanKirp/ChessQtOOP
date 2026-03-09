@@ -1,16 +1,15 @@
 #include "rook.h"
 
 #include <QList>
-#include <QPair>
 
 QList<QPointF> Rook::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
     QList<QPointF> coordinatesOfWhitePieces,
     QList<QPointF> coordinatesOfBlackPieces) const {
-    QList<QPointF> bishopPossibleMoves_;
+    QList<QPointF> rookPossibleMoves_;
     QList<QPointF> helpCoordinates = {
-        QPointF(cellSize, cellSize), QPointF(cellSize, -cellSize),
-        QPointF(-cellSize, cellSize), QPointF(-cellSize, -cellSize)};
+        QPointF(0, -cellSize), QPointF(0, cellSize), QPointF(cellSize, 0),
+        QPointF(-cellSize, 0)};
 
     int x = position.x();
     int y = position.y();
@@ -18,37 +17,29 @@ QList<QPointF> Rook::possibleMoves(
     int newY;
 
     for (int k = 0; k < 4; k++) {
+
         for (int i = 1; i < 8; i++) {
             newX = x + i * helpCoordinates[k].x();
             newY = y + i * helpCoordinates[k].y();
             if (newX >= 0 && newX <= 7 * cellSize && newY >= 0 &&
                 newY <= 7 * cellSize) {
                 if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
-                    bishopPossibleMoves_.append(QPointF(newX, newY));
-                } else if (2 % 2 != 0) {
-                    if (coordinatesOfBlackPieces.contains(
-                            QPointF(newX, newY))) {
-                        bishopPossibleMoves_.append(QPointF(newX, newY));
+                    rookPossibleMoves_.append(QPointF(newX, newY));
+                } else {
+                    if (color == "white" && coordinatesOfBlackPieces.contains(
+                                                QPointF(newX, newY))) {
+                        rookPossibleMoves_.append(QPointF(newX, newY));
                         break;
-                    } /*else if (coordinatesOfWhitePieces.contains(
+                    } else if (color == "black" &&
+                               coordinatesOfWhitePieces.contains(
                                    QPointF(newX, newY))) {
-                        isProtectedByWhite.append(QPointF(newX, newY));
+                        rookPossibleMoves_.append(QPointF(newX, newY));
                         break;
-                    }*/
-                } else if ((2 % 2 == 0)) {
-                    if (coordinatesOfWhitePieces.contains(
-                            QPointF(newX, newY))) {
-                        bishopPossibleMoves_.append(QPointF(newX, newY));
+                    } else
                         break;
-                    } /*else if (coordinatesOfBlackPieces.contains(
-                                   QPointF(newX, newY))) {
-                        isProtectedByBlack.append(QPointF(newX, newY));
-                        break;
-                    }*/
-                } else
-                    break;
+                }
             }
         }
     }
-    return bishopPossibleMoves_;
+    return rookPossibleMoves_;
 }

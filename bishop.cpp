@@ -1,8 +1,6 @@
 #include "bishop.h"
 
-#include <QDebug>
 #include <QList>
-#include <QPair>
 
 QList<QPointF> Bishop::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
@@ -26,21 +24,21 @@ QList<QPointF> Bishop::possibleMoves(
                 newY <= 7 * cellSize) {
                 if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
                     bishopPossibleMoves_.append(QPointF(newX, newY));
-                } else if (color == "white" &&
-                           coordinatesOfBlackPieces.contains(
-                               QPointF(newX, newY))) {
-                    bishopPossibleMoves_.append(QPointF(newX, newY));
-                    break;
-                } else if (color == "black" &&
-                           coordinatesOfWhitePieces.contains(
-                               QPointF(newX, newY))) {
-                    bishopPossibleMoves_.append(QPointF(newX, newY));
-                    break;
-                } else
-                    break;
+                } else {
+                    if (color == "white" && coordinatesOfBlackPieces.contains(
+                                                QPointF(newX, newY))) {
+                        bishopPossibleMoves_.append(QPointF(newX, newY));
+                        break;
+                    } else if (color == "black" &&
+                               coordinatesOfWhitePieces.contains(
+                                   QPointF(newX, newY))) {
+                        bishopPossibleMoves_.append(QPointF(newX, newY));
+                        break;
+                    } else
+                        break;
+                }
             }
         }
     }
-    qDebug() << color;
     return bishopPossibleMoves_;
 }

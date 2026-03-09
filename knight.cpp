@@ -1,7 +1,6 @@
 #include "knight.h"
 
 #include <QList>
-#include <QPair>
 
 QList<QPointF> Knight::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
@@ -34,7 +33,8 @@ QList<QPointF> Knight::possibleMoves(
                            !coordinatesOfBlackPieces.contains(
                                QPointF(newX, newY))) {
                     knightPossibleMoves_.append(QPointF(newX, newY));
-                }
+                } else
+                    break;
             }
         }
     }
