@@ -16,7 +16,6 @@ class ChessBoard {
     void drawChessboard();
     QPushButton* addToChessboard(ChessPiece* piece);
 
-   public:
     int cellSize = 100;
 };
 #endif	// CHESSBOARD_H

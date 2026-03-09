@@ -91,6 +91,6 @@ void MainWindow::drawScene() {
     Scene* myScene = new Scene(scene, view, newBoard, notation);
     myScene->drawScene();
 
-    ClassicGame* game = new ClassicGame(newBoard);
+    ClassicGame* game = new ClassicGame(newBoard, allChessPieceButtons);
     game->ChessPieceManager(100);
 }

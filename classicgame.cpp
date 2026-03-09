@@ -1,4 +1,5 @@
 #include "classicgame.h"
+#include <QDebug>
 
 void ClassicGame::ChessPieceManager(int cellSize) {
     for (int i = 0; i < 8; i++) {
@@ -46,5 +47,11 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     for (int i = 0; i < 32; i++) {
         allChessPieceButtons.append(
             newBoard->addToChessboard(allChessPieces[i]));
+    }
+
+    updateCoordinates();
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        QObject::connect(allChessPieceButtons[i], &QPushButton::clicked,
+                         [this, i]() { this->getPossibleMoves(i); });
     }
 }

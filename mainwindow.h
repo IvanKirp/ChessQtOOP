@@ -34,6 +34,7 @@ class MainWindow : public QMainWindow {
     MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 
+    QList<QPushButton*> allChessPieceButtons;
     QGraphicsScene* scene = new QGraphicsScene(this);
     QGraphicsView* view = new QGraphicsView(scene);
     ChessBoard* newBoard = new ChessBoard(scene, view);

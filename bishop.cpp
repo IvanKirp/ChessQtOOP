@@ -1,13 +1,13 @@
 #include "bishop.h"
 
+#include <QDebug>
 #include <QList>
 #include <QPair>
 
-QList<QPointF> Bishop::possibleMoves(int cellSize,
-                                     QList<QPointF> coordinatesOfAllPieces,
-                                     QList<QPointF> coordinatesOfWhitePieces,
-                                     QList<QPointF> coordinatesOfBlackPieces,
-                                     int counterOfMoves) const {
+QList<QPointF> Bishop::possibleMoves(
+    int cellSize, QList<QPointF> coordinatesOfAllPieces,
+    QList<QPointF> coordinatesOfWhitePieces,
+    QList<QPointF> coordinatesOfBlackPieces) const {
     QList<QPointF> bishopPossibleMoves_;
     QList<QPointF> helpCoordinates = {
         QPointF(cellSize, cellSize), QPointF(cellSize, -cellSize),
@@ -26,30 +26,21 @@ QList<QPointF> Bishop::possibleMoves(int cellSize,
                 newY <= 7 * cellSize) {
                 if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
                     bishopPossibleMoves_.append(QPointF(newX, newY));
-                } else if (counterOfMoves % 2 != 0) {
-                    if (coordinatesOfBlackPieces.contains(
-                            QPointF(newX, newY))) {
-                        bishopPossibleMoves_.append(QPointF(newX, newY));
-                        break;
-                    } /*else if (coordinatesOfWhitePieces.contains(
-                                   QPointF(newX, newY))) {
-                        isProtectedByWhite.append(QPointF(newX, newY));
-                        break;
-                    }*/
-                } else if ((counterOfMoves % 2 == 0)) {
-                    if (coordinatesOfWhitePieces.contains(
-                            QPointF(newX, newY))) {
-                        bishopPossibleMoves_.append(QPointF(newX, newY));
-                        break;
-                    } /*else if (coordinatesOfBlackPieces.contains(
-                                   QPointF(newX, newY))) {
-                        isProtectedByBlack.append(QPointF(newX, newY));
-                        break;
-                    }*/
+                } else if (color == "white" &&
+                           coordinatesOfBlackPieces.contains(
+                               QPointF(newX, newY))) {
+                    bishopPossibleMoves_.append(QPointF(newX, newY));
+                    break;
+                } else if (color == "black" &&
+                           coordinatesOfWhitePieces.contains(
+                               QPointF(newX, newY))) {
+                    bishopPossibleMoves_.append(QPointF(newX, newY));
+                    break;
                 } else
                     break;
             }
         }
     }
+    qDebug() << color;
     return bishopPossibleMoves_;
 }

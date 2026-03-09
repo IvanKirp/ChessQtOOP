@@ -4,10 +4,12 @@
 #include "gamemode.h"
 
 #include <QList>
+#include <QPointF>
 
 class ClassicGame : public GameMode {
    public:
-    ClassicGame(ChessBoard* newBoard) : GameMode(newBoard) {}
+    ClassicGame(ChessBoard* newBoard, QList<QPushButton*> allChessPieceButtons)
+        : GameMode(newBoard, allChessPieceButtons) {}
 
     void ChessPieceManager(int cellSize) override;
 };

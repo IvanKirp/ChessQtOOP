@@ -9,11 +9,10 @@ class Rook : public ChessPiece {
     Rook(QPointF position, QString color, bool isProtected)
         : ChessPiece(position, color), isProtected(isProtected) {}
 
-    QList<QPointF> possibleMoves(int cellSize,
-                                 QList<QPointF> coordinatesOfAllPieces,
-                                 QList<QPointF> coordinatesOfWhitePieces,
-                                 QList<QPointF> coordinatesOfBlackPieces,
-                                 int counterOfMoves) const override;
+    QList<QPointF> possibleMoves(
+        int cellSize, QList<QPointF> coordinatesOfAllPieces,
+        QList<QPointF> coordinatesOfWhitePieces,
+        QList<QPointF> coordinatesOfBlackPieces) const override;
 };
 
 #endif	// ROOK_H

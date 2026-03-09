@@ -17,7 +17,7 @@ class ChessPiece {
     virtual QList<QPointF> possibleMoves(
         int cellSize, QList<QPointF> coordinatesOfAllPieces,
         QList<QPointF> coordinatesOfWhitePieces,
-        QList<QPointF> coordinatesOfBlackPieces, int counterOfMoves) const = 0;
+        QList<QPointF> coordinatesOfBlackPieces) const = 0;
 };
 
 #endif	// CHESSPIECE_H

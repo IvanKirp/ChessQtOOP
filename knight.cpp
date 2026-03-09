@@ -3,11 +3,10 @@
 #include <QList>
 #include <QPair>
 
-QList<QPointF> Knight::possibleMoves(int cellSize,
-                                     QList<QPointF> coordinatesOfAllPieces,
-                                     QList<QPointF> coordinatesOfWhitePieces,
-                                     QList<QPointF> coordinatesOfBlackPieces,
-                                     int counterOfMoves) const {
+QList<QPointF> Knight::possibleMoves(
+    int cellSize, QList<QPointF> coordinatesOfAllPieces,
+    QList<QPointF> coordinatesOfWhitePieces,
+    QList<QPointF> coordinatesOfBlackPieces) const {
     QList<QPointF> knightPossibleMoves_;
     QList<QPointF> helpCoordinates = {
         QPointF(cellSize, 2 * cellSize),  QPointF(cellSize, -2 * cellSize),
@@ -25,14 +24,14 @@ QList<QPointF> Knight::possibleMoves(int cellSize,
         newY = y + helpCoordinates[i].y();
         if (newX >= 0 && newX <= 7 * cellSize && newY >= 0 &&
             newY <= 7 * cellSize) {
-            if (counterOfMoves % 2 != 0) {
+            if (2 % 2 != 0) {
                 if (!coordinatesOfWhitePieces.contains(QPointF(newX, newY))) {
                     knightPossibleMoves_.append(QPointF(newX, newY));
                 } /*else if (coordinatesOfWhitePieces.contains(
                                    QPointF(newX, newY))) {
                         isProtectedByWhite.append(QPointF(newX, newY));
                     }*/
-            } else if (counterOfMoves % 2 == 0) {
+            } else if (2 % 2 == 0) {
                 if (!coordinatesOfBlackPieces.contains(QPointF(newX, newY))) {
                     knightPossibleMoves_.append(QPointF(newX, newY));
                 }

@@ -3,11 +3,10 @@
 #include <QList>
 #include <QPair>
 
-QList<QPointF> Queen::possibleMoves(int cellSize,
-                                    QList<QPointF> coordinatesOfAllPieces,
-                                    QList<QPointF> coordinatesOfWhitePieces,
-                                    QList<QPointF> coordinatesOfBlackPieces,
-                                    int counterOfMoves) const {
+QList<QPointF> Queen::possibleMoves(
+    int cellSize, QList<QPointF> coordinatesOfAllPieces,
+    QList<QPointF> coordinatesOfWhitePieces,
+    QList<QPointF> coordinatesOfBlackPieces) const {
     QList<QPointF> bishopPossibleMoves_;
     QList<QPointF> helpCoordinates = {
         QPointF(cellSize, cellSize), QPointF(cellSize, -cellSize),
@@ -26,7 +25,7 @@ QList<QPointF> Queen::possibleMoves(int cellSize,
                 newY <= 7 * cellSize) {
                 if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
                     bishopPossibleMoves_.append(QPointF(newX, newY));
-                } else if (counterOfMoves % 2 != 0) {
+                } else if (2 % 2 != 0) {
                     if (coordinatesOfBlackPieces.contains(
                             QPointF(newX, newY))) {
                         bishopPossibleMoves_.append(QPointF(newX, newY));
@@ -36,7 +35,7 @@ QList<QPointF> Queen::possibleMoves(int cellSize,
                         isProtectedByWhite.append(QPointF(newX, newY));
                         break;
                     }*/
-                } else if ((counterOfMoves % 2 == 0)) {
+                } else if ((2 % 2 == 0)) {
                     if (coordinatesOfWhitePieces.contains(
                             QPointF(newX, newY))) {
                         bishopPossibleMoves_.append(QPointF(newX, newY));
