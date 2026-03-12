@@ -25,13 +25,12 @@ QList<QPointF> Bishop::possibleMoves(
                 if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
                     bishopPossibleMoves_.append(QPointF(newX, newY));
                 } else {
-                    if (color == "white" && coordinatesOfBlackPieces.contains(
-                                                QPointF(newX, newY))) {
+                    if (isWhite() && coordinatesOfBlackPieces.contains(
+                                         QPointF(newX, newY))) {
                         bishopPossibleMoves_.append(QPointF(newX, newY));
                         break;
-                    } else if (color == "black" &&
-                               coordinatesOfWhitePieces.contains(
-                                   QPointF(newX, newY))) {
+                    } else if (isBlack() && coordinatesOfWhitePieces.contains(
+                                                QPointF(newX, newY))) {
                         bishopPossibleMoves_.append(QPointF(newX, newY));
                         break;
                     } else

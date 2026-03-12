@@ -3,8 +3,8 @@
 
 void ClassicGame::ChessPieceManager(int cellSize) {
     for (int i = 0; i < 8; i++) {
-        allChessPieces.append(
-            new Pawn(QPointF(i * cellSize, 6 * cellSize), "white", false));
+        allChessPieces.append(new Pawn(QPointF(i * cellSize, 6 * cellSize),
+                                       "white", false, true));
     }
     for (int i = 0; i < 8; i++) {
         if (i == 0 || i == 7)
@@ -24,8 +24,8 @@ void ClassicGame::ChessPieceManager(int cellSize) {
                 new King(QPointF(i * cellSize, 7 * cellSize), "white", false));
     }
     for (int i = 0; i < 8; i++) {
-        allChessPieces.append(
-            new Pawn(QPointF(i * cellSize, 1 * cellSize), "black", false));
+        allChessPieces.append(new Pawn(QPointF(i * cellSize, 1 * cellSize),
+                                       "black", false, true));
     }
     for (int i = 0; i < 8; i++) {
         if (i == 0 || i == 7)
@@ -52,11 +52,16 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     allChessPieces.append(new Bishop(QPointF(300, 400), "white", false));
     allChessPieces.append(new Knight(QPointF(500, 300), "black", false));
     allChessPieces.append(new Rook(QPointF(400, 400), "white", false));
+    allChessPieces.append(new Pawn(QPointF(200, 200), "white", false, false));
+    allChessPieces.append(new Pawn(QPointF(500, 500), "black", false, false));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[32]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[33]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[34]));
+    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[35]));
+    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[36]));
 
     updateCoordinates();
+    qDebug() << coordinatesOfAllPieces;
     for (int i = 0; i < allChessPieces.size(); i++) {
         QObject::connect(allChessPieceButtons[i], &QPushButton::clicked,
                          [this, i]() { this->getPossibleMoves(i); });

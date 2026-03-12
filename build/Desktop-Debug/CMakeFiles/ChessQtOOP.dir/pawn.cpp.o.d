@@ -266,5 +266,4 @@ CMakeFiles/ChessQtOOP.dir/pawn.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h

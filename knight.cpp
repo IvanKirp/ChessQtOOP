@@ -19,22 +19,23 @@ QList<QPointF> Knight::possibleMoves(
     int newY;
 
     for (int i = 0; i < 8; i++) {
-        newX = x + helpCoordinates[i].x();
-        newY = y + helpCoordinates[i].y();
-        if (newX >= 0 && newX <= 7 * cellSize && newY >= 0 &&
-            newY <= 7 * cellSize) {
-            if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
-                knightPossibleMoves_.append(QPointF(newX, newY));
-            } else {
-                if (color == "white" &&
-                    !coordinatesOfWhitePieces.contains(QPointF(newX, newY))) {
+        for (int k = 0; k < 1; k++) {
+            newX = x + helpCoordinates[i].x();
+            newY = y + helpCoordinates[i].y();
+            if (newX >= 0 && newX <= 7 * cellSize && newY >= 0 &&
+                newY <= 7 * cellSize) {
+                if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
                     knightPossibleMoves_.append(QPointF(newX, newY));
-                } else if (color == "black" &&
-                           !coordinatesOfBlackPieces.contains(
-                               QPointF(newX, newY))) {
-                    knightPossibleMoves_.append(QPointF(newX, newY));
-                } else
-                    break;
+                } else {
+                    if (isWhite() && !coordinatesOfWhitePieces.contains(
+                                         QPointF(newX, newY))) {
+                        knightPossibleMoves_.append(QPointF(newX, newY));
+                    } else if (isBlack() && !coordinatesOfBlackPieces.contains(
+                                                QPointF(newX, newY))) {
+                        knightPossibleMoves_.append(QPointF(newX, newY));
+                    } else
+                        break;
+                }
             }
         }
     }

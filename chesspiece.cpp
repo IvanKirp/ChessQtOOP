@@ -2,10 +2,10 @@
 
 ChessPiece::ChessPiece() {}
 
-bool ChessPiece::isWhite() {
+bool ChessPiece::isWhite() const {
     return color == "white";
 }
 
-bool ChessPiece::isBlack() {
+bool ChessPiece::isBlack() const {
     return color == "black";
 }

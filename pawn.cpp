@@ -1,54 +1,60 @@
 #include "pawn.h"
 
 #include <QList>
-#include <QPair>
 
 QList<QPointF> Pawn::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
     QList<QPointF> coordinatesOfWhitePieces,
     QList<QPointF> coordinatesOfBlackPieces) const {
-    QList<QPointF> bishopPossibleMoves_;
-    QList<QPointF> helpCoordinates = {
-        QPointF(cellSize, cellSize), QPointF(cellSize, -cellSize),
-        QPointF(-cellSize, cellSize), QPointF(-cellSize, -cellSize)};
+    QList<QPointF> pawnPossibleMoves_;
+    QList<QPointF> helpCoordinates;
 
     int x = position.x();
     int y = position.y();
     int newX;
     int newY;
 
-    for (int k = 0; k < 4; k++) {
-        for (int i = 1; i < 8; i++) {
-            newX = x + i * helpCoordinates[k].x();
-            newY = y + i * helpCoordinates[k].y();
+    if (isWhite()) {
+        helpCoordinates = {QPointF(0, -cellSize), QPointF(-cellSize, -cellSize),
+                           QPointF(cellSize, -cellSize)};
+        if (longMove &&
+            !coordinatesOfAllPieces.contains(QPointF(x, y - cellSize)))
+            helpCoordinates.append(QPointF(0, -2 * cellSize));
+    } else if (isBlack()) {
+        helpCoordinates = {QPointF(0, cellSize), QPointF(-cellSize, cellSize),
+                           QPointF(cellSize, cellSize)};
+        if (longMove &&
+            !coordinatesOfAllPieces.contains(QPointF(x, y + cellSize)))
+            helpCoordinates.append(QPointF(0, 2 * cellSize));
+    }
+
+    for (int i = 0; i < helpCoordinates.size(); i++) {
+        for (int k = 0; k < 1; k++) {
+            newX = x + helpCoordinates[i].x();
+            newY = y + helpCoordinates[i].y();
             if (newX >= 0 && newX <= 7 * cellSize && newY >= 0 &&
                 newY <= 7 * cellSize) {
-                if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
-                    bishopPossibleMoves_.append(QPointF(newX, newY));
-                } else if (2 % 2 != 0) {
-                    if (coordinatesOfBlackPieces.contains(
-                            QPointF(newX, newY))) {
-                        bishopPossibleMoves_.append(QPointF(newX, newY));
+                if (!coordinatesOfAllPieces.contains(QPointF(newX, newY)) &&
+                    x == newX) {
+                    pawnPossibleMoves_.append(QPointF(newX, newY));
+                } else {
+                    if (isWhite() &&
+                        coordinatesOfBlackPieces.contains(
+                            QPointF(newX, newY)) &&
+                        x != newX) {
+                        pawnPossibleMoves_.append(QPointF(newX, newY));
                         break;
-                    } /*else if (coordinatesOfWhitePieces.contains(
-                                   QPointF(newX, newY))) {
-                        isProtectedByWhite.append(QPointF(newX, newY));
+                    } else if (isBlack() &&
+                               coordinatesOfWhitePieces.contains(
+                                   QPointF(newX, newY)) &&
+                               x != newX) {
+                        pawnPossibleMoves_.append(QPointF(newX, newY));
                         break;
-                    }*/
-                } else if ((2 % 2 == 0)) {
-                    if (coordinatesOfWhitePieces.contains(
-                            QPointF(newX, newY))) {
-                        bishopPossibleMoves_.append(QPointF(newX, newY));
+                    } else
                         break;
-                    } /*else if (coordinatesOfBlackPieces.contains(
-                                   QPointF(newX, newY))) {
-                        isProtectedByBlack.append(QPointF(newX, newY));
-                        break;
-                    }*/
-                } else
-                    break;
+                }
             }
         }
     }
-    return bishopPossibleMoves_;
+    return pawnPossibleMoves_;
 }

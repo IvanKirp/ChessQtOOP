@@ -17,7 +17,6 @@ QList<QPointF> Rook::possibleMoves(
     int newY;
 
     for (int k = 0; k < 4; k++) {
-
         for (int i = 1; i < 8; i++) {
             newX = x + i * helpCoordinates[k].x();
             newY = y + i * helpCoordinates[k].y();
@@ -26,13 +25,12 @@ QList<QPointF> Rook::possibleMoves(
                 if (!coordinatesOfAllPieces.contains(QPointF(newX, newY))) {
                     rookPossibleMoves_.append(QPointF(newX, newY));
                 } else {
-                    if (color == "white" && coordinatesOfBlackPieces.contains(
-                                                QPointF(newX, newY))) {
+                    if (isWhite() && coordinatesOfBlackPieces.contains(
+                                         QPointF(newX, newY))) {
                         rookPossibleMoves_.append(QPointF(newX, newY));
                         break;
-                    } else if (color == "black" &&
-                               coordinatesOfWhitePieces.contains(
-                                   QPointF(newX, newY))) {
+                    } else if (isBlack() && coordinatesOfWhitePieces.contains(
+                                                QPointF(newX, newY))) {
                         rookPossibleMoves_.append(QPointF(newX, newY));
                         break;
                     } else

@@ -4183,7 +4183,6 @@ CMakeFiles/ChessQtOOP.dir/pawn.cpp.o: /home/ivan/Документы/453503/ОО�
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \

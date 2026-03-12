@@ -12,8 +12,8 @@ class ChessPiece {
     ChessPiece(QPointF position, QString color)
         : position(position), color(color) {}
 
-    bool isWhite();
-    bool isBlack();
+    bool isWhite() const;
+    bool isBlack() const;
     virtual QList<QPointF> possibleMoves(
         int cellSize, QList<QPointF> coordinatesOfAllPieces,
         QList<QPointF> coordinatesOfWhitePieces,
