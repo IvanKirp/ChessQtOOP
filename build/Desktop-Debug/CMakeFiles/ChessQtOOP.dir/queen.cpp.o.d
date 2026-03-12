@@ -224,6 +224,8 @@ CMakeFiles/ChessQtOOP.dir/queen.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \

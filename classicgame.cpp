@@ -54,11 +54,13 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     allChessPieces.append(new Rook(QPointF(400, 400), "white", false));
     allChessPieces.append(new Pawn(QPointF(200, 200), "white", false, false));
     allChessPieces.append(new Pawn(QPointF(500, 500), "black", false, false));
+    allChessPieces.append(new Queen(QPointF(200, 500), "black", false));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[32]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[33]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[34]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[35]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[36]));
+    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[37]));
 
     updateCoordinates();
     qDebug() << coordinatesOfAllPieces;

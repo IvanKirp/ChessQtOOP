@@ -4259,8 +4259,10 @@ CMakeFiles/ChessQtOOP.dir/pawn.cpp.o
 
 CMakeFiles/ChessQtOOP.dir/queen.cpp.o
  /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h
  /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h
  /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/array
  /usr/include/c++/13/atomic
