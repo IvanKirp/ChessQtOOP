@@ -51,21 +51,19 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     allChessPieces.append(new Rook(QPointF(400, 400), "white"));
     allChessPieces.append(new Pawn(QPointF(200, 200), "white"));
     allChessPieces.append(new Pawn(QPointF(500, 500), "black"));
-    allChessPieces.append(new Queen(QPointF(100, 400), "black"));
-    //allChessPieces.append(new King(QPointF(500, 500), "white"));
+    allChessPieces.append(new Queen(QPointF(100, 300), "black"));
+    allChessPieces.append(new King(QPointF(400, 300), "white"));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[32]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[33]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[34]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[35]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[36]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[37]));
-    //allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[38]));
-
+    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[38]));
     updateCoordinates();
     qDebug() << coordinatesOfAllPieces;
     qDebug() << isCheckForWhiteKing();
     qDebug() << isCheckForBlackKing();
-    qDebug() << "dich";
     for (int i = 0; i < allChessPieces.size(); i++) {
         QObject::connect(allChessPieceButtons[i], &QPushButton::clicked,
                          [this, i]() { this->getPossibleMoves(i); });

@@ -28,6 +28,8 @@ void GameMode::getPossibleMoves(int index) {
             qDebug() << "www";
             indexOfColorCoordinates = coordinatesOfWhitePieces.indexOf(
                 allChessPieces[index]->position);
+            qDebug() << indexOfColorCoordinates;
+            qDebug() << possibleMovesOfThisPiece.size();
             coordinatesOfWhitePieces[indexOfColorCoordinates] =
                 possibleMovesOfThisPiece[i];
             if (!isCheckForWhiteKing()) {
@@ -44,11 +46,11 @@ void GameMode::getPossibleMoves(int index) {
             }
         }
     }
-
-    for (int i = indexForRemove.size(); i > 0; i--) {
+    qDebug() << indexForRemove.size();
+    for (int i = indexForRemove.size() - 1; i >= 0; i--) {
         possibleMovesOfThisPiece.removeAt(indexForRemove[i]);
     }
-
+    qDebug() << possibleMovesOfThisPiece;
     newBoard->drawPossibleMoves(possibleMovesOfThisPiece);
     possibleMovesOfThisPiece.clear();
 }
@@ -63,7 +65,7 @@ bool GameMode::isCheckForWhiteKing() {
             indexOfKing = i;
         }
     }
-
+    qDebug() << indexOfKing;
     for (int i = 0; i < allChessPieces.size(); i++) {
         if (allChessPieces[i]->isBlack()) {
             tempList.append(allChessPieces[i]->possibleMoves(
@@ -76,9 +78,8 @@ bool GameMode::isCheckForWhiteKing() {
             tempList.clear();
         }
     }
-    int kingIndex =
-        coordinatesOfAllPieces.indexOf(allChessPieces[indexOfKing]->position);
-    if (impossibleWhiteKingMoves.contains(coordinatesOfAllPieces[kingIndex])) {
+    if (impossibleWhiteKingMoves.contains(
+            coordinatesOfAllPieces[indexOfKing])) {
         impossibleWhiteKingMoves.clear();
         return true;
     } else {
