@@ -33,3 +33,25 @@ QPushButton* ChessBoard::addToChessboard(ChessPiece* piece) {
     button->setFocusPolicy(Qt::NoFocus);
     return button;
 }
+
+void ChessBoard::drawPossibleMoves(QList<QPointF> coordinates) {
+    QColor color = QColor("green");
+    for (int i = 0; i < coordinates.size(); i++) {
+        QGraphicsEllipseItem* ellipse = new QGraphicsEllipseItem(0, 0, 30, 30);
+        ellipse->setPos(coordinates[i].x() + (cellSize / 2 - 15),
+                        coordinates[i].y() + (cellSize / 2 - 15));
+        circle.append(ellipse);
+        circle[i]->setBrush(QBrush(color));
+        circle[i]->setPen(Qt::NoPen);
+        scene->addItem(circle[i]);
+    }
+}
+
+void ChessBoard::deletePossibleMoves() {
+    if (!circle.isEmpty()) {
+        for (int i = 0; i < circle.size(); i++) {
+            delete circle[i];
+        }
+        circle.clear();
+    }
+}

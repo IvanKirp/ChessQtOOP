@@ -27,7 +27,8 @@ class GameMode {
     virtual void ChessPieceManager(int cellSize) = 0;
     void updateCoordinates();
     void getPossibleMoves(int index);
-    void updateImpossibleKingsMoves();
+    bool isCheckForWhiteKing();
+    bool isCheckForBlackKing();
 };
 
 #endif	// GAMEMODE_H
