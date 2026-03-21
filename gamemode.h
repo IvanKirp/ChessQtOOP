@@ -27,6 +27,7 @@ class GameMode {
     virtual void ChessPieceManager(int cellSize) = 0;
     void updateCoordinates();
     void getPossibleMoves(int index);
+    void updateImpossibleKingsMoves();
 };
 
 #endif	// GAMEMODE_H

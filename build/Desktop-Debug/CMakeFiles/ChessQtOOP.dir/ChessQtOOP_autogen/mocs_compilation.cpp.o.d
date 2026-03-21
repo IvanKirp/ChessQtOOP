@@ -237,18 +237,7 @@ CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../chesspiece.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../chessboard.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
@@ -288,6 +277,18 @@ CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../chessboard.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
@@ -360,7 +361,6 @@ CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../rook.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../scene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \

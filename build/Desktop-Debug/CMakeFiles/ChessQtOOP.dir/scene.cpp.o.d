@@ -371,5 +371,6 @@ CMakeFiles/ChessQtOOP.dir/scene.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString

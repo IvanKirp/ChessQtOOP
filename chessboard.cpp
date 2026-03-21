@@ -22,13 +22,8 @@ void ChessBoard::drawChessboard() {
 }
 
 QPushButton* ChessBoard::addToChessboard(ChessPiece* piece) {
-    int nameSize = QString(typeid(*piece).name()[0]).toInt();
-    char* name = new char[nameSize];
-    for (int i = 0; i < nameSize; i++) {
-        name[i] = typeid(*piece).name()[i + 1];
-    }
-    name[nameSize] = '\0';
-    QString imagePath = ":/images/" + piece->color + name + ".png";
+    QString name = piece->getName();
+    QString imagePath = ":/images/" + piece->getColor() + name + ".png";
     QPushButton* button = new QPushButton(view);
     button->setGeometry(piece->position.x(), piece->position.y(), cellSize,
                         cellSize);

@@ -1,7 +1,5 @@
 #include "pawn.h"
 
-#include <QList>
-
 QList<QPointF> Pawn::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
     QList<QPointF> coordinatesOfWhitePieces,
@@ -17,13 +15,13 @@ QList<QPointF> Pawn::possibleMoves(
     if (isWhite()) {
         helpCoordinates = {QPointF(0, -cellSize), QPointF(-cellSize, -cellSize),
                            QPointF(cellSize, -cellSize)};
-        if (longMove &&
+        if (y == 6 * cellSize &&
             !coordinatesOfAllPieces.contains(QPointF(x, y - cellSize)))
             helpCoordinates.append(QPointF(0, -2 * cellSize));
     } else if (isBlack()) {
         helpCoordinates = {QPointF(0, cellSize), QPointF(-cellSize, cellSize),
                            QPointF(cellSize, cellSize)};
-        if (longMove &&
+        if (y == cellSize &&
             !coordinatesOfAllPieces.contains(QPointF(x, y + cellSize)))
             helpCoordinates.append(QPointF(0, 2 * cellSize));
     }

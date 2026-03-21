@@ -4,14 +4,12 @@
 
 class Pawn : public ChessPiece {
    public:
-    bool isProtected;
-    bool longMove;
+    bool isProtected = false;
     bool isCanBeTakenOnPassage = false;
 
-    Pawn(QPointF position, QString color, bool isProtected, bool longMove)
-        : ChessPiece(position, color),
-          isProtected(isProtected),
-          longMove(longMove) {}
+    Pawn(QPointF position, QString color) : ChessPiece(position, color) {
+        name = "Pawn";
+    }
 
     QList<QPointF> possibleMoves(
         int cellSize, QList<QPointF> coordinatesOfAllPieces,

@@ -5,10 +5,11 @@
 
 class Bishop : public ChessPiece {
    public:
-    bool isProtected;
+    bool isProtected = false;
 
-    Bishop(QPointF position, QString color, bool isProtected)
-        : ChessPiece(position, color), isProtected(isProtected) {}
+    Bishop(QPointF position, QString color) : ChessPiece(position, color) {
+        name = "Bishop";
+    }
 
     QList<QPointF> possibleMoves(
         int cellSize, QList<QPointF> coordinatesOfAllPieces,

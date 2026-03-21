@@ -2,9 +2,6 @@
 #include "bishop.h"
 #include "rook.h"
 
-#include <QList>
-#include <QPair>
-
 QList<QPointF> Queen::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
     QList<QPointF> coordinatesOfWhitePieces,
@@ -14,8 +11,8 @@ QList<QPointF> Queen::possibleMoves(
     int x = position.x();
     int y = position.y();
 
-    Bishop* helpBishop = new Bishop(QPointF(x, y), color, isProtected);
-    Rook* helpRook = new Rook(QPointF(x, y), color, isProtected);
+    Bishop* helpBishop = new Bishop(QPointF(x, y), color);
+    Rook* helpRook = new Rook(QPointF(x, y), color);
 
     queenPossibleMoves_.append(helpBishop->possibleMoves(
         cellSize, coordinatesOfAllPieces, coordinatesOfWhitePieces,

@@ -1,9 +1,9 @@
 CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/type_traits \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -119,13 +119,15 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/string.h /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/stdlib.h \
   /usr/lib/llvm-18/lib/clang/18/include/stdarg.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stdarg___gnuc_va_list.h \
@@ -222,4 +224,45 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/streambuf.tcc \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/numeric \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_numeric.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/glue_numeric_defs.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/functional \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_function.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/unordered_map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unordered_map.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable_policy.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/ext/aligned_buffer.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/enable_special_members.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/node_handle.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/erase_if.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/vector \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_uninitialized.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_bvector.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/vector.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/compare \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/list \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_list.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/allocated_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/list.tcc \
+  /usr/lib/llvm-18/lib/clang/18/include/limits.h /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString

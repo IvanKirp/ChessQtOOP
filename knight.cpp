@@ -1,7 +1,5 @@
 #include "knight.h"
 
-#include <QList>
-
 QList<QPointF> Knight::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
     QList<QPointF> coordinatesOfWhitePieces,

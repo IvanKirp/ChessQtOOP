@@ -1,7 +1,5 @@
 #include "bishop.h"
 
-#include <QList>
-
 QList<QPointF> Bishop::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
     QList<QPointF> coordinatesOfWhitePieces,

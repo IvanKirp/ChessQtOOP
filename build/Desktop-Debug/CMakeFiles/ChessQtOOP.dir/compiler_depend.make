@@ -1573,11 +1573,13 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: /home/ivan/Документы/453503
 CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
   /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/array \
   /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/algorithmfwd.h \
   /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
   /usr/include/c++/13/bits/atomic_base.h \
   /usr/include/c++/13/bits/atomic_lockfree_defines.h \
@@ -1589,14 +1591,19 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
+  /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
   /usr/include/c++/13/bits/locale_classes.tcc \
   /usr/include/c++/13/bits/localefwd.h \
@@ -1605,6 +1612,7 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/nested_exception.h \
   /usr/include/c++/13/bits/new_allocator.h \
+  /usr/include/c++/13/bits/node_handle.h \
   /usr/include/c++/13/bits/ostream_insert.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
@@ -1613,29 +1621,38 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_list.h \
+  /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_relops.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/stream_iterator.h \
   /usr/include/c++/13/bits/streambuf.tcc \
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
+  /usr/include/c++/13/compare \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
@@ -1643,17 +1660,22 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/exception \
+  /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
   /usr/include/c++/13/ext/atomicity.h \
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iterator \
+  /usr/include/c++/13/list \
   /usr/include/c++/13/new \
+  /usr/include/c++/13/numeric \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
@@ -1664,7 +1686,9 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
   /usr/include/c++/13/utility \
+  /usr/include/c++/13/vector \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -1683,7 +1707,9 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
@@ -1705,8 +1731,11 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -1752,40 +1781,54 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
@@ -1803,6 +1846,7 @@ CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_ptrdiff_t.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_size_t.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_wchar_t.h \
+  /usr/lib/llvm-18/lib/clang/18/include/limits.h \
   /usr/lib/llvm-18/lib/clang/18/include/stdarg.h \
   /usr/lib/llvm-18/lib/clang/18/include/stddef.h \
   /usr/lib/llvm-18/lib/clang/18/include/stdint.h
@@ -2438,6 +2482,7 @@ CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o: /home/ivan/Документы/453503/�
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
@@ -2788,7 +2833,6 @@ CMakeFiles/ChessQtOOP.dir/king.cpp.o: /home/ivan/Документы/453503/ОО�
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
@@ -4467,7 +4511,6 @@ CMakeFiles/ChessQtOOP.dir/queen.cpp.o: /home/ivan/Документы/453503/ОО
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
@@ -5054,6 +5097,7 @@ CMakeFiles/ChessQtOOP.dir/scene.cpp.o: /home/ivan/Документы/453503/ОО
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
@@ -5754,8 +5798,6 @@ ChessQtOOP_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h:
 
 /usr/include/c++/13/bits/list.tcc:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QPair:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 

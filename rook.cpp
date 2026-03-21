@@ -1,7 +1,5 @@
 #include "rook.h"
 
-#include <QList>
-
 QList<QPointF> Rook::possibleMoves(
     int cellSize, QList<QPointF> coordinatesOfAllPieces,
     QList<QPointF> coordinatesOfWhitePieces,

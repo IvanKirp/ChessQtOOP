@@ -349,6 +349,7 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
@@ -360,7 +361,6 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \

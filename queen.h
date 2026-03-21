@@ -4,10 +4,11 @@
 
 class Queen : public ChessPiece {
    public:
-    bool isProtected;
+    bool isProtected = false;
 
-    Queen(QPointF position, QString color, bool isProtected)
-        : ChessPiece(position, color), isProtected(isProtected) {}
+    Queen(QPointF position, QString color) : ChessPiece(position, color) {
+        name = "Queen";
+    }
 
     QList<QPointF> possibleMoves(
         int cellSize, QList<QPointF> coordinatesOfAllPieces,

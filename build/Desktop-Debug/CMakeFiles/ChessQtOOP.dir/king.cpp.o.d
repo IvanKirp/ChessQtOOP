@@ -2,9 +2,9 @@ CMakeFiles/ChessQtOOP.dir/king.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.cpp \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/type_traits \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -120,13 +120,15 @@ CMakeFiles/ChessQtOOP.dir/king.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/string.h /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/stdlib.h \
   /usr/lib/llvm-18/lib/clang/18/include/stdarg.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stdarg___gnuc_va_list.h \
@@ -224,11 +226,6 @@ CMakeFiles/ChessQtOOP.dir/king.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/numeric \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_numeric.h \
@@ -267,4 +264,6 @@ CMakeFiles/ChessQtOOP.dir/king.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
