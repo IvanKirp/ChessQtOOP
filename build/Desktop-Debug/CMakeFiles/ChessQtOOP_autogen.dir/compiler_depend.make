@@ -471,7 +471,6 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
@@ -658,8 +657,6 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget:
 

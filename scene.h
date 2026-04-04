@@ -8,7 +8,6 @@
 #include <QHeaderView>
 #include <QPushButton>
 #include <QTableWidget>
-#include <QWidget>
 #include "chessboard.h"
 
 class Scene : public QGraphicsScene {
@@ -22,12 +21,7 @@ class Scene : public QGraphicsScene {
 
     Scene(QGraphicsScene* scene, QGraphicsView* view, ChessBoard* newBoard,
           QTableWidget* notation)
-        : scene(scene), view(view), newBoard(newBoard), notation(notation) {
-        if (view) {
-            view->setMouseTracking(true);
-        }
-        setSceneRect(0, 0, 800, 800);
-    }
+        : scene(scene), view(view), newBoard(newBoard), notation(notation) {}
 
     QPushButton *giveUpButton, *drawButton, *homeButton;
 
@@ -35,8 +29,6 @@ class Scene : public QGraphicsScene {
 
    protected:
     void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
-   signals:
-    void mousePressed(const QPointF& pos, Qt::MouseButton button);
 };
 
 #endif	// SCENE_H

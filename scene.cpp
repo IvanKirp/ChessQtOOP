@@ -5,7 +5,6 @@ void Scene::drawScene() {
     scene->clear();
     view->setFixedSize(800, 800);
     view->setFocusPolicy(Qt::NoFocus);
-    view->setFocus();
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     newBoard->drawChessboard();
@@ -25,10 +24,29 @@ void Scene::drawScene() {
 }
 
 void Scene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
-    QPointF pos = event->scenePos();
-    qDebug() << "Position:" << pos;
-    qDebug() << "Button:" << event->button();
-    /*if (scene && !circle.isEmpty()) {
+    if (scene && !newBoard->circle.isEmpty()) {
+        int cellSize = newBoard->cellSize;
+        double radius = cellSize * 0.3 / 2;
+        QPointF scene_pos = event->scenePos();
+        qDebug() << "Position:" << scene_pos;
+        qDebug() << "Button:" << event->button();
+        for (QGraphicsEllipseItem* ellipse : newBoard->circle) {
+            QPointF center = ellipse->scenePos() + QPointF(radius, radius);
+            QRectF clickableArea(center.x() - cellSize / 2,
+                                 center.y() - cellSize / 2, cellSize, cellSize);
+            qDebug() << "center:" << center;
+            if (clickableArea.contains(scene_pos)) {
+                QPointF pieceMoveTo;
+                pieceMoveTo.setX(center.x() - cellSize / 2);
+                pieceMoveTo.setY(center.y() - cellSize / 2);
+                qDebug() << pieceMoveTo;
+                break;
+            }
+        }
+    }
+
+
+    /* if (scene && !circle.isEmpty()) {
         QPointF scene_pos = view->mapToScene(event->pos());
         if (event->button() == Qt::RightButton) {
             deleteSelections();
@@ -54,7 +72,4 @@ void Scene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
                 drawCheck();
         }
     }*/
-    emit mousePressed(pos, event->button());
-    update();
-    QGraphicsScene::mousePressEvent(event);
 }

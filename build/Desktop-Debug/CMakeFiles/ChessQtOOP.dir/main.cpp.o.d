@@ -391,7 +391,6 @@ CMakeFiles/ChessQtOOP.dir/main.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \

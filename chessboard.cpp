@@ -38,10 +38,12 @@ QPushButton* ChessBoard::addToChessboard(ChessPiece* piece) {
 
 void ChessBoard::drawPossibleMoves(QList<QPointF> coordinates) {
     QColor color = QColor("green");
+    double radius = cellSize * 0.3 / 2;
     for (int i = 0; i < coordinates.size(); i++) {
-        QGraphicsEllipseItem* ellipse = new QGraphicsEllipseItem(0, 0, 30, 30);
-        ellipse->setPos(coordinates[i].x() + (cellSize / 2 - 15),
-                        coordinates[i].y() + (cellSize / 2 - 15));
+        QGraphicsEllipseItem* ellipse =
+            new QGraphicsEllipseItem(0, 0, 2 * radius, 2 * radius);
+        ellipse->setPos(coordinates[i].x() + (cellSize / 2 - radius),
+                        coordinates[i].y() + (cellSize / 2 - radius));
         circle.append(ellipse);
         circle[i]->setBrush(QBrush(color));
         circle[i]->setPen(Qt::NoPen);
