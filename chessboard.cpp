@@ -15,7 +15,9 @@ void ChessBoard::drawChessboard() {
                 col * cellSize, row * cellSize, cellSize, cellSize);
 
             cell->setBrush(QBrush(color));
-
+            cell->setAcceptedMouseButtons(Qt::NoButton);
+            cell->setFlag(QGraphicsItem::ItemIsSelectable, false);
+            cell->setFlag(QGraphicsItem::ItemIsMovable, false);
             scene->addItem(cell);
         }
     }
@@ -50,6 +52,7 @@ void ChessBoard::drawPossibleMoves(QList<QPointF> coordinates) {
 void ChessBoard::deletePossibleMoves() {
     if (!circle.isEmpty()) {
         for (int i = 0; i < circle.size(); i++) {
+            scene->removeItem(circle[i]);
             delete circle[i];
         }
         circle.clear();

@@ -20,39 +20,66 @@ void GameMode::getPossibleMoves(int index) {
                                              coordinatesOfWhitePieces,
                                              coordinatesOfBlackPieces);
     int indexOfColorCoordinates;
+    int canBeTakenPieceIndex;
+    QPointF canBeTakenPiecePosition;
     QList<int> indexForRemove;
 
     for (int i = 0; i < possibleMovesOfThisPiece.size(); i++) {
         coordinatesOfAllPieces[index] = possibleMovesOfThisPiece[i];
         if (allChessPieces[index]->isWhite()) {
-            qDebug() << "www";
+            /*if (coordinatesOfBlackPieces.contains(
+                    possibleMovesOfThisPiece[i])) {
+                canBeTakenPieceIndex = coordinatesOfBlackPieces.indexOf(
+                    possibleMovesOfThisPiece[i]);
+                canBeTakenPiecePosition =
+                    coordinatesOfBlackPieces[canBeTakenPieceIndex];
+                coordinatesOfBlackPieces[canBeTakenPieceIndex] =
+                    QPointF(-1, -1);
+            }*/
+
             indexOfColorCoordinates = coordinatesOfWhitePieces.indexOf(
                 allChessPieces[index]->position);
-            qDebug() << indexOfColorCoordinates;
-            qDebug() << possibleMovesOfThisPiece.size();
             coordinatesOfWhitePieces[indexOfColorCoordinates] =
                 possibleMovesOfThisPiece[i];
             if (!isCheckForWhiteKing()) {
-                qDebug() << "www1";
                 coordinatesOfAllPieces[index] = allChessPieces[index]->position;
                 coordinatesOfWhitePieces[indexOfColorCoordinates] =
                     allChessPieces[index]->position;
+                //coordinatesOfBlackPieces[canBeTakenPieceIndex] =
+                //    canBeTakenPiecePosition;
             } else if (isCheckForWhiteKing()) {
-                qDebug() << "www2";
                 coordinatesOfAllPieces[index] = allChessPieces[index]->position;
                 coordinatesOfWhitePieces[indexOfColorCoordinates] =
+                    allChessPieces[index]->position;
+                //coordinatesOfBlackPieces[canBeTakenPieceIndex] =
+                //  canBeTakenPiecePosition;
+                indexForRemove.append(i);
+            }
+        } else if (allChessPieces[index]->isBlack()) {
+            indexOfColorCoordinates = coordinatesOfBlackPieces.indexOf(
+                allChessPieces[index]->position);
+            coordinatesOfBlackPieces[indexOfColorCoordinates] =
+                possibleMovesOfThisPiece[i];
+            if (!isCheckForBlackKing()) {
+                coordinatesOfAllPieces[index] = allChessPieces[index]->position;
+                coordinatesOfBlackPieces[indexOfColorCoordinates] =
+                    allChessPieces[index]->position;
+            } else if (isCheckForBlackKing()) {
+                coordinatesOfAllPieces[index] = allChessPieces[index]->position;
+                coordinatesOfBlackPieces[indexOfColorCoordinates] =
                     allChessPieces[index]->position;
                 indexForRemove.append(i);
             }
         }
     }
-    qDebug() << indexForRemove.size();
+
     for (int i = indexForRemove.size() - 1; i >= 0; i--) {
         possibleMovesOfThisPiece.removeAt(indexForRemove[i]);
     }
-    qDebug() << possibleMovesOfThisPiece;
     newBoard->drawPossibleMoves(possibleMovesOfThisPiece);
+    qDebug() << possibleMovesOfThisPiece;
     possibleMovesOfThisPiece.clear();
+    indexForRemove.clear();
 }
 
 bool GameMode::isCheckForWhiteKing() {
@@ -65,7 +92,7 @@ bool GameMode::isCheckForWhiteKing() {
             indexOfKing = i;
         }
     }
-    qDebug() << indexOfKing;
+
     for (int i = 0; i < allChessPieces.size(); i++) {
         if (allChessPieces[i]->isBlack()) {
             tempList.append(allChessPieces[i]->possibleMoves(
@@ -113,7 +140,7 @@ bool GameMode::isCheckForBlackKing() {
     }
 
     if (impossibleBlackKingMoves.contains(
-            allChessPieces[indexOfKing]->position)) {
+            coordinatesOfAllPieces[indexOfKing])) {
         impossibleBlackKingMoves.clear();
         return true;
     } else {

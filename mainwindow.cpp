@@ -87,9 +87,21 @@ void MainWindow::drawScene() {
         "url(:/images/next_window.png) 0 0 0 0 stretch stretch;}");
 
     notation = new QTableWidget(this);
-    setCentralWidget(view);
+
     Scene* myScene = new Scene(scene, view, newBoard, notation);
+    view->setScene(myScene);
+    newBoard->scene = myScene;
+    setCentralWidget(view);
     myScene->drawScene();
+
+    /*
+    Scene* myScene = new Scene(scene, view, newBoard, notation);
+    view->setScene(myScene);
+
+    newBoard->scene = myScene;
+
+    setCentralWidget(view);
+    myScene->drawScene();*/
 
     ClassicGame* game = new ClassicGame(newBoard, allChessPieceButtons);
     game->ChessPieceManager(100);

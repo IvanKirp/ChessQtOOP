@@ -6,6 +6,7 @@
 #include <QGraphicsView>
 #include <QPushButton>
 #include "chesspiece.h"
+
 class ChessBoard {
    public:
     QGraphicsScene* scene;
