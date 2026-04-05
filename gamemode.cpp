@@ -21,53 +21,106 @@ void GameMode::getPossibleMoves(int index) {
                                              coordinatesOfBlackPieces);
     int indexOfColorCoordinates;
     int canBeTakenPieceIndex;
+    int canBeTakenPieceColorIndex;
     QPointF canBeTakenPiecePosition;
     QList<int> indexForRemove;
 
     for (int i = 0; i < possibleMovesOfThisPiece.size(); i++) {
-        coordinatesOfAllPieces[index] = possibleMovesOfThisPiece[i];
         if (allChessPieces[index]->isWhite()) {
-            /*if (coordinatesOfBlackPieces.contains(
-                    possibleMovesOfThisPiece[i])) {
-                canBeTakenPieceIndex = coordinatesOfBlackPieces.indexOf(
-                    possibleMovesOfThisPiece[i]);
-                canBeTakenPiecePosition =
-                    coordinatesOfBlackPieces[canBeTakenPieceIndex];
-                coordinatesOfBlackPieces[canBeTakenPieceIndex] =
-                    QPointF(-1, -1);
-            }*/
 
+            if (coordinatesOfBlackPieces.contains(
+                    possibleMovesOfThisPiece[i]) &&
+                coordinatesOfAllPieces.contains(possibleMovesOfThisPiece[i])) {
+                canBeTakenPieceColorIndex = coordinatesOfBlackPieces.indexOf(
+                    possibleMovesOfThisPiece[i]);
+                canBeTakenPieceIndex =
+                    coordinatesOfAllPieces.indexOf(possibleMovesOfThisPiece[i]);
+                canBeTakenPiecePosition =
+                    allChessPieces[canBeTakenPieceIndex]->position;
+                coordinatesOfBlackPieces[canBeTakenPieceColorIndex] =
+                    QPointF(-1, -1);
+                allChessPieces[canBeTakenPieceIndex]->position =
+                    QPointF(-1, -1);
+            }
+
+            coordinatesOfAllPieces[index] = possibleMovesOfThisPiece[i];
             indexOfColorCoordinates = coordinatesOfWhitePieces.indexOf(
                 allChessPieces[index]->position);
             coordinatesOfWhitePieces[indexOfColorCoordinates] =
                 possibleMovesOfThisPiece[i];
+
             if (!isCheckForWhiteKing()) {
                 coordinatesOfAllPieces[index] = allChessPieces[index]->position;
                 coordinatesOfWhitePieces[indexOfColorCoordinates] =
                     allChessPieces[index]->position;
-                //coordinatesOfBlackPieces[canBeTakenPieceIndex] =
-                //    canBeTakenPiecePosition;
+                if (canBeTakenPieceColorIndex >= 0 &&
+                    canBeTakenPieceIndex >= 0) {
+                    coordinatesOfBlackPieces[canBeTakenPieceColorIndex] =
+                        canBeTakenPiecePosition;
+                    allChessPieces[canBeTakenPieceIndex]->position =
+                        canBeTakenPiecePosition;
+                }
+
             } else if (isCheckForWhiteKing()) {
                 coordinatesOfAllPieces[index] = allChessPieces[index]->position;
                 coordinatesOfWhitePieces[indexOfColorCoordinates] =
                     allChessPieces[index]->position;
-                //coordinatesOfBlackPieces[canBeTakenPieceIndex] =
-                //  canBeTakenPiecePosition;
+                if (canBeTakenPieceColorIndex >= 0 &&
+                    canBeTakenPieceIndex >= 0) {
+                    coordinatesOfBlackPieces[canBeTakenPieceColorIndex] =
+                        canBeTakenPiecePosition;
+                    allChessPieces[canBeTakenPieceIndex]->position =
+                        canBeTakenPiecePosition;
+                }
                 indexForRemove.append(i);
             }
+
         } else if (allChessPieces[index]->isBlack()) {
+
+            if (coordinatesOfWhitePieces.contains(
+                    possibleMovesOfThisPiece[i]) &&
+                coordinatesOfAllPieces.contains(possibleMovesOfThisPiece[i])) {
+                canBeTakenPieceColorIndex = coordinatesOfWhitePieces.indexOf(
+                    possibleMovesOfThisPiece[i]);
+                canBeTakenPieceIndex =
+                    coordinatesOfAllPieces.indexOf(possibleMovesOfThisPiece[i]);
+                canBeTakenPiecePosition =
+                    allChessPieces[canBeTakenPieceIndex]->position;
+                coordinatesOfWhitePieces[canBeTakenPieceColorIndex] =
+                    QPointF(-1, -1);
+                allChessPieces[canBeTakenPieceIndex]->position =
+                    QPointF(-1, -1);
+            }
+
+            coordinatesOfAllPieces[index] = possibleMovesOfThisPiece[i];
             indexOfColorCoordinates = coordinatesOfBlackPieces.indexOf(
                 allChessPieces[index]->position);
             coordinatesOfBlackPieces[indexOfColorCoordinates] =
                 possibleMovesOfThisPiece[i];
+
             if (!isCheckForBlackKing()) {
                 coordinatesOfAllPieces[index] = allChessPieces[index]->position;
                 coordinatesOfBlackPieces[indexOfColorCoordinates] =
                     allChessPieces[index]->position;
+                if (canBeTakenPieceColorIndex >= 0 &&
+                    canBeTakenPieceIndex >= 0) {
+                    coordinatesOfWhitePieces[canBeTakenPieceColorIndex] =
+                        canBeTakenPiecePosition;
+                    allChessPieces[canBeTakenPieceIndex]->position =
+                        canBeTakenPiecePosition;
+                }
+
             } else if (isCheckForBlackKing()) {
                 coordinatesOfAllPieces[index] = allChessPieces[index]->position;
                 coordinatesOfBlackPieces[indexOfColorCoordinates] =
                     allChessPieces[index]->position;
+                if (canBeTakenPieceColorIndex >= 0 &&
+                    canBeTakenPieceIndex >= 0) {
+                    coordinatesOfWhitePieces[canBeTakenPieceColorIndex] =
+                        canBeTakenPiecePosition;
+                    allChessPieces[canBeTakenPieceIndex]->position =
+                        canBeTakenPiecePosition;
+                }
                 indexForRemove.append(i);
             }
         }

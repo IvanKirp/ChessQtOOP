@@ -46,13 +46,14 @@ void ClassicGame::ChessPieceManager(int cellSize) {
             newBoard->addToChessboard(allChessPieces[i]));
     }
 
-    allChessPieces.append(new Bishop(QPointF(300, 400), "white"));
+    allChessPieces.append(new Bishop(QPointF(300, 500), "white"));
     allChessPieces.append(new Knight(QPointF(500, 200), "black"));
     allChessPieces.append(new Rook(QPointF(400, 400), "white"));
-    allChessPieces.append(new Pawn(QPointF(200, 200), "white"));
+    allChessPieces.append(new Pawn(QPointF(200, 400), "white"));
     allChessPieces.append(new Pawn(QPointF(500, 500), "black"));
     allChessPieces.append(new Queen(QPointF(200, 500), "black"));
     allChessPieces.append(new King(QPointF(400, 500), "white"));
+    allChessPieces.append(new King(QPointF(300, 300), "black"));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[32]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[33]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[34]));
@@ -60,6 +61,7 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[36]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[37]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[38]));
+    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[39]));
     updateCoordinates();
     qDebug() << coordinatesOfAllPieces;
     qDebug() << isCheckForWhiteKing();

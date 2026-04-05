@@ -34,7 +34,6 @@ void Scene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
             QPointF center = ellipse->scenePos() + QPointF(radius, radius);
             QRectF clickableArea(center.x() - cellSize / 2,
                                  center.y() - cellSize / 2, cellSize, cellSize);
-            qDebug() << "center:" << center;
             if (clickableArea.contains(scene_pos)) {
                 QPointF pieceMoveTo;
                 pieceMoveTo.setX(center.x() - cellSize / 2);
