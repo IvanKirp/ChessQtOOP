@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChessQtOOP.dir/main.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/queen.cpp.o"

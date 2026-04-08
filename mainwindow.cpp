@@ -18,8 +18,6 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::startWindow() {
-    this->QAbstractButton::move(400, 100);
-
     setFixedSize(1100, 800);
     setStyleSheet(
         "QMainWindow { border-image: "

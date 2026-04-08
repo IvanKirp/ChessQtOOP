@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/knight.cpp" "CMakeFiles/ChessQtOOP.dir/knight.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/knight.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/main.cpp" "CMakeFiles/ChessQtOOP.dir/main.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/main.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.cpp" "CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o.d"
+  "/home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.cpp" "CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.cpp" "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp" "CMakeFiles/ChessQtOOP.dir/queen.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/queen.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/rook.cpp" "CMakeFiles/ChessQtOOP.dir/rook.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/rook.cpp.o.d"

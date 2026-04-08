@@ -50,6 +50,7 @@ else()
             pawn.h pawn.cpp
             classicgame.h classicgame.cpp
             gamemode.h gamemode.cpp
+            mouseeventmediator.h mouseeventmediator.cpp
         )
     endif()
 endif()

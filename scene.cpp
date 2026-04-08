@@ -36,8 +36,8 @@ void Scene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
                                  center.y() - cellSize / 2, cellSize, cellSize);
             if (clickableArea.contains(scene_pos)) {
                 QPointF pieceMoveTo;
-                pieceMoveTo.setX(center.x() - cellSize / 2);
-                pieceMoveTo.setY(center.y() - cellSize / 2);
+                pieceMoveTo = QPointF(center.x() - cellSize / 2,
+                                      center.y() - cellSize / 2);
                 qDebug() << pieceMoveTo;
                 break;
             }

@@ -298,10 +298,24 @@ CMakeFiles/ChessQtOOP.dir/gamemode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/gamemode.cpp.s"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp -o CMakeFiles/ChessQtOOP.dir/gamemode.cpp.s
 
+CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
+CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.cpp
+CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o -MF CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.cpp
+
+CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.cpp > CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.i
+
+CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.cpp -o CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.s
+
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o -MF CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp
 
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
@@ -328,6 +342,7 @@ ChessQtOOP_OBJECTS = \
 "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o" \
+"CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 
 # External object files for target ChessQtOOP
@@ -347,6 +362,7 @@ ChessQtOOP: CMakeFiles/ChessQtOOP.dir/king.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/pawn.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o
+ChessQtOOP: CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/build.make
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
@@ -354,7 +370,7 @@ ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable ChessQtOOP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable ChessQtOOP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChessQtOOP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
