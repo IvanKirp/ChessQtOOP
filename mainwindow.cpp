@@ -103,4 +103,6 @@ void MainWindow::drawScene() {
 
     ClassicGame* game = new ClassicGame(newBoard, allChessPieceButtons);
     game->ChessPieceManager(100);
+
+    connect(myScene, &Scene::mousePressed, game, &GameMode::move);
 }

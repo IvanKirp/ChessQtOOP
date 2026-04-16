@@ -6,16 +6,20 @@
 #include "chesspiece.h"
 #include "king.h"
 #include "knight.h"
+#include "mouseeventmediator.h"
 #include "pawn.h"
 #include "queen.h"
 #include "rook.h"
 
-class GameMode {
+class GameMode : public QObject {
+    Q_OBJECT
    public:
     ChessBoard* newBoard;
     int cellSize = newBoard->cellSize;
+    int counterOfMoves = 1;
     QList<ChessPiece*> allChessPieces;
     QList<QPushButton*> allChessPieceButtons;
+    MouseEventMediator* mouseEventMediator = MouseEventMediator::getInstance();
 
     GameMode(ChessBoard* newBoard, QList<QPushButton*> allChessPieceButtons)
         : newBoard(newBoard), allChessPieceButtons(allChessPieceButtons) {}
@@ -29,6 +33,10 @@ class GameMode {
     void getPossibleMoves(int index);
     bool isCheckForWhiteKing();
     bool isCheckForBlackKing();
+    bool isCanMove(int i);
+
+   public slots:
+    void move();
 };
 
 #endif	// GAMEMODE_H

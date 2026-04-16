@@ -9,6 +9,7 @@
 #include <QPushButton>
 #include <QTableWidget>
 #include "chessboard.h"
+#include "mouseeventmediator.h"
 
 class Scene : public QGraphicsScene {
     Q_OBJECT
@@ -18,6 +19,7 @@ class Scene : public QGraphicsScene {
     QGraphicsView* view;
     ChessBoard* newBoard;
     QTableWidget* notation;
+    MouseEventMediator* mouseEventMediator = MouseEventMediator::getInstance();
 
     Scene(QGraphicsScene* scene, QGraphicsView* view, ChessBoard* newBoard,
           QTableWidget* notation)
@@ -29,6 +31,9 @@ class Scene : public QGraphicsScene {
 
    protected:
     void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
+
+   signals:
+    void mousePressed();
 };
 
 #endif	// SCENE_H

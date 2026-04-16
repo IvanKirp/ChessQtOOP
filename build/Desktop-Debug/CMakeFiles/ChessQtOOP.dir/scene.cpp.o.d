@@ -381,4 +381,12 @@ CMakeFiles/ChessQtOOP.dir/scene.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h

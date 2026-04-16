@@ -1,5 +1,6 @@
 #include "scene.h"
 #include "chessboard.h"
+#include "gamemode.h"
 
 void Scene::drawScene() {
     scene->clear();
@@ -38,7 +39,8 @@ void Scene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
                 QPointF pieceMoveTo;
                 pieceMoveTo = QPointF(center.x() - cellSize / 2,
                                       center.y() - cellSize / 2);
-                qDebug() << pieceMoveTo;
+                mouseEventMediator->updateCell(pieceMoveTo);
+                mousePressed();
                 break;
             }
         }

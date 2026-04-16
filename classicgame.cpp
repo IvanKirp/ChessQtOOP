@@ -1,5 +1,6 @@
 #include "classicgame.h"
 #include <QDebug>
+#include "mouseeventmediator.h"
 
 void ClassicGame::ChessPieceManager(int cellSize) {
     for (int i = 0; i < 8; i++) {
@@ -67,7 +68,9 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     qDebug() << isCheckForWhiteKing();
     qDebug() << isCheckForBlackKing();
     for (int i = 0; i < allChessPieces.size(); i++) {
-        QObject::connect(allChessPieceButtons[i], &QPushButton::clicked,
-                         [this, i]() { this->getPossibleMoves(i); });
+        connect(allChessPieceButtons[i], &QPushButton::clicked, [this, i]() {
+            this->getPossibleMoves(i);
+            mouseEventMediator->updateIndex(i);
+        });
     }
 }

@@ -504,10 +504,12 @@ CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o: ChessQtOOP_
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.h \
+  ChessQtOOP_autogen/EWIEGA46WW/moc_gamemode.cpp \
   ChessQtOOP_autogen/EWIEGA46WW/moc_mainwindow.cpp \
   ChessQtOOP_autogen/EWIEGA46WW/moc_scene.cpp \
   /usr/include/c++/13/algorithm \
@@ -1198,6 +1200,7 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: /home/ivan/Документы/453503
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
@@ -1889,6 +1892,7 @@ CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o: /home/ivan/Документы/45350
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
@@ -2270,6 +2274,7 @@ CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o: /home/ivan/Документы/453503/�
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
@@ -3219,6 +3224,7 @@ CMakeFiles/ChessQtOOP.dir/main.cpp.o: /home/ivan/Документы/453503/ОО�
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
@@ -3635,6 +3641,7 @@ CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o: /home/ivan/Документы/453503
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
@@ -5028,8 +5035,16 @@ CMakeFiles/ChessQtOOP.dir/rook.cpp.o: /home/ivan/Документы/453503/ОО�
   /usr/lib/llvm-18/lib/clang/18/include/stdint.h
 
 CMakeFiles/ChessQtOOP.dir/scene.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.cpp \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.h \
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/array \
@@ -5648,6 +5663,8 @@ ChessQtOOP_autogen/include/ui_mainwindow.h:
 /usr/include/c++/13/atomic:
 
 ChessQtOOP_autogen/EWIEGA46WW/moc_scene.cpp:
+
+ChessQtOOP_autogen/EWIEGA46WW/moc_gamemode.cpp:
 
 ChessQtOOP_autogen/mocs_compilation.cpp:
 

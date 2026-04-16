@@ -13,3 +13,11 @@ MouseEventMediator* MouseEventMediator::getInstance() {
 void MouseEventMediator::updateCell(QPointF coordinates) {
     pieceMoveTo = coordinates;
 }
+
+void MouseEventMediator::updateIndex(int i) {
+    indexOfLastButton = i;
+}
+/*
+void MouseEventMediator::updateIsCanMove(bool condition) {
+    isCanMove = condition;
+}*/
