@@ -3,6 +3,9 @@
 #include <QDebug>
 
 void GameMode::updateCoordinates() {
+    coordinatesOfAllPieces.clear();
+    coordinatesOfWhitePieces.clear();
+    coordinatesOfBlackPieces.clear();
     for (int i = 0; i < allChessPieces.size(); i++) {
         coordinatesOfAllPieces.append(allChessPieces[i]->position);
         if (allChessPieces[i]->isWhite())
@@ -14,6 +17,7 @@ void GameMode::updateCoordinates() {
 
 void GameMode::getPossibleMoves(int index) {
     newBoard->deletePossibleMoves();
+    canBeTakenPieces.clear();
 
     if (isCanMove(index)) {
         QList<QPointF> possibleMovesOfThisPiece =
@@ -139,6 +143,17 @@ void GameMode::getPossibleMoves(int index) {
         for (int i = indexForRemove.size() - 1; i >= 0; i--) {
             possibleMovesOfThisPiece.removeAt(indexForRemove[i]);
         }
+
+        for (int i = 0; i < possibleMovesOfThisPiece.size(); i++) {
+            if (allChessPieces[index]->isWhite() &&
+                coordinatesOfBlackPieces.contains(possibleMovesOfThisPiece[i]))
+                canBeTakenPieces.append(possibleMovesOfThisPiece[i]);
+            else if (allChessPieces[index]->isBlack() &&
+                     coordinatesOfWhitePieces.contains(
+                         possibleMovesOfThisPiece[i]))
+                canBeTakenPieces.append(possibleMovesOfThisPiece[i]);
+        }
+        qDebug() << canBeTakenPieces;
         newBoard->drawPossibleMoves(possibleMovesOfThisPiece);
         qDebug() << possibleMovesOfThisPiece;
         possibleMovesOfThisPiece.clear();
@@ -225,12 +240,34 @@ bool GameMode::isCanMove(int i) {
 void GameMode::move() {
     newBoard->deletePossibleMoves();
     QPointF moveTo = mouseEventMediator->getCell();
-    int indexOfButton = mouseEventMediator->getIndex();
+    int indexOfNowButton = mouseEventMediator->getIndex();
     if (!coordinatesOfAllPieces.contains(moveTo)) {
-        qDebug() << "GOGOGOGO";
-    } else if (coordinatesOfAllPieces.contains(moveTo)) {
-        qDebug() << "NOOOOOOOOOOOOOOO";
+        int x = moveTo.x();
+        int y = moveTo.y();
+        allChessPieceButtons[indexOfNowButton]->move(x, y);
+        allChessPieces[indexOfNowButton]->position = moveTo;
+        updateCoordinates();
     }
 
+    indexOfLastButton = -1;
+    counterOfMoves++;
+}
+
+void GameMode::taking(int indexOfTakingPiece) {
+    newBoard->deletePossibleMoves();
+    if (!canBeTakenPieces.contains(coordinatesOfAllPieces[indexOfTakingPiece]))
+        return;
+
+    QPointF moveTo = allChessPieces[indexOfTakingPiece]->position;
+    int indexOfNowButton = mouseEventMediator->getIndex();
+    newBoard->deleteFromChessboard(allChessPieceButtons[indexOfTakingPiece]);
+    allChessPieces[indexOfTakingPiece]->position = QPointF(-1, -1);
+    int x = moveTo.x();
+    int y = moveTo.y();
+    allChessPieceButtons[indexOfNowButton]->move(x, y);
+    allChessPieces[indexOfNowButton]->position = moveTo;
+    updateCoordinates();
+
+    indexOfLastButton = -1;
     counterOfMoves++;
 }

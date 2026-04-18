@@ -36,6 +36,10 @@ QPushButton* ChessBoard::addToChessboard(ChessPiece* piece) {
     return button;
 }
 
+void ChessBoard::deleteFromChessboard(QPushButton* button) {
+    button->hide();
+}
+
 void ChessBoard::drawPossibleMoves(QList<QPointF> coordinates) {
     QColor color = QColor("green");
     double radius = cellSize * 0.3 / 2;

@@ -15,7 +15,7 @@ class MouseEventMediator {
    private:
     static MouseEventMediator* instance;
     MouseEventMediator();
-    QPointF pieceMoveTo = QPointF(-1, 1);
+    QPointF pieceMoveTo = QPointF(-1, -1);
     int indexOfLastButton = -1;
     //bool isCanMove = 0;
 };

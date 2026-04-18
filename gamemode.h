@@ -17,6 +17,8 @@ class GameMode : public QObject {
     ChessBoard* newBoard;
     int cellSize = newBoard->cellSize;
     int counterOfMoves = 1;
+    int indexOfLastButton = -1;
+    QList<QPointF> canBeTakenPieces;
     QList<ChessPiece*> allChessPieces;
     QList<QPushButton*> allChessPieceButtons;
     MouseEventMediator* mouseEventMediator = MouseEventMediator::getInstance();
@@ -37,6 +39,7 @@ class GameMode : public QObject {
 
    public slots:
     void move();
+    void taking(int indexOfTakingPiece);
 };
 
 #endif	// GAMEMODE_H

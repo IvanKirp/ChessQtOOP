@@ -20,5 +20,6 @@ class ChessBoard {
     void drawPossibleMoves(QList<QPointF> coordinates);
     void deletePossibleMoves();
     QPushButton* addToChessboard(ChessPiece* piece);
+    void deleteFromChessboard(QPushButton* button);
 };
 #endif	// CHESSBOARD_H

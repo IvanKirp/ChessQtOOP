@@ -46,7 +46,7 @@ void ClassicGame::ChessPieceManager(int cellSize) {
         allChessPieceButtons.append(
             newBoard->addToChessboard(allChessPieces[i]));
     }
-
+    /*
     allChessPieces.append(new Bishop(QPointF(300, 500), "white"));
     allChessPieces.append(new Knight(QPointF(500, 200), "black"));
     allChessPieces.append(new Rook(QPointF(400, 400), "white"));
@@ -62,15 +62,25 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[36]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[37]));
     allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[38]));
-    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[39]));
+    allChessPieceButtons.append(newBoard->addToChessboard(allChessPieces[39]));*/
     updateCoordinates();
     qDebug() << coordinatesOfAllPieces;
     qDebug() << isCheckForWhiteKing();
     qDebug() << isCheckForBlackKing();
-    for (int i = 0; i < allChessPieces.size(); i++) {
+    for (int i = 0; i < allChessPieceButtons.size(); i++) {
         connect(allChessPieceButtons[i], &QPushButton::clicked, [this, i]() {
-            this->getPossibleMoves(i);
-            mouseEventMediator->updateIndex(i);
+            if (counterOfMoves % 2 == 1 &&
+                allChessPieces[i]->getColor() == "white") {
+                this->getPossibleMoves(i);
+                mouseEventMediator->updateIndex(i);
+                indexOfLastButton = i;
+            } else if (counterOfMoves % 2 == 0 &&
+                       allChessPieces[i]->getColor() == "black") {
+                this->getPossibleMoves(i);
+                mouseEventMediator->updateIndex(i);
+                indexOfLastButton = i;
+            } else if (indexOfLastButton != -1)
+                taking(i);
         });
     }
 }
