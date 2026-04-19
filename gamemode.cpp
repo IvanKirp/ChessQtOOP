@@ -24,10 +24,10 @@ void GameMode::getPossibleMoves(int index) {
             allChessPieces[index]->possibleMoves(
                 cellSize, coordinatesOfAllPieces, coordinatesOfWhitePieces,
                 coordinatesOfBlackPieces);
-        int indexOfColorCoordinates;
-        int canBeTakenPieceIndex;
-        int canBeTakenPieceColorIndex;
-        QPointF canBeTakenPiecePosition;
+        int indexOfColorCoordinates = -1;
+        int canBeTakenPieceIndex = -1;
+        int canBeTakenPieceColorIndex = -1;
+        QPointF canBeTakenPiecePosition = QPointF(-1, -1);
         QList<int> indexForRemove;
 
         for (int i = 0; i < possibleMovesOfThisPiece.size(); i++) {
@@ -61,6 +61,7 @@ void GameMode::getPossibleMoves(int index) {
                         allChessPieces[index]->position;
                     coordinatesOfWhitePieces[indexOfColorCoordinates] =
                         allChessPieces[index]->position;
+
                     if (canBeTakenPieceColorIndex >= 0 &&
                         canBeTakenPieceIndex >= 0) {
                         coordinatesOfBlackPieces[canBeTakenPieceColorIndex] =
@@ -249,7 +250,13 @@ void GameMode::move() {
         updateCoordinates();
     }
 
-    indexOfLastButton = -1;
+    if (allChessPieces[indexOfNowButton]->getName() == "Rook")
+        dynamic_cast<Rook*>(allChessPieces[indexOfNowButton])
+            ->setCastlingState(false);
+    else if (allChessPieces[indexOfNowButton]->getName() == "King")
+        dynamic_cast<King*>(allChessPieces[indexOfNowButton])
+            ->setCastlingState(false);
+
     counterOfMoves++;
 }
 
@@ -268,6 +275,83 @@ void GameMode::taking(int indexOfTakingPiece) {
     allChessPieces[indexOfNowButton]->position = moveTo;
     updateCoordinates();
 
-    indexOfLastButton = -1;
+
+    if (allChessPieces[indexOfNowButton]->getName() == "Rook")
+        dynamic_cast<Rook*>(allChessPieces[indexOfNowButton])
+            ->setCastlingState(false);
+    else if (allChessPieces[indexOfNowButton]->getName() == "King")
+        dynamic_cast<King*>(allChessPieces[indexOfNowButton])
+            ->setCastlingState(false);
+
+    counterOfMoves++;
+}
+
+void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
+    newBoard->deletePossibleMoves();
+    if (dynamic_cast<King*>(allChessPieces[indexOfKing])->getCastlingState() ==
+            false ||
+        dynamic_cast<Rook*>(allChessPieces[indexOfRook])->getCastlingState() ==
+            false) {
+        getPossibleMoves(indexOfRook);
+        mouseEventMediator->updateIndex(indexOfRook);
+        indexOfLastButton = indexOfRook;
+        return;
+    }
+
+    QPointF king = allChessPieces[indexOfKing]->position;
+    QPointF rook = allChessPieces[indexOfRook]->position;
+    QList<QPointF> needToBeEmptyCoordinates;
+    QPointF kingMoveTo;
+    QPointF rookMoveTo;
+
+    //короткая рокировка
+    if (rook.x() - king.x() > 0) {
+        kingMoveTo = QPointF(6 * cellSize, king.y());
+        rookMoveTo = QPointF(5 * cellSize, king.y());
+        needToBeEmptyCoordinates.append(kingMoveTo);
+        needToBeEmptyCoordinates.append(rookMoveTo);
+        for (int i = king.x() + cellSize; i < kingMoveTo.x(); i += cellSize) {
+            QPointF cell = QPointF(i, king.y());
+            if (!needToBeEmptyCoordinates.contains(cell))
+                needToBeEmptyCoordinates.append(cell);
+        }
+    }
+
+    //длинная рокировка
+    else if (rook.x() - king.x() < 0) {
+        kingMoveTo = QPointF(2 * cellSize, king.y());
+        rookMoveTo = QPointF(3 * cellSize, king.y());
+        needToBeEmptyCoordinates.append(kingMoveTo);
+        needToBeEmptyCoordinates.append(rookMoveTo);
+        if (rook.x() == 0) {
+            for (int i = rook.x() + cellSize; i < king.x(); i += cellSize) {
+                QPointF cell = QPointF(i, king.y());
+                if (!needToBeEmptyCoordinates.contains(cell))
+                    needToBeEmptyCoordinates.append(cell);
+            }
+        } else if (rook.x() != 0) {
+            for (int i = kingMoveTo.x() + cellSize; i < king.x();
+                 i += cellSize) {
+                QPointF cell = QPointF(i, king.y());
+                if (!needToBeEmptyCoordinates.contains(cell))
+                    needToBeEmptyCoordinates.append(cell);
+            }
+        }
+    }
+
+    for (int i = 0; i < needToBeEmptyCoordinates.size(); i++) {
+        if (coordinatesOfAllPieces.contains(needToBeEmptyCoordinates[i]) &&
+            i != indexOfKing && i != indexOfRook) {
+            return;
+        }
+    }
+
+    allChessPieceButtons[indexOfKing]->move(kingMoveTo.x(), kingMoveTo.y());
+    allChessPieceButtons[indexOfRook]->move(rookMoveTo.x(), rookMoveTo.y());
+    allChessPieces[indexOfKing]->position = kingMoveTo;
+    allChessPieces[indexOfRook]->position = rookMoveTo;
+    dynamic_cast<King*>(allChessPieces[indexOfKing])->setCastlingState(false);
+    dynamic_cast<Rook*>(allChessPieces[indexOfRook])->setCastlingState(false);
+    updateCoordinates();
     counterOfMoves++;
 }

@@ -2,7 +2,6 @@
 #include "./ui_mainwindow.h"
 
 #include <QDebug>
-#include <typeinfo>
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {

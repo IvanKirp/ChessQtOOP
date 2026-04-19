@@ -17,7 +17,7 @@ class GameMode : public QObject {
     ChessBoard* newBoard;
     int cellSize = newBoard->cellSize;
     int counterOfMoves = 1;
-    int indexOfLastButton = -1;
+    int indexOfLastButton = 0;
     QList<QPointF> canBeTakenPieces;
     QList<ChessPiece*> allChessPieces;
     QList<QPushButton*> allChessPieceButtons;
@@ -40,6 +40,7 @@ class GameMode : public QObject {
    public slots:
     void move();
     void taking(int indexOfTakingPiece);
+    void universalCastling(int indexOfKing, int indexOfRook);
 };
 
 #endif	// GAMEMODE_H

@@ -45,32 +45,4 @@ void Scene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
             }
         }
     }
-
-
-    /* if (scene && !circle.isEmpty()) {
-        QPointF scene_pos = view->mapToScene(event->pos());
-        if (event->button() == Qt::RightButton) {
-            deleteSelections();
-            if (isCheck().first == true)
-                drawCheck();
-        }
-        if (event->button() == Qt::LeftButton) {
-            for (QGraphicsEllipseItem* ellipse : circle) {
-                QPointF center = ellipse->scenePos() + QPointF(15, 15);
-                QRectF clickableArea(center.x() - 50, center.y() - 50, 100,
-                                     100);
-
-                if (clickableArea.contains(scene_pos)) {
-                    QPointF pieceMoveTo;
-                    pieceMoveTo.setX(center.x() - 50);
-                    pieceMoveTo.setY(center.y() - 50);
-                    move(pieceMoveTo);
-                    deleteSelections();
-                    break;
-                }
-            }
-            if (isCheck().first == true)
-                drawCheck();
-        }
-    }*/
 }

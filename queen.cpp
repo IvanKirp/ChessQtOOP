@@ -12,7 +12,7 @@ QList<QPointF> Queen::possibleMoves(
     int y = position.y();
 
     Bishop* helpBishop = new Bishop(QPointF(x, y), color);
-    Rook* helpRook = new Rook(QPointF(x, y), color);
+    Rook* helpRook = new Rook(QPointF(x, y), color, true);
 
     queenPossibleMoves_.append(helpBishop->possibleMoves(
         cellSize, coordinatesOfAllPieces, coordinatesOfWhitePieces,

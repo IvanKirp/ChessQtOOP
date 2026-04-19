@@ -4,8 +4,8 @@
 
 class King : public ChessPiece {
    public:
-    bool isProtected = false;
-    King(QPointF position, QString color) : ChessPiece(position, color) {
+    King(QPointF position, QString color, bool isCanToCastle)
+        : ChessPiece(position, color), isCanToCastle(isCanToCastle) {
         name = "King";
     }
 
@@ -13,6 +13,12 @@ class King : public ChessPiece {
         int cellSize, QList<QPointF> coordinatesOfAllPieces,
         QList<QPointF> coordinatesOfWhitePieces,
         QList<QPointF> coordinatesOfBlackPieces) const override;
+
+    bool getCastlingState() const { return isCanToCastle; }
+    void setCastlingState(bool state) { isCanToCastle = state; }
+
+   private:
+    bool isCanToCastle;
 };
 
 #endif	// KING_H
