@@ -41,6 +41,7 @@ void Scene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
                                       center.y() - cellSize / 2);
                 mouseEventMediator->updateCell(pieceMoveTo);
                 mousePressed();
+                mouseEventMediator->updateIndexOfTakingOnPassage(-1);
                 break;
             }
         }

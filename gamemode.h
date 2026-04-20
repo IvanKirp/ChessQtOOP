@@ -36,6 +36,9 @@ class GameMode : public QObject {
     bool isCheckForWhiteKing();
     bool isCheckForBlackKing();
     bool isCanMove(int i);
+    void takingOnPassage(int indexOfNowButton, int indexOfTakingOnPassage,
+                         QPointF moveTo);
+    void clearPawnStates(int indexOfNowButton);
 
    public slots:
     void move();

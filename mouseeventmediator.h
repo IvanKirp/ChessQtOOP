@@ -6,18 +6,18 @@ class MouseEventMediator {
    public:
     QPointF getCell() const { return pieceMoveTo; }
     int getIndex() const { return indexOfLastButton; }
-    //bool getIsCanMove() const { return isCanMove; }
+    int getIndexOfTakingOnPassage() const { return indexOfTakingOnPassage; }
     static MouseEventMediator* getInstance();
     void updateCell(QPointF coordinates);
     void updateIndex(int i);
-    //void updateIsCanMove(bool condition);
+    void updateIndexOfTakingOnPassage(int i);
 
    private:
     static MouseEventMediator* instance;
     MouseEventMediator();
     QPointF pieceMoveTo = QPointF(-1, -1);
     int indexOfLastButton = -1;
-    //bool isCanMove = 0;
+    int indexOfTakingOnPassage = -1;
 };
 
 #endif	// MOUSEEVENTMEDIATOR_H

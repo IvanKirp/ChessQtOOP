@@ -4,10 +4,9 @@
 
 class Pawn : public ChessPiece {
    public:
-    bool isProtected = false;
-    bool isCanBeTakenOnPassage = false;
-
-    Pawn(QPointF position, QString color) : ChessPiece(position, color) {
+    Pawn(QPointF position, QString color, bool isCanBeTakenOnPassage)
+        : ChessPiece(position, color),
+          isCanBeTakenOnPassage(isCanBeTakenOnPassage) {
         name = "Pawn";
     }
 
@@ -15,6 +14,12 @@ class Pawn : public ChessPiece {
         int cellSize, QList<QPointF> coordinatesOfAllPieces,
         QList<QPointF> coordinatesOfWhitePieces,
         QList<QPointF> coordinatesOfBlackPieces) const override;
+
+    bool getPassageState() const { return isCanBeTakenOnPassage; }
+    void setPassageState(bool state) { isCanBeTakenOnPassage = state; }
+
+   private:
+    bool isCanBeTakenOnPassage;
 };
 
 #endif	// PAWN_H

@@ -17,7 +17,7 @@ void MouseEventMediator::updateCell(QPointF coordinates) {
 void MouseEventMediator::updateIndex(int i) {
     indexOfLastButton = i;
 }
-/*
-void MouseEventMediator::updateIsCanMove(bool condition) {
-    isCanMove = condition;
-}*/
+
+void MouseEventMediator::updateIndexOfTakingOnPassage(int i) {
+    indexOfTakingOnPassage = i;
+}

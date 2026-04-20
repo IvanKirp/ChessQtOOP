@@ -5,7 +5,7 @@
 void ClassicGame::ChessPieceManager(int cellSize) {
     for (int i = 0; i < 8; i++) {
         allChessPieces.append(
-            new Pawn(QPointF(i * cellSize, 6 * cellSize), "white"));
+            new Pawn(QPointF(i * cellSize, 6 * cellSize), "white", false));
     }
     for (int i = 0; i < 8; i++) {
         if (i == 0 || i == 7)
@@ -26,7 +26,7 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     }
     for (int i = 0; i < 8; i++) {
         allChessPieces.append(
-            new Pawn(QPointF(i * cellSize, 1 * cellSize), "black"));
+            new Pawn(QPointF(i * cellSize, 1 * cellSize), "black", false));
     }
     for (int i = 0; i < 8; i++) {
         if (i == 0 || i == 7)
@@ -90,8 +90,10 @@ void ClassicGame::ChessPieceManager(int cellSize) {
                 getPossibleMoves(i);
                 mouseEventMediator->updateIndex(i);
                 indexOfLastButton = i;
-            } else if (indexOfLastButton != -1)
+            } else if (indexOfLastButton != -1) {
                 taking(i);
+                mouseEventMediator->updateIndex(indexOfLastButton);
+            }
         });
     }
 }
