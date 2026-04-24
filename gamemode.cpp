@@ -399,6 +399,14 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     if (rook.x() - king.x() > 0) {
         kingMoveTo = QPointF(6 * cellSize, king.y());
         rookMoveTo = QPointF(5 * cellSize, king.y());
+
+        if (!castlingIsPossible(indexOfKing, kingMoveTo)) {
+            getPossibleMoves(indexOfRook);
+            mouseEventMediator->updateIndex(indexOfRook);
+            indexOfLastButton = indexOfRook;
+            return;
+        }
+
         needToBeEmptyCoordinates.append(kingMoveTo);
         needToBeEmptyCoordinates.append(rookMoveTo);
         for (int i = king.x() + cellSize; i < kingMoveTo.x(); i += cellSize) {
@@ -412,6 +420,14 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     else if (rook.x() - king.x() < 0) {
         kingMoveTo = QPointF(2 * cellSize, king.y());
         rookMoveTo = QPointF(3 * cellSize, king.y());
+
+        if (!castlingIsPossible(indexOfKing, kingMoveTo)) {
+            getPossibleMoves(indexOfRook);
+            mouseEventMediator->updateIndex(indexOfRook);
+            indexOfLastButton = indexOfRook;
+            return;
+        }
+
         needToBeEmptyCoordinates.append(kingMoveTo);
         needToBeEmptyCoordinates.append(rookMoveTo);
         if (rook.x() == 0) {
@@ -447,6 +463,62 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
 
     clearPawnStates(indexOfKing);
     counterOfMoves++;
+}
+
+bool GameMode::castlingIsPossible(int indexOfKing, QPointF kingMoveTo) {
+    QPointF king = allChessPieces[indexOfKing]->position;
+
+    int colorIndexOfKing;
+    bool isPossible = true;
+    if (allChessPieces[indexOfKing]->isWhite()) {
+        colorIndexOfKing = coordinatesOfWhitePieces.indexOf(king);
+    } else if (allChessPieces[indexOfKing]->isBlack()) {
+        colorIndexOfKing = coordinatesOfBlackPieces.indexOf(king);
+    }
+    if (king.x() <= kingMoveTo.x()) {
+        for (int i = king.x(); i <= kingMoveTo.x(); i += cellSize) {
+            coordinatesOfAllPieces[indexOfKing] = QPointF(i, king.y());
+            if (allChessPieces[indexOfKing]->isWhite()) {
+                coordinatesOfWhitePieces[colorIndexOfKing] =
+                    QPointF(i, king.y());
+                if (isCheckForWhiteKing())
+                    isPossible = false;
+            } else if (allChessPieces[indexOfKing]->isBlack()) {
+                coordinatesOfBlackPieces[colorIndexOfKing] =
+                    QPointF(i, king.y());
+                if (isCheckForBlackKing())
+                    isPossible = false;
+            }
+        }
+        coordinatesOfAllPieces[indexOfKing] = king;
+        if (allChessPieces[indexOfKing]->isWhite()) {
+            coordinatesOfWhitePieces[colorIndexOfKing] = king;
+        } else if (allChessPieces[indexOfKing]->isBlack()) {
+            coordinatesOfBlackPieces[colorIndexOfKing] = king;
+        }
+    } else if (king.x() > kingMoveTo.x()) {
+        for (int i = kingMoveTo.x(); i <= king.x(); i += cellSize) {
+            coordinatesOfAllPieces[indexOfKing] = QPointF(i, king.y());
+            if (allChessPieces[indexOfKing]->isWhite()) {
+                coordinatesOfWhitePieces[colorIndexOfKing] =
+                    QPointF(i, king.y());
+                if (isCheckForWhiteKing())
+                    isPossible = false;
+            } else if (allChessPieces[indexOfKing]->isBlack()) {
+                coordinatesOfBlackPieces[colorIndexOfKing] =
+                    QPointF(i, king.y());
+                if (isCheckForBlackKing())
+                    isPossible = false;
+            }
+        }
+        coordinatesOfAllPieces[indexOfKing] = king;
+        if (allChessPieces[indexOfKing]->isWhite()) {
+            coordinatesOfWhitePieces[colorIndexOfKing] = king;
+        } else if (allChessPieces[indexOfKing]->isBlack()) {
+            coordinatesOfBlackPieces[colorIndexOfKing] = king;
+        }
+    }
+    return isPossible;
 }
 
 void GameMode::clearPawnStates(int indexOfNowButton) {

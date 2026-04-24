@@ -39,6 +39,7 @@ class GameMode : public QObject {
     void takingOnPassage(int indexOfNowButton, int indexOfTakingOnPassage,
                          QPointF moveTo);
     void clearPawnStates(int indexOfNowButton);
+    bool castlingIsPossible(int indexOfKing, QPointF kingMoveTo);
 
    public slots:
     void move();
