@@ -42,7 +42,7 @@ void GameMode::getPossibleMoves(int index) {
             }
             qDebug() << "nearPawns" << nearPawns;
 
-            for (int i = 0; i < nearPawns.size(); i++) {
+            for (int i = nearPawns.size() - 1; i >= 0; i--) {
                 if (dynamic_cast<Pawn*>(allChessPieces[nearPawns[i]])
                             ->getPassageState() == true &&
                     allChessPieces[index]->position.y() ==
@@ -60,9 +60,14 @@ void GameMode::getPossibleMoves(int index) {
                     possibleMovesOfThisPiece.append(coords);
                     mouseEventMediator->updateIndexOfTakingOnPassage(
                         nearPawns[i]);
+                    qDebug() << "nearPawns[i]" << nearPawns[i];
+                    qDebug() << "nearPawns[i]"
+                             << mouseEventMediator->getIndexOfTakingOnPassage();
                 } else
-                    mouseEventMediator->updateIndexOfTakingOnPassage(-1);
+                    nearPawns.removeAt(i);
             }
+            if (nearPawns.isEmpty())
+                mouseEventMediator->updateIndexOfTakingOnPassage(-1);
         }
 
         for (int i = 0; i < possibleMovesOfThisPiece.size(); i++) {
@@ -194,6 +199,8 @@ void GameMode::getPossibleMoves(int index) {
         possibleMovesOfThisPiece.clear();
         indexForRemove.clear();
     }
+    qDebug() << "nearPawns[i]"
+             << mouseEventMediator->getIndexOfTakingOnPassage();
 }
 
 bool GameMode::isCheckForWhiteKing() {
@@ -277,15 +284,31 @@ void GameMode::move() {
     QPointF moveTo = mouseEventMediator->getCell();
     int indexOfNowButton = mouseEventMediator->getIndex();
 
+    qDebug() << "1";
+    qDebug() << "indexOfTakingOnPassage"
+             << mouseEventMediator->getIndexOfTakingOnPassage();
+
+    qDebug() << "до хода";
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        if (allChessPieces[i]->getName() == "Pawn") {
+            qDebug()
+                << i
+                << dynamic_cast<Pawn*>(allChessPieces[i])->getPassageState();
+        }
+    }
+
+
     if (allChessPieces[indexOfNowButton]->getName() == "Pawn") {
         if (std::abs(moveTo.y() -
                      allChessPieces[indexOfNowButton]->position.y()) ==
             2 * cellSize) {
+            qDebug() << "2";
             dynamic_cast<Pawn*>(allChessPieces[indexOfNowButton])
                 ->setPassageState(true);
         } else if (mouseEventMediator->getIndexOfTakingOnPassage() != -1) {
             int indexOfTakingOnPassage =
                 mouseEventMediator->getIndexOfTakingOnPassage();
+            qDebug() << "3";
             newBoard->deleteFromChessboard(
                 allChessPieceButtons[indexOfTakingOnPassage]);
             allChessPieces[indexOfTakingOnPassage]->position = QPointF(-1, -1);
@@ -307,8 +330,19 @@ void GameMode::move() {
         dynamic_cast<King*>(allChessPieces[indexOfNowButton])
             ->setCastlingState(false);
 
+
+    qDebug() << indexOfNowButton;
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
+
+    qDebug() << "после хода";
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        if (allChessPieces[i]->getName() == "Pawn") {
+            qDebug()
+                << i
+                << dynamic_cast<Pawn*>(allChessPieces[i])->getPassageState();
+        }
+    }
 }
 
 void GameMode::taking(int indexOfTakingPiece) {
@@ -339,6 +373,7 @@ void GameMode::taking(int indexOfTakingPiece) {
         dynamic_cast<King*>(allChessPieces[indexOfNowButton])
             ->setCastlingState(false);
 
+    clearPawnStates(indexOfNowButton);
     counterOfMoves++;
 }
 
@@ -409,6 +444,8 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     dynamic_cast<King*>(allChessPieces[indexOfKing])->setCastlingState(false);
     dynamic_cast<Rook*>(allChessPieces[indexOfRook])->setCastlingState(false);
     updateCoordinates();
+
+    clearPawnStates(indexOfKing);
     counterOfMoves++;
 }
 
@@ -438,3 +475,5 @@ void GameMode::takingOnPassage(int indexOfNowButton, int indexOfTakingOnPassage,
     allChessPieceButtons[indexOfNowButton]->move(moveTo.x(), moveTo.y());
     allChessPieces[indexOfNowButton]->position = moveTo;*/
 }
+
+//ЕСЛИ ХОД ОБЫЧНЫЙ, ТО ВСЁ ОК, НО ЕСЛИ ВЗЯТИЕ, ТО ПОКА НЕ ОБРАБОТАНА ОТМЕНА ВОЗМОЖНОСТИ ВЗЯТИЯ НА ПРОХОДЕ
