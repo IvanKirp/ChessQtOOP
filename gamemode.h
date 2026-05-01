@@ -38,8 +38,7 @@ class GameMode : public QObject {
     bool isCanMove(int i);
     void clearPawnStates(int indexOfNowButton);
     bool castlingIsPossible(int indexOfKing, QPointF kingMoveTo);
-    void whitePawnConvertion(int indexOfPawn, QPointF moveTo);
-    void blackPawnConvertion(int indexOfPawn, QPointF moveTo);
+    void pawnConvertion(int indexOfNowButton, QPointF moveTo);
     void taking(int indexOfTakingPiece);
     void universalCastling(int indexOfKing, int indexOfRook);
 

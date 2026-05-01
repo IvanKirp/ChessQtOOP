@@ -33,6 +33,7 @@ QPushButton* ChessBoard::addToChessboard(ChessPiece* piece) {
     button->setIconSize(QSize(cellSize, cellSize));
     button->setStyleSheet("background: transparent; border: none;");
     button->setFocusPolicy(Qt::NoFocus);
+    button->show();
     return button;
 }
 

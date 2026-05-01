@@ -343,11 +343,10 @@ void GameMode::move() {
 
 
     if (allChessPieces[indexOfNowButton]->getName() == "Pawn") {
-        if (allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) {
-            whitePawnConvertion(indexOfNowButton, moveTo);
-        } else if (allChessPieces[indexOfNowButton]->isBlack() &&
-                   moveTo.y() == 7 * cellSize) {
-            blackPawnConvertion(indexOfNowButton, moveTo);
+        if ((allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) ||
+            (allChessPieces[indexOfNowButton]->isBlack() &&
+             moveTo.y() == 7 * cellSize)) {
+            pawnConvertion(indexOfNowButton, moveTo);
         } else if (std::abs(moveTo.y() -
                             allChessPieces[indexOfNowButton]->position.y()) ==
                    2 * cellSize) {
@@ -413,11 +412,10 @@ void GameMode::taking(int indexOfTakingPiece) {
     allChessPieces[indexOfTakingPiece]->position = QPointF(-1, -1);
 
     if (allChessPieces[indexOfNowButton]->getName() == "Pawn") {
-        if (allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) {
-            whitePawnConvertion(indexOfNowButton, moveTo);
-        } else if (allChessPieces[indexOfNowButton]->isBlack() &&
-                   moveTo.y() == 7 * cellSize) {
-            blackPawnConvertion(indexOfNowButton, moveTo);
+        if ((allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) ||
+            (allChessPieces[indexOfNowButton]->isBlack() &&
+             moveTo.y() == 7 * cellSize)) {
+            pawnConvertion(indexOfNowButton, moveTo);
         }
     }
 
@@ -438,6 +436,7 @@ void GameMode::taking(int indexOfTakingPiece) {
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
 }
+
 void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     newBoard->deletePossibleMoves();
     if (dynamic_cast<King*>(allChessPieces[indexOfKing])->getCastlingState() ==
@@ -601,38 +600,45 @@ void GameMode::clearPawnStates(int indexOfNowButton) {
         return;
 }
 
-void GameMode::whitePawnConvertion(int indexOfPawn, QPointF moveTo) {
-    qDebug() << "indexOfPawn" << indexOfPawn << "moveTo" << moveTo;
-    newBoard->addWhitePawnChooseButtons(moveTo);
+void GameMode::pawnConvertion(int indexOfPawn, QPointF moveTo) {
+    QString color;
 
-    for (int i = 0; i < newBoard->pawnChooseButtons.size(); i++) {
+    if (allChessPieces[indexOfPawn]->isWhite()) {
+        color = "white";
+        newBoard->addWhitePawnChooseButtons(moveTo);
+    } else if (allChessPieces[indexOfPawn]->isBlack()) {
+        color = "black";
+        newBoard->addBlackPawnChooseButtons(moveTo);
+    }
+
+    for (int i = 0; i < 4; i++) {
         QAbstractButton::connect(
             newBoard->pawnChooseButtons[i], &QPushButton::clicked,
-            [this, i, moveTo, indexOfPawn]() {
+            [this, i, moveTo, indexOfPawn, color]() {
                 ChessPiece* choosenPiece;
                 if (i == 0) {
-                    choosenPiece = new Queen(moveTo, "white");
+                    choosenPiece = new Queen(moveTo, color);
                 } else if (i == 1) {
-                    choosenPiece = new Rook(moveTo, "white", false);
+                    choosenPiece = new Rook(moveTo, color, false);
                 } else if (i == 2) {
-                    choosenPiece = new Knight(moveTo, "white");
+                    choosenPiece = new Knight(moveTo, color);
                 } else if (i == 3) {
-                    choosenPiece = new Bishop(moveTo, "white");
+                    choosenPiece = new Bishop(moveTo, color);
                 }
                 allChessPieces[indexOfPawn] = choosenPiece;
-                //allChessPieceButtons[indexOfPawn] =
-                //  newBoard->pawnChooseButtons[i];
-                //allChessPieceButtons[indexOfPawn] =
-                //  newBoard->addToChessboard(allChessPieces[indexOfPawn]);
-                //newBoard->addToChessboard(choosenPiece);
-                //allChessPieceButtons[indexOfPawn]->show();
+                qDebug() << allChessPieces[indexOfPawn]->getName();
+                qDebug() << allChessPieces[indexOfPawn]->getColor();
+                newBoard->deleteFromChessboard(
+                    allChessPieceButtons[indexOfPawn]);
+                QPushButton* choosenPieceButton =
+                    newBoard->addToChessboard(choosenPiece);
+                allChessPieceButtons[indexOfPawn] = choosenPieceButton;
+                connect(allChessPieceButtons[indexOfPawn],
+                        &QPushButton::clicked, [this, indexOfPawn]() {
+                            chessPieceConnection(indexOfPawn);
+                        });
+                ;
                 newBoard->deletePawnChooseButtons();
-                //ПАТТЕРН: ЦЕПОЧКА ОБЯЗАННОСТЕЙ - ДЛЯ КОННЕКТА КНОПОК. ПОТОМ НОВУЮ КНОПКУ ПОСЛЕ ПРЕВРАЩЕНИЯ ПЕШКИ СОЗДАТЬ, ДОБАВИТЬ И ЗАКОННЕКТИТЬ (ПОМЕНЯТЬ КАРТИНКУ - СЛИШКОМ ПРОСТО)
             });
     }
-}
-
-void GameMode::blackPawnConvertion(int indexOfPawn, QPointF moveTo) {
-    qDebug() << "indexOfPawn" << indexOfPawn << "moveTo" << moveTo;
-    newBoard->addBlackPawnChooseButtons(moveTo);
 }
