@@ -64,3 +64,59 @@ void ChessBoard::deletePossibleMoves() {
         circle.clear();
     }
 }
+
+void ChessBoard::addWhitePawnChooseButtons(QPointF moveTo) {
+    pawnChooseButtons.clear();
+    QList<QString> names = {"Queen", "Rook", "Knight", "Bishop"};
+    QPushButton* queenButton = new QPushButton(view);
+    QPushButton* rookButton = new QPushButton(view);
+    QPushButton* knightButton = new QPushButton(view);
+    QPushButton* bishopButton = new QPushButton(view);
+    pawnChooseButtons.append(queenButton);
+    pawnChooseButtons.append(rookButton);
+    pawnChooseButtons.append(knightButton);
+    pawnChooseButtons.append(bishopButton);
+    for (int i = 0; i < 4; i++) {
+        pawnChooseButtons[i]->setGeometry(moveTo.x(), moveTo.y() + i * cellSize,
+                                          cellSize, cellSize);
+        pawnChooseButtons[i]->show();
+        pawnChooseButtons[i]->setIcon(
+            QIcon(":/images/white" + names[i] + ".png"));
+        pawnChooseButtons[i]->setIconSize(QSize(cellSize, cellSize));
+        pawnChooseButtons[i]->setStyleSheet(
+            "QPushButton:hover {"
+            "background-color: green;}");
+    }
+}
+
+void ChessBoard::addBlackPawnChooseButtons(QPointF moveTo) {
+    pawnChooseButtons.clear();
+    QList<QString> names = {"Queen", "Rook", "Knight", "Bishop"};
+    QPushButton* queenButton = new QPushButton(view);
+    QPushButton* rookButton = new QPushButton(view);
+    QPushButton* knightButton = new QPushButton(view);
+    QPushButton* bishopButton = new QPushButton(view);
+    pawnChooseButtons.append(queenButton);
+    pawnChooseButtons.append(rookButton);
+    pawnChooseButtons.append(knightButton);
+    pawnChooseButtons.append(bishopButton);
+    for (int i = 0; i < 4; i++) {
+        pawnChooseButtons[i]->setGeometry(moveTo.x(), moveTo.y() - i * cellSize,
+                                          cellSize, cellSize);
+        pawnChooseButtons[i]->show();
+        pawnChooseButtons[i]->setIcon(
+            QIcon(":/images/black" + names[i] + ".png"));
+        pawnChooseButtons[i]->setIconSize(QSize(cellSize, cellSize));
+        pawnChooseButtons[i]->setStyleSheet(
+            "QPushButton:hover {"
+            "background-color: green;}");
+    }
+}
+
+void ChessBoard::deletePawnChooseButtons() {
+    for (int i = 0; i < pawnChooseButtons.size(); i++) {
+        delete pawnChooseButtons[i];
+        pawnChooseButtons[i] = nullptr;
+    }
+    pawnChooseButtons.clear();
+}

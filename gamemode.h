@@ -36,15 +36,21 @@ class GameMode : public QObject {
     bool isCheckForWhiteKing();
     bool isCheckForBlackKing();
     bool isCanMove(int i);
-    void takingOnPassage(int indexOfNowButton, int indexOfTakingOnPassage,
-                         QPointF moveTo);
     void clearPawnStates(int indexOfNowButton);
     bool castlingIsPossible(int indexOfKing, QPointF kingMoveTo);
+    void whitePawnConvertion(int indexOfPawn, QPointF moveTo);
+    void blackPawnConvertion(int indexOfPawn, QPointF moveTo);
+    void taking(int indexOfTakingPiece);
+    void universalCastling(int indexOfKing, int indexOfRook);
+
+    void chessPieceConnection(int i);
+    void castlingHandler(int i);
+    void whiteMoveHandler(int i);
+    void blackMoveHandler(int i);
+    void takingHandler(int i);
 
    public slots:
     void move();
-    void taking(int indexOfTakingPiece);
-    void universalCastling(int indexOfKing, int indexOfRook);
 };
 
 #endif	// GAMEMODE_H

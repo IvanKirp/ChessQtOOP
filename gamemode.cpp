@@ -2,6 +2,51 @@
 
 #include <QDebug>
 
+void GameMode::chessPieceConnection(int i) {
+    castlingHandler(i);
+    return;
+}
+void GameMode::castlingHandler(int i) {
+    if (allChessPieces[indexOfLastButton]->getName() == "King" &&
+        allChessPieces[i]->getName() == "Rook" &&
+        allChessPieces[indexOfLastButton]->getColor() ==
+            allChessPieces[i]->getColor()) {
+        universalCastling(indexOfLastButton, i);
+        indexOfLastButton = i;
+        return;
+    } else {
+        whiteMoveHandler(i);
+        return;
+    }
+}
+void GameMode::whiteMoveHandler(int i) {
+    if (counterOfMoves % 2 == 1 && allChessPieces[i]->getColor() == "white") {
+        getPossibleMoves(i);
+        mouseEventMediator->updateIndex(i);
+        indexOfLastButton = i;
+        return;
+    } else {
+        blackMoveHandler(i);
+        return;
+    }
+}
+void GameMode::blackMoveHandler(int i) {
+    if (counterOfMoves % 2 == 0 && allChessPieces[i]->getColor() == "black") {
+        getPossibleMoves(i);
+        mouseEventMediator->updateIndex(i);
+        indexOfLastButton = i;
+        return;
+    } else {
+        takingHandler(i);
+        return;
+    }
+}
+void GameMode::takingHandler(int i) {
+    taking(i);
+    mouseEventMediator->updateIndex(indexOfLastButton);
+    return;
+}
+
 void GameMode::updateCoordinates() {
     coordinatesOfAllPieces.clear();
     coordinatesOfWhitePieces.clear();
@@ -280,7 +325,6 @@ bool GameMode::isCanMove(int i) {
 }
 
 void GameMode::move() {
-    newBoard->deletePossibleMoves();
     QPointF moveTo = mouseEventMediator->getCell();
     int indexOfNowButton = mouseEventMediator->getIndex();
 
@@ -299,13 +343,21 @@ void GameMode::move() {
 
 
     if (allChessPieces[indexOfNowButton]->getName() == "Pawn") {
-        if (std::abs(moveTo.y() -
-                     allChessPieces[indexOfNowButton]->position.y()) ==
-            2 * cellSize) {
+        if (allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) {
+            whitePawnConvertion(indexOfNowButton, moveTo);
+        } else if (allChessPieces[indexOfNowButton]->isBlack() &&
+                   moveTo.y() == 7 * cellSize) {
+            blackPawnConvertion(indexOfNowButton, moveTo);
+        } else if (std::abs(moveTo.y() -
+                            allChessPieces[indexOfNowButton]->position.y()) ==
+                   2 * cellSize) {
             qDebug() << "2";
             dynamic_cast<Pawn*>(allChessPieces[indexOfNowButton])
                 ->setPassageState(true);
-        } else if (mouseEventMediator->getIndexOfTakingOnPassage() != -1) {
+        } else if (mouseEventMediator->getIndexOfTakingOnPassage() != -1 &&
+                   allChessPieces[mouseEventMediator
+                                      ->getIndexOfTakingOnPassage()]
+                           ->position.x() == moveTo.x()) {
             int indexOfTakingOnPassage =
                 mouseEventMediator->getIndexOfTakingOnPassage();
             qDebug() << "3";
@@ -359,6 +411,16 @@ void GameMode::taking(int indexOfTakingPiece) {
 
     newBoard->deleteFromChessboard(allChessPieceButtons[indexOfTakingPiece]);
     allChessPieces[indexOfTakingPiece]->position = QPointF(-1, -1);
+
+    if (allChessPieces[indexOfNowButton]->getName() == "Pawn") {
+        if (allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) {
+            whitePawnConvertion(indexOfNowButton, moveTo);
+        } else if (allChessPieces[indexOfNowButton]->isBlack() &&
+                   moveTo.y() == 7 * cellSize) {
+            blackPawnConvertion(indexOfNowButton, moveTo);
+        }
+    }
+
     int x = moveTo.x();
     int y = moveTo.y();
     allChessPieceButtons[indexOfNowButton]->move(x, y);
@@ -376,7 +438,6 @@ void GameMode::taking(int indexOfTakingPiece) {
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
 }
-
 void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     newBoard->deletePossibleMoves();
     if (dynamic_cast<King*>(allChessPieces[indexOfKing])->getCastlingState() ==
@@ -540,12 +601,38 @@ void GameMode::clearPawnStates(int indexOfNowButton) {
         return;
 }
 
-void GameMode::takingOnPassage(int indexOfNowButton, int indexOfTakingOnPassage,
-                               QPointF moveTo) {
-    /*newBoard->deleteFromChessboard(allChessPieceButtons[indexOfTakingOnPassage]);
-    allChessPieces[indexOfTakingOnPassage]->position = QPointF(-1, -1);
-    allChessPieceButtons[indexOfNowButton]->move(moveTo.x(), moveTo.y());
-    allChessPieces[indexOfNowButton]->position = moveTo;*/
+void GameMode::whitePawnConvertion(int indexOfPawn, QPointF moveTo) {
+    qDebug() << "indexOfPawn" << indexOfPawn << "moveTo" << moveTo;
+    newBoard->addWhitePawnChooseButtons(moveTo);
+
+    for (int i = 0; i < newBoard->pawnChooseButtons.size(); i++) {
+        QAbstractButton::connect(
+            newBoard->pawnChooseButtons[i], &QPushButton::clicked,
+            [this, i, moveTo, indexOfPawn]() {
+                ChessPiece* choosenPiece;
+                if (i == 0) {
+                    choosenPiece = new Queen(moveTo, "white");
+                } else if (i == 1) {
+                    choosenPiece = new Rook(moveTo, "white", false);
+                } else if (i == 2) {
+                    choosenPiece = new Knight(moveTo, "white");
+                } else if (i == 3) {
+                    choosenPiece = new Bishop(moveTo, "white");
+                }
+                allChessPieces[indexOfPawn] = choosenPiece;
+                //allChessPieceButtons[indexOfPawn] =
+                //  newBoard->pawnChooseButtons[i];
+                //allChessPieceButtons[indexOfPawn] =
+                //  newBoard->addToChessboard(allChessPieces[indexOfPawn]);
+                //newBoard->addToChessboard(choosenPiece);
+                //allChessPieceButtons[indexOfPawn]->show();
+                newBoard->deletePawnChooseButtons();
+                //ПАТТЕРН: ЦЕПОЧКА ОБЯЗАННОСТЕЙ - ДЛЯ КОННЕКТА КНОПОК. ПОТОМ НОВУЮ КНОПКУ ПОСЛЕ ПРЕВРАЩЕНИЯ ПЕШКИ СОЗДАТЬ, ДОБАВИТЬ И ЗАКОННЕКТИТЬ (ПОМЕНЯТЬ КАРТИНКУ - СЛИШКОМ ПРОСТО)
+            });
+    }
 }
 
-//ЕСЛИ ХОД ОБЫЧНЫЙ, ТО ВСЁ ОК, НО ЕСЛИ ВЗЯТИЕ, ТО ПОКА НЕ ОБРАБОТАНА ОТМЕНА ВОЗМОЖНОСТИ ВЗЯТИЯ НА ПРОХОДЕ
+void GameMode::blackPawnConvertion(int indexOfPawn, QPointF moveTo) {
+    qDebug() << "indexOfPawn" << indexOfPawn << "moveTo" << moveTo;
+    newBoard->addBlackPawnChooseButtons(moveTo);
+}

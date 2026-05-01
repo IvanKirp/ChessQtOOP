@@ -70,30 +70,7 @@ void ClassicGame::ChessPieceManager(int cellSize) {
     qDebug() << isCheckForWhiteKing();
     qDebug() << isCheckForBlackKing();
     for (int i = 0; i < allChessPieceButtons.size(); i++) {
-        connect(allChessPieceButtons[i], &QPushButton::clicked, [this, i]() {
-            qDebug() << indexOfLastButton << i;
-            qDebug() << allChessPieces[indexOfLastButton]->getName()
-                     << allChessPieces[i]->getName();
-            if (allChessPieces[indexOfLastButton]->getName() == "King" &&
-                allChessPieces[i]->getName() == "Rook" &&
-                allChessPieces[indexOfLastButton]->getColor() ==
-                    allChessPieces[i]->getColor()) {
-                universalCastling(indexOfLastButton, i);
-                indexOfLastButton = i;
-            } else if (counterOfMoves % 2 == 1 &&
-                       allChessPieces[i]->getColor() == "white") {
-                getPossibleMoves(i);
-                mouseEventMediator->updateIndex(i);
-                indexOfLastButton = i;
-            } else if (counterOfMoves % 2 == 0 &&
-                       allChessPieces[i]->getColor() == "black") {
-                getPossibleMoves(i);
-                mouseEventMediator->updateIndex(i);
-                indexOfLastButton = i;
-            } else if (indexOfLastButton != -1) {
-                taking(i);
-                mouseEventMediator->updateIndex(indexOfLastButton);
-            }
-        });
+        connect(allChessPieceButtons[i], &QPushButton::clicked,
+                [this, i]() { chessPieceConnection(i); });
     }
 }

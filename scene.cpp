@@ -1,4 +1,5 @@
 #include "scene.h"
+#include "QDebug"
 #include "chessboard.h"
 #include "gamemode.h"
 
@@ -29,21 +30,20 @@ void Scene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
         int cellSize = newBoard->cellSize;
         double radius = cellSize * 0.3 / 2;
         QPointF scene_pos = event->scenePos();
-        qDebug() << "Position:" << scene_pos;
-        qDebug() << "Button:" << event->button();
         for (QGraphicsEllipseItem* ellipse : newBoard->circle) {
             QPointF center = ellipse->scenePos() + QPointF(radius, radius);
-            QRectF clickableArea(center.x() - cellSize / 2,
-                                 center.y() - cellSize / 2, cellSize, cellSize);
+            QRectF clickableArea =
+                QRectF(center.x() - cellSize / 2, center.y() - cellSize / 2,
+                       cellSize, cellSize);
             if (clickableArea.contains(scene_pos)) {
                 QPointF pieceMoveTo;
                 pieceMoveTo = QPointF(center.x() - cellSize / 2,
                                       center.y() - cellSize / 2);
                 mouseEventMediator->updateCell(pieceMoveTo);
                 mousePressed();
-                //mouseEventMediator->updateIndexOfTakingOnPassage(-1);
                 break;
             }
         }
+        newBoard->deletePossibleMoves();
     }
 }

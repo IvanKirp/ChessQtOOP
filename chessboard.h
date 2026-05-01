@@ -12,6 +12,7 @@ class ChessBoard {
     QGraphicsScene* scene;
     QGraphicsView* view;
     QList<QGraphicsEllipseItem*> circle;
+    QList<QPushButton*> pawnChooseButtons;
     int cellSize = 100;
 
     ChessBoard(QGraphicsScene* scene, QGraphicsView* view)
@@ -21,5 +22,8 @@ class ChessBoard {
     void deletePossibleMoves();
     QPushButton* addToChessboard(ChessPiece* piece);
     void deleteFromChessboard(QPushButton* button);
+    void addWhitePawnChooseButtons(QPointF moveTo);
+    void addBlackPawnChooseButtons(QPointF moveTo);
+    void deletePawnChooseButtons();
 };
 #endif	// CHESSBOARD_H

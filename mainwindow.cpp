@@ -17,7 +17,6 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::startWindow() {
-    setFixedSize(1100, 800);
     setStyleSheet(
         "QMainWindow { border-image: "
         "url(:/images/start_window.png) 0 0 0 0 stretch stretch;}");
