@@ -73,4 +73,9 @@ void ClassicGame::ChessPieceManager(int cellSize) {
         connect(allChessPieceButtons[i], &QPushButton::clicked,
                 [this, i]() { chessPieceConnection(i); });
     }
+
+    ChessTranslator* trans = new ChessTranslator();
+    qDebug() << trans->encryption(allChessPieces);
+    qDebug() << trans->decryption(
+        "rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR");
 }

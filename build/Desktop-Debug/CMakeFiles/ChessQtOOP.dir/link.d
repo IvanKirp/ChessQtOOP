@@ -17,6 +17,7 @@ ChessQtOOP: \
   CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o \
   CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o \
   CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o \
+  CMakeFiles/ChessQtOOP.dir/chesstranslator.cpp.o \
   CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o \
   /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13 \
   /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13 \
@@ -122,6 +123,8 @@ CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o:
 CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o:
 
 CMakeFiles/ChessQtOOP.dir/mouseeventmediator.cpp.o:
+
+CMakeFiles/ChessQtOOP.dir/chesstranslator.cpp.o:
 
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o:
 

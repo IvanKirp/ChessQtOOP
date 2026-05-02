@@ -51,6 +51,7 @@ else()
             classicgame.h classicgame.cpp
             gamemode.h gamemode.cpp
             mouseeventmediator.h mouseeventmediator.cpp
+            chesstranslator.h chesstranslator.cpp
         )
     endif()
 endif()

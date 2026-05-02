@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.cpp" "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.cpp" "CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp" "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o.d"
+  "/home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.cpp" "CMakeFiles/ChessQtOOP.dir/chesstranslator.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/chesstranslator.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.cpp" "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp" "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp" "CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o.d"

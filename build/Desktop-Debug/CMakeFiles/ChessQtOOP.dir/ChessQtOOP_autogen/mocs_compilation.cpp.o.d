@@ -355,6 +355,7 @@ CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../chesstranslator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../mouseeventmediator.h \

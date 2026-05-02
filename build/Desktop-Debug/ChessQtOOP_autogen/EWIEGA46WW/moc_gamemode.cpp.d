@@ -3,6 +3,7 @@
   /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \

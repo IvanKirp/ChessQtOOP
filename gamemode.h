@@ -4,6 +4,7 @@
 #include "bishop.h"
 #include "chessboard.h"
 #include "chesspiece.h"
+#include "chesstranslator.h"
 #include "king.h"
 #include "knight.h"
 #include "mouseeventmediator.h"
