@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1530/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1531/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1530/bin/cmake -E rm -f
+RM = /snap/cmake/1531/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -73,8 +73,8 @@ ChessQtOOP_autogen/timestamp: /usr/lib/qt5/bin/moc
 ChessQtOOP_autogen/timestamp: /usr/lib/qt5/bin/uic
 ChessQtOOP_autogen/timestamp: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ChessQtOOP"
-	/snap/cmake/1530/bin/cmake -E cmake_autogen /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP_autogen.dir/AutogenInfo.json Debug
-	/snap/cmake/1530/bin/cmake -E touch /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/timestamp
+	/snap/cmake/1531/bin/cmake -E cmake_autogen /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP_autogen.dir/AutogenInfo.json Debug
+	/snap/cmake/1531/bin/cmake -E touch /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/timestamp
 
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/resources.qrc
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: CMakeFiles/ChessQtOOP_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json
@@ -97,7 +97,7 @@ ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /home/ivan/Документы/4
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /usr/lib/qt5/bin/rcc
 ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp: /usr/lib/qt5/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for resources.qrc"
-	/snap/cmake/1530/bin/cmake -E cmake_autorcc /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug
+	/snap/cmake/1531/bin/cmake -E cmake_autorcc /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug
 
 CMakeFiles/ChessQtOOP.dir/codegen:
 .PHONY : CMakeFiles/ChessQtOOP.dir/codegen
@@ -158,19 +158,19 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/chessboard.cpp.s"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.cpp -o CMakeFiles/ChessQtOOP.dir/chessboard.cpp.s
 
-CMakeFiles/ChessQtOOP.dir/scene.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
-CMakeFiles/ChessQtOOP.dir/scene.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.cpp
-CMakeFiles/ChessQtOOP.dir/scene.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ChessQtOOP.dir/scene.cpp.o"
-	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/scene.cpp.o -MF CMakeFiles/ChessQtOOP.dir/scene.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/scene.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.cpp
+CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
+CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp
+CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o -MF CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp
 
-CMakeFiles/ChessQtOOP.dir/scene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/scene.cpp.i"
-	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.cpp > CMakeFiles/ChessQtOOP.dir/scene.cpp.i
+CMakeFiles/ChessQtOOP.dir/gamescene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/gamescene.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp > CMakeFiles/ChessQtOOP.dir/gamescene.cpp.i
 
-CMakeFiles/ChessQtOOP.dir/scene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/scene.cpp.s"
-	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.cpp -o CMakeFiles/ChessQtOOP.dir/scene.cpp.s
+CMakeFiles/ChessQtOOP.dir/gamescene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/gamescene.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp -o CMakeFiles/ChessQtOOP.dir/gamescene.cpp.s
 
 CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
 CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp
@@ -332,7 +332,7 @@ ChessQtOOP_OBJECTS = \
 "CMakeFiles/ChessQtOOP.dir/main.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o" \
-"CMakeFiles/ChessQtOOP.dir/scene.cpp.o" \
+"CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/rook.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/knight.cpp.o" \
@@ -352,7 +352,7 @@ ChessQtOOP: CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/main.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o
-ChessQtOOP: CMakeFiles/ChessQtOOP.dir/scene.cpp.o
+ChessQtOOP: CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/rook.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/knight.cpp.o

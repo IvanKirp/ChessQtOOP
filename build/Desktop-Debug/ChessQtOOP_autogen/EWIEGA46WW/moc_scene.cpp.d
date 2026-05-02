@@ -1,8 +1,16 @@
 /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/moc_scene.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/moc_predefs.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/scene.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

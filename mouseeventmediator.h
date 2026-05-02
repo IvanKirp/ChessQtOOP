@@ -2,8 +2,13 @@
 #define MOUSEEVENTMEDIATOR_H
 #include <QPointF>
 
+class GameMode;
+class GameScene;
 class MouseEventMediator {
    public:
+    void setGameMode(GameMode* gamemode) { _gamemode = gamemode; }
+    void setScene(GameScene* scene) { _scene = scene; }
+    void setConnection();
     QPointF getCell() const { return pieceMoveTo; }
     int getIndex() const { return indexOfLastButton; }
     int getIndexOfTakingOnPassage() const { return indexOfTakingOnPassage; }
@@ -13,6 +18,8 @@ class MouseEventMediator {
     void updateIndexOfTakingOnPassage(int i);
 
    private:
+    GameMode* _gamemode = nullptr;
+    GameScene* _scene = nullptr;
     static MouseEventMediator* instance;
     MouseEventMediator();
     QPointF pieceMoveTo = QPointF(-1, -1);

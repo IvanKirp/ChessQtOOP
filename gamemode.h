@@ -24,7 +24,10 @@ class GameMode : public QObject {
     MouseEventMediator* mouseEventMediator = MouseEventMediator::getInstance();
 
     GameMode(ChessBoard* newBoard, QList<QPushButton*> allChessPieceButtons)
-        : newBoard(newBoard), allChessPieceButtons(allChessPieceButtons) {}
+        : newBoard(newBoard), allChessPieceButtons(allChessPieceButtons) {
+        mouseEventMediator->setGameMode(this);
+        mouseEventMediator->setConnection();
+    }
 
     QList<QPointF> coordinatesOfAllPieces;
     QList<QPointF> coordinatesOfWhitePieces;

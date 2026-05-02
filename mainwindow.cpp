@@ -84,7 +84,7 @@ void MainWindow::drawScene() {
 
     notation = new QTableWidget(this);
 
-    Scene* myScene = new Scene(scene, view, newBoard, notation);
+    GameScene* myScene = new GameScene(scene, view, newBoard, notation);
     view->setScene(myScene);
     newBoard->scene = myScene;
     setCentralWidget(view);
@@ -101,6 +101,4 @@ void MainWindow::drawScene() {
 
     ClassicGame* game = new ClassicGame(newBoard, allChessPieceButtons);
     game->ChessPieceManager(100);
-
-    connect(myScene, &Scene::mousePressed, game, &GameMode::move);
 }

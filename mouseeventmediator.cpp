@@ -1,5 +1,6 @@
 #include "mouseeventmediator.h"
-
+#include "gamemode.h"
+#include "gamescene.h"
 MouseEventMediator* MouseEventMediator::instance = nullptr;
 MouseEventMediator::MouseEventMediator() {}
 
@@ -20,4 +21,11 @@ void MouseEventMediator::updateIndex(int i) {
 
 void MouseEventMediator::updateIndexOfTakingOnPassage(int i) {
     indexOfTakingOnPassage = i;
+}
+
+void MouseEventMediator::setConnection() {
+    if (_gamemode != nullptr && _scene != nullptr) {
+        QObject::connect(_scene, &GameScene::mousePressed, _gamemode,
+                         &GameMode::move);
+    }
 }

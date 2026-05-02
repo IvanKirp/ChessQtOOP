@@ -6,7 +6,7 @@ ChessQtOOP: \
   CMakeFiles/ChessQtOOP.dir/main.cpp.o \
   CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o \
   CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o \
-  CMakeFiles/ChessQtOOP.dir/scene.cpp.o \
+  CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o \
   CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o \
   CMakeFiles/ChessQtOOP.dir/rook.cpp.o \
   CMakeFiles/ChessQtOOP.dir/knight.cpp.o \
@@ -101,7 +101,7 @@ CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o:
 
 CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o:
 
-CMakeFiles/ChessQtOOP.dir/scene.cpp.o:
+CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o:
 
 CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o:
 

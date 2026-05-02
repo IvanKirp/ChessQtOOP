@@ -11,7 +11,7 @@
 #include "pawn.h"
 #include "queen.h"
 #include "rook.h"
-#include "scene.h"
+#include "gamescene.h"
 
 #include <QAbstractButton>
 #include <QGraphicsScene>

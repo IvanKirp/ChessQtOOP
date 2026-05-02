@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp" "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.cpp" "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp" "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o.d"
+  "/home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp" "CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/king.cpp" "CMakeFiles/ChessQtOOP.dir/king.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/king.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/knight.cpp" "CMakeFiles/ChessQtOOP.dir/knight.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/knight.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/main.cpp" "CMakeFiles/ChessQtOOP.dir/main.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/main.cpp.o.d"
@@ -24,7 +25,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.cpp" "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp" "CMakeFiles/ChessQtOOP.dir/queen.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/queen.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/rook.cpp" "CMakeFiles/ChessQtOOP.dir/rook.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/rook.cpp.o.d"
-  "/home/ivan/Документы/453503/ООП/ChessQtOOP/scene.cpp" "CMakeFiles/ChessQtOOP.dir/scene.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/scene.cpp.o.d"
   "" "ChessQtOOP" "gcc" "CMakeFiles/ChessQtOOP.dir/link.d"
   )
 

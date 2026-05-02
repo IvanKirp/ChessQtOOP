@@ -40,7 +40,7 @@ else()
             ${PROJECT_SOURCES}
             chessboard.h chessboard.cpp
             resources.qrc
-            scene.h scene.cpp
+            gamescene.h gamescene.cpp
             chesspiece.h chesspiece.cpp
             rook.h rook.cpp
             knight.h knight.cpp
