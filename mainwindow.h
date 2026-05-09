@@ -5,13 +5,14 @@
 #include "chessboard.h"
 #include "chesspiece.h"
 #include "classicgame.h"
+#include "fischerchess.h"
 #include "gamemode.h"
+#include "gamescene.h"
 #include "king.h"
 #include "knight.h"
 #include "pawn.h"
 #include "queen.h"
 #include "rook.h"
-#include "gamescene.h"
 
 #include <QAbstractButton>
 #include <QGraphicsScene>

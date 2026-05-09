@@ -99,6 +99,7 @@ void MainWindow::drawScene() {
     setCentralWidget(view);
     myScene->drawScene();*/
 
-    ClassicGame* game = new ClassicGame(newBoard, allChessPieceButtons);
+    //ClassicGame* game = new ClassicGame(newBoard, allChessPieceButtons);
+    FischerChess* game = new FischerChess(newBoard, allChessPieceButtons, 480);
     game->ChessPieceManager();
 }

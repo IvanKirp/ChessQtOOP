@@ -52,6 +52,7 @@ else()
             gamemode.h gamemode.cpp
             mouseeventmediator.h mouseeventmediator.cpp
             chesstranslator.h chesstranslator.cpp
+            fischerchess.h fischerchess.cpp
         )
     endif()
 endif()

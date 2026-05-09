@@ -47,10 +47,13 @@ class GameMode : public QObject {
     void taking(int indexOfTakingPiece);
 
     void universalCastling(int indexOfKing, int indexOfRook);
-    /*void enableWhiteShortCastling();
-    void enableWhiteLongCastling();
-    void enableBlackShortCastling();
-    void enableBlackLongCastling();*/
+    void enableCastling(int indexOfKing, int indexOfRook);
+
+    bool isCheckMateForWhite();
+    bool isCheckMateForBlack();
+    bool isStaleMateForWhite();
+    bool isStaleMateForBlack();
+    void gameOver();
 
     void chessPieceConnection(int i);
     void castlingHandler(int i);

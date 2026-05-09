@@ -118,6 +118,12 @@
 			null
 		],
 		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/fischerchess.h",
+			"MU",
+			"EWIEGA46WW/moc_fischerchess.cpp",
+			null
+		],
+		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/gamemode.h",
 			"MU",
 			"EWIEGA46WW/moc_gamemode.cpp",
@@ -245,6 +251,11 @@
 		],
 		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/classicgame.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/fischerchess.cpp",
 			"MU",
 			null
 		],

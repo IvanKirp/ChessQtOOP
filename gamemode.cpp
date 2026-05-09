@@ -363,6 +363,7 @@ void GameMode::move() {
 
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
+    gameOver();
 }
 
 void GameMode::taking(int indexOfTakingPiece) {
@@ -404,6 +405,7 @@ void GameMode::taking(int indexOfTakingPiece) {
 
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
+    gameOver();
 }
 
 void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
@@ -412,7 +414,7 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
             false ||
         dynamic_cast<Rook*>(allChessPieces[indexOfRook])->getCastlingState() ==
             false) {
-        getPossibleMoves(indexOfRook);
+        newBoard->drawPossibleMoves(getPossibleMoves(indexOfRook));
         mouseEventMediator->updateIndex(indexOfRook);
         indexOfLastButton = indexOfRook;
         return;
@@ -430,12 +432,11 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
         rookMoveTo = QPointF(5 * cellSize, king.y());
 
         if (!castlingIsPossible(indexOfKing, kingMoveTo)) {
-            getPossibleMoves(indexOfRook);
+            newBoard->drawPossibleMoves(getPossibleMoves(indexOfRook));
             mouseEventMediator->updateIndex(indexOfRook);
             indexOfLastButton = indexOfRook;
             return;
         }
-
         needToBeEmptyCoordinates.append(kingMoveTo);
         needToBeEmptyCoordinates.append(rookMoveTo);
         for (int i = king.x() + cellSize; i < kingMoveTo.x(); i += cellSize) {
@@ -451,7 +452,7 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
         rookMoveTo = QPointF(3 * cellSize, king.y());
 
         if (!castlingIsPossible(indexOfKing, kingMoveTo)) {
-            getPossibleMoves(indexOfRook);
+            newBoard->drawPossibleMoves(getPossibleMoves(indexOfRook));
             mouseEventMediator->updateIndex(indexOfRook);
             indexOfLastButton = indexOfRook;
             return;
@@ -477,11 +478,13 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
 
     for (int i = 0; i < needToBeEmptyCoordinates.size(); i++) {
         if (coordinatesOfAllPieces.contains(needToBeEmptyCoordinates[i]) &&
-            i != indexOfKing && i != indexOfRook) {
+            coordinatesOfAllPieces.indexOf(needToBeEmptyCoordinates[i]) !=
+                indexOfKing &&
+            coordinatesOfAllPieces.indexOf(needToBeEmptyCoordinates[i]) !=
+                indexOfRook) {
             return;
         }
     }
-
     allChessPieceButtons[indexOfKing]->move(kingMoveTo.x(), kingMoveTo.y());
     allChessPieceButtons[indexOfRook]->move(rookMoveTo.x(), rookMoveTo.y());
     allChessPieces[indexOfKing]->position = kingMoveTo;
@@ -492,6 +495,26 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
 
     clearPawnStates(indexOfKing);
     counterOfMoves++;
+    gameOver();
+}
+
+void GameMode::enableCastling(int indexOfKing, int indexOfRook) {
+    if (!dynamic_cast<King*>(allChessPieces[indexOfKing]) ||
+        !dynamic_cast<Rook*>(allChessPieces[indexOfRook]))
+        return;
+    King* king = dynamic_cast<King*>(allChessPieces[indexOfKing]);
+    Rook* rook = dynamic_cast<Rook*>(allChessPieces[indexOfRook]);
+    if (king->isWhite() && rook->isWhite() &&
+        king->position.y() == 7 * cellSize &&
+        rook->position.y() == 7 * cellSize) {
+        king->setCastlingState(true);
+        rook->setCastlingState(true);
+    } else if (king->isBlack() && rook->isBlack() && king->position.y() == 0 &&
+               rook->position.y() == 0) {
+        king->setCastlingState(true);
+        rook->setCastlingState(true);
+    } else
+        return;
 }
 
 bool GameMode::castlingIsPossible(int indexOfKing, QPointF kingMoveTo) {
@@ -609,5 +632,58 @@ void GameMode::pawnConvertion(int indexOfPawn, QPointF moveTo) {
                 ;
                 newBoard->deletePawnChooseButtons();
             });
+    }
+}
+
+bool GameMode::isCheckMateForWhite() {
+    if (!isCheckForWhiteKing())
+        return false;
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        if (allChessPieces[i]->isWhite() && !getPossibleMoves(i).isEmpty())
+            return false;
+    }
+    return true;
+}
+bool GameMode::isCheckMateForBlack() {
+    if (!isCheckForBlackKing())
+        return false;
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        if (allChessPieces[i]->isBlack() && !getPossibleMoves(i).isEmpty())
+            return false;
+    }
+    return true;
+}
+bool GameMode::isStaleMateForWhite() {
+    if (isCheckForWhiteKing())
+        return false;
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        if (allChessPieces[i]->isWhite() && !getPossibleMoves(i).isEmpty())
+            return false;
+    }
+    return true;
+}
+bool GameMode::isStaleMateForBlack() {
+    if (isCheckForBlackKing())
+        return false;
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        if (allChessPieces[i]->isBlack() && !getPossibleMoves(i).isEmpty())
+            return false;
+    }
+    return true;
+}
+
+void GameMode::gameOver() {
+    if (counterOfMoves % 2 == 1) {
+        if (isCheckMateForWhite()) {
+            qDebug() << "белым мат";
+        } else if (isStaleMateForWhite()) {
+            qDebug() << "белым пат";
+        }
+    } else if (counterOfMoves % 2 == 0) {
+        if (isCheckMateForBlack()) {
+            qDebug() << "чёрным мат";
+        } else if (isStaleMateForBlack()) {
+            qDebug() << "чёрным пат";
+        }
     }
 }

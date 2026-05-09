@@ -10,7 +10,10 @@ void ClassicGame::ChessPieceManager() {
         allChessPieceButtons.append(
             newBoard->addToChessboard(allChessPieces[i]));
     }
-
+    enableCastling(4, 0);
+    enableCastling(4, 7);
+    enableCastling(28, 24);
+    enableCastling(28, 31);
     updateCoordinates();
     qDebug() << coordinatesOfAllPieces;
     qDebug() << isCheckForWhiteKing();
