@@ -11,7 +11,7 @@ class ClassicGame : public GameMode {
     ClassicGame(ChessBoard* newBoard, QList<QPushButton*> allChessPieceButtons)
         : GameMode(newBoard, allChessPieceButtons) {}
 
-    void ChessPieceManager(int cellSize) override;
+    void ChessPieceManager() override;
 };
 
 #endif	// CLASSICGAME_H

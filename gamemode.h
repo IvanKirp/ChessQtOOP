@@ -16,6 +16,7 @@ class GameMode : public QObject {
     Q_OBJECT
    public:
     ChessBoard* newBoard;
+    ChessTranslator* translator = new ChessTranslator();
     int cellSize = newBoard->cellSize;
     int counterOfMoves = 1;
     int indexOfLastButton = 0;
@@ -34,9 +35,9 @@ class GameMode : public QObject {
     QList<QPointF> coordinatesOfWhitePieces;
     QList<QPointF> coordinatesOfBlackPieces;
 
-    virtual void ChessPieceManager(int cellSize) = 0;
+    virtual void ChessPieceManager() = 0;
     void updateCoordinates();
-    void getPossibleMoves(int index);
+    QList<QPointF> getPossibleMoves(int index);
     bool isCheckForWhiteKing();
     bool isCheckForBlackKing();
     bool isCanMove(int i);
@@ -44,7 +45,12 @@ class GameMode : public QObject {
     bool castlingIsPossible(int indexOfKing, QPointF kingMoveTo);
     void pawnConvertion(int indexOfNowButton, QPointF moveTo);
     void taking(int indexOfTakingPiece);
+
     void universalCastling(int indexOfKing, int indexOfRook);
+    /*void enableWhiteShortCastling();
+    void enableWhiteLongCastling();
+    void enableBlackShortCastling();
+    void enableBlackLongCastling();*/
 
     void chessPieceConnection(int i);
     void castlingHandler(int i);

@@ -21,7 +21,7 @@ void GameMode::castlingHandler(int i) {
 }
 void GameMode::whiteMoveHandler(int i) {
     if (counterOfMoves % 2 == 1 && allChessPieces[i]->getColor() == "white") {
-        getPossibleMoves(i);
+        newBoard->drawPossibleMoves(getPossibleMoves(i));
         mouseEventMediator->updateIndex(i);
         indexOfLastButton = i;
         return;
@@ -32,7 +32,7 @@ void GameMode::whiteMoveHandler(int i) {
 }
 void GameMode::blackMoveHandler(int i) {
     if (counterOfMoves % 2 == 0 && allChessPieces[i]->getColor() == "black") {
-        getPossibleMoves(i);
+        newBoard->drawPossibleMoves(getPossibleMoves(i));
         mouseEventMediator->updateIndex(i);
         indexOfLastButton = i;
         return;
@@ -60,15 +60,15 @@ void GameMode::updateCoordinates() {
     }
 }
 
-void GameMode::getPossibleMoves(int index) {
+QList<QPointF> GameMode::getPossibleMoves(int index) {
     newBoard->deletePossibleMoves();
     canBeTakenPieces.clear();
 
+    QList<QPointF> possibleMovesOfThisPiece;
     if (isCanMove(index)) {
-        QList<QPointF> possibleMovesOfThisPiece =
-            allChessPieces[index]->possibleMoves(
-                cellSize, coordinatesOfAllPieces, coordinatesOfWhitePieces,
-                coordinatesOfBlackPieces);
+        possibleMovesOfThisPiece = allChessPieces[index]->possibleMoves(
+            cellSize, coordinatesOfAllPieces, coordinatesOfWhitePieces,
+            coordinatesOfBlackPieces);
         int indexOfColorCoordinates = -1;
         int canBeTakenPieceIndex = -1;
         int canBeTakenPieceColorIndex = -1;
@@ -239,13 +239,8 @@ void GameMode::getPossibleMoves(int index) {
                          possibleMovesOfThisPiece[i]))
                 canBeTakenPieces.append(possibleMovesOfThisPiece[i]);
         }
-
-        newBoard->drawPossibleMoves(possibleMovesOfThisPiece);
-        possibleMovesOfThisPiece.clear();
-        indexForRemove.clear();
     }
-    qDebug() << "nearPawns[i]"
-             << mouseEventMediator->getIndexOfTakingOnPassage();
+    return possibleMovesOfThisPiece;
 }
 
 bool GameMode::isCheckForWhiteKing() {
@@ -328,20 +323,6 @@ void GameMode::move() {
     QPointF moveTo = mouseEventMediator->getCell();
     int indexOfNowButton = mouseEventMediator->getIndex();
 
-    qDebug() << "1";
-    qDebug() << "indexOfTakingOnPassage"
-             << mouseEventMediator->getIndexOfTakingOnPassage();
-
-    qDebug() << "до хода";
-    for (int i = 0; i < allChessPieces.size(); i++) {
-        if (allChessPieces[i]->getName() == "Pawn") {
-            qDebug()
-                << i
-                << dynamic_cast<Pawn*>(allChessPieces[i])->getPassageState();
-        }
-    }
-
-
     if (allChessPieces[indexOfNowButton]->getName() == "Pawn") {
         if ((allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) ||
             (allChessPieces[indexOfNowButton]->isBlack() &&
@@ -350,7 +331,6 @@ void GameMode::move() {
         } else if (std::abs(moveTo.y() -
                             allChessPieces[indexOfNowButton]->position.y()) ==
                    2 * cellSize) {
-            qDebug() << "2";
             dynamic_cast<Pawn*>(allChessPieces[indexOfNowButton])
                 ->setPassageState(true);
         } else if (mouseEventMediator->getIndexOfTakingOnPassage() != -1 &&
@@ -359,7 +339,6 @@ void GameMode::move() {
                            ->position.x() == moveTo.x()) {
             int indexOfTakingOnPassage =
                 mouseEventMediator->getIndexOfTakingOnPassage();
-            qDebug() << "3";
             newBoard->deleteFromChessboard(
                 allChessPieceButtons[indexOfTakingOnPassage]);
             allChessPieces[indexOfTakingOnPassage]->position = QPointF(-1, -1);
@@ -382,18 +361,8 @@ void GameMode::move() {
             ->setCastlingState(false);
 
 
-    qDebug() << indexOfNowButton;
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
-
-    qDebug() << "после хода";
-    for (int i = 0; i < allChessPieces.size(); i++) {
-        if (allChessPieces[i]->getName() == "Pawn") {
-            qDebug()
-                << i
-                << dynamic_cast<Pawn*>(allChessPieces[i])->getPassageState();
-        }
-    }
 }
 
 void GameMode::taking(int indexOfTakingPiece) {

@@ -1,6 +1,13 @@
 #include "chesstranslator.h"
 #include <QDebug>
+#include <QMessageBox>
+#include "bishop.h"
 #include "chesspiece.h"
+#include "king.h"
+#include "knight.h"
+#include "pawn.h"
+#include "queen.h"
+#include "rook.h"
 ChessTranslator::ChessTranslator() {}
 
 QString ChessTranslator::encryption(QList<ChessPiece*> allChessPieces,
@@ -38,9 +45,8 @@ QString ChessTranslator::encryption(QList<ChessPiece*> allChessPieces,
     return result;
 }
 
-QList<QPair<QPointF, QString>> ChessTranslator::decryption(QString code,
-                                                           int cellSize) {
-    QList<QPair<QPointF, QString>> result;
+QList<ChessPiece*> ChessTranslator::decryption(QString code, int cellSize) {
+    QList<ChessPiece*> result;
 
     for (int i = 0; i < code.size(); i++) {
         if (code[i] != "-") {
@@ -48,13 +54,41 @@ QList<QPair<QPointF, QString>> ChessTranslator::decryption(QString code,
             int y = 7 - i / 8;
             QPointF cell = QPointF(x * cellSize, y * cellSize);
 
-            QString piece;
+            QString color;
             if (code[i] == code[i].toLower())
-                piece = QString("w") + QString(code[i]);
+                color = "white";
             else if (code[i] == code[i].toUpper())
-                piece = QString("b") + QString(code[i].toLower());
+                color = "black";
 
-            result.append(qMakePair(cell, piece));
+            ChessPiece* piece;
+            char p = code.toLower().toStdString()[i];
+            qDebug() << p;
+            switch (p) {
+                case 'r':
+                    piece = new Rook(cell, color, false);
+                    result.append(piece);
+                    break;
+                case 'n':
+                    piece = new Knight(cell, color);
+                    result.append(piece);
+                    break;
+                case 'b':
+                    piece = new Bishop(cell, color);
+                    result.append(piece);
+                    break;
+                case 'q':
+                    piece = new Queen(cell, color);
+                    result.append(piece);
+                    break;
+                case 'k':
+                    piece = new King(cell, color, false);
+                    result.append(piece);
+                    break;
+                case 'p':
+                    piece = new Pawn(cell, color, false);
+                    result.append(piece);
+                    break;
+            }
         }
     }
     return result;
