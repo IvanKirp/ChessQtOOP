@@ -42,7 +42,7 @@ void FischerChess::ChessPieceManager() {
 
 QString FischerChess::getStartPosition(int number) {
     number--;
-    if ((number < 1) || (number > 960))
+    if ((number < 0) || (number > 960))
         return "";
 
     QList<QString> all960Positions;

@@ -25,8 +25,7 @@ class GameMode : public QObject {
     QList<QPushButton*> allChessPieceButtons;
     MouseEventMediator* mouseEventMediator = MouseEventMediator::getInstance();
 
-    GameMode(ChessBoard* newBoard, QList<QPushButton*> allChessPieceButtons)
-        : newBoard(newBoard), allChessPieceButtons(allChessPieceButtons) {
+    GameMode(ChessBoard* newBoard) : newBoard(newBoard) {
         mouseEventMediator->setGameMode(this);
         mouseEventMediator->setConnection();
     }

@@ -8,8 +8,7 @@
 
 class ClassicGame : public GameMode {
    public:
-    ClassicGame(ChessBoard* newBoard, QList<QPushButton*> allChessPieceButtons)
-        : GameMode(newBoard, allChessPieceButtons) {}
+    ClassicGame(ChessBoard* newBoard) : GameMode(newBoard) {}
 
     void ChessPieceManager() override;
 };

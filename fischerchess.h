@@ -8,10 +8,8 @@
 
 class FischerChess : public GameMode {
    public:
-    FischerChess(ChessBoard* newBoard, QList<QPushButton*> allChessPieceButtons,
-                 int numberOfPosition)
-        : GameMode(newBoard, allChessPieceButtons),
-          numberOfPosition(numberOfPosition) {}
+    FischerChess(ChessBoard* newBoard, int numberOfPosition)
+        : GameMode(newBoard), numberOfPosition(numberOfPosition) {}
 
     void ChessPieceManager() override;
     QString getStartPosition(int number);

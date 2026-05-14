@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 
 #include <QDebug>
+#include <QInputDialog>
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -65,12 +66,13 @@ void MainWindow::startWindow() {
     exitButton->show();
 
 
-    connect(startButton, &QPushButton::clicked, this, &MainWindow::drawScene);
+    connect(startButton, &QPushButton::clicked, this,
+            &MainWindow::chooseGameMode);
     //connect(readButton, &QPushButton::clicked, this, &MainWindow::getFromFile);
     //connect(exitButton, &QPushButton::clicked, this, &MainWindow::exit);
 }
 
-void MainWindow::drawScene() {
+void MainWindow::chooseGameMode() {
     delete startButton;
     startButton = nullptr;
     delete readButton;
@@ -78,10 +80,49 @@ void MainWindow::drawScene() {
     delete exitButton;
     exitButton = nullptr;
 
+    QPushButton* classicButton = new QPushButton("Классические шахматы", this);
+    allGameModeButtons.append(classicButton);
+    connect(classicButton, &QPushButton::clicked, [this]() {
+        ClassicGame* gamemode = new ClassicGame(newBoard);
+        drawScene(gamemode);
+    });
+
+    QPushButton* fischerButton = new QPushButton("Шахматы Фишера", this);
+    allGameModeButtons.append(fischerButton);
+    connect(fischerButton, &QPushButton::clicked, [this]() {
+        bool ok;
+        int number = QInputDialog::getInt(
+            this, "Позиция", "Введите номер позиции", 1, 1, 960, 1, &ok);
+        if (ok) {
+            FischerChess* gamemode = new FischerChess(newBoard, number);
+            drawScene(gamemode);
+        }
+    });
+
+    for (int i = 0; i < allGameModeButtons.size(); i++) {
+        allGameModeButtons[i]->setGeometry(250, 100 * i + 25, 600, 80);
+        allGameModeButtons[i]->setStyleSheet(
+            "QPushButton {"
+            "background-color: transparent;"
+            "border: 4px solid black;"
+            "font: bold 50px 'Arial';"
+            "color: rgb(255, 0, 0);}"
+            "QPushButton:hover {"
+            "   background-color: green;"
+            "   color: rgb(234, 255, 3);}");
+        allGameModeButtons[i]->show();
+    }
+}
+void MainWindow::drawScene(GameMode* gamemode) {
+    for (int i = 0; i < allGameModeButtons.size(); i++) {
+        delete allGameModeButtons[i];
+        allGameModeButtons[i] = nullptr;
+    }
+    allGameModeButtons.clear();
     setStyleSheet(
         "QMainWindow { border-image: "
         "url(:/images/next_window.png) 0 0 0 0 stretch stretch;}");
-
+    setWindowTitle("Chess");
     notation = new QTableWidget(this);
 
     GameScene* myScene = new GameScene(scene, view, newBoard, notation);
@@ -100,6 +141,6 @@ void MainWindow::drawScene() {
     myScene->drawScene();*/
 
     //ClassicGame* game = new ClassicGame(newBoard, allChessPieceButtons);
-    FischerChess* game = new FischerChess(newBoard, allChessPieceButtons, 480);
-    game->ChessPieceManager();
+    //FischerChess* game = new FischerChess(newBoard, allChessPieceButtons, 480);
+    gamemode->ChessPieceManager();
 }

@@ -35,14 +35,16 @@ class MainWindow : public QMainWindow {
     MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 
-    QList<QPushButton*> allChessPieceButtons;
     QGraphicsScene* scene = new QGraphicsScene(this);
     QGraphicsView* view = new QGraphicsView(scene);
     ChessBoard* newBoard = new ChessBoard(scene, view);
     QTableWidget* notation;
     QPushButton *startButton, *readButton, *exitButton;
+    QList<QPushButton*> allGameModeButtons;
+    QList<GameMode*> allGameModes;
     void startWindow();
-    void drawScene();
+    void chooseGameMode();
+    void drawScene(GameMode* gamemode);
 
    private:
     Ui::MainWindow* ui;
