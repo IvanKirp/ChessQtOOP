@@ -3,6 +3,7 @@
 
 #include "bishop.h"
 #include "chessboard.h"
+#include "chessnotation.h"
 #include "chesspiece.h"
 #include "chesstranslator.h"
 #include "king.h"
@@ -24,6 +25,9 @@ class GameMode : public QObject {
     QList<ChessPiece*> allChessPieces;
     QList<QPushButton*> allChessPieceButtons;
     MouseEventMediator* mouseEventMediator = MouseEventMediator::getInstance();
+    void setChessNotation(ChessNotation* _chessNotation) {
+        chessNotation = _chessNotation;
+    }
 
     GameMode(ChessBoard* newBoard) : newBoard(newBoard) {
         mouseEventMediator->setGameMode(this);
@@ -36,6 +40,7 @@ class GameMode : public QObject {
 
     virtual void ChessPieceManager() = 0;
     void updateCoordinates();
+    void clearAllLists();
     QList<QPointF> getPossibleMoves(int index);
     bool isCheckForWhiteKing();
     bool isCheckForBlackKing();
@@ -60,6 +65,8 @@ class GameMode : public QObject {
     void blackMoveHandler(int i);
     void takingHandler(int i);
 
+   protected:
+    ChessNotation* chessNotation;
    public slots:
     void move();
 };

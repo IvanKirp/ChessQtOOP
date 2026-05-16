@@ -36,7 +36,8 @@ class GameScene : public QGraphicsScene {
     void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
 
    signals:
-    void mousePressed();
+    void mousePressedToMove();
+    void mousePressedToChoose();
 };
 
 #endif	// GAMESCENE_H

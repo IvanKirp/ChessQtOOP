@@ -4,10 +4,14 @@
 
 class GameMode;
 class GameScene;
+class CustomSetupMode;
 class MouseEventMediator {
    public:
     void setGameMode(GameMode* gamemode) { _gamemode = gamemode; }
     void setScene(GameScene* scene) { _scene = scene; }
+    void setCustom(CustomSetupMode* customSetupMode) {
+        _customSetupMode = customSetupMode;
+    }
     void setConnection();
     QPointF getCell() const { return pieceMoveTo; }
     int getIndex() const { return indexOfLastButton; }
@@ -20,6 +24,7 @@ class MouseEventMediator {
    private:
     GameMode* _gamemode = nullptr;
     GameScene* _scene = nullptr;
+    CustomSetupMode* _customSetupMode = nullptr;
     static MouseEventMediator* instance;
     MouseEventMediator();
     QPointF pieceMoveTo = QPointF(-1, -1);

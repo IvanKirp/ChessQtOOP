@@ -23,7 +23,7 @@ void ChessBoard::drawChessboard() {
     }
 }
 
-QPushButton* ChessBoard::addToChessboard(ChessPiece* piece) {
+QPushButton* ChessBoard::addToChessboard(ChessPiece* piece, int cellSize) {
     QString name = piece->getName();
     QString imagePath = ":/images/" + piece->getColor() + name + ".png";
     QPushButton* button = new QPushButton(view);

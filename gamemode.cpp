@@ -60,6 +60,14 @@ void GameMode::updateCoordinates() {
     }
 }
 
+void GameMode::clearAllLists() {
+    coordinatesOfAllPieces.clear();
+    coordinatesOfWhitePieces.clear();
+    coordinatesOfBlackPieces.clear();
+    allChessPieces.clear();
+    allChessPieceButtons.clear();
+}
+
 QList<QPointF> GameMode::getPossibleMoves(int index) {
     newBoard->deletePossibleMoves();
     canBeTakenPieces.clear();

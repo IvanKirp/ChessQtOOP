@@ -13,14 +13,14 @@ class ChessBoard {
     QGraphicsView* view;
     QList<QGraphicsEllipseItem*> circle;
     QList<QPushButton*> pawnChooseButtons;
-    int cellSize = 100;
+    int cellSize;
 
-    ChessBoard(QGraphicsScene* scene, QGraphicsView* view)
-        : scene(scene), view(view) {}
+    ChessBoard(QGraphicsScene* scene, QGraphicsView* view, int cellSize)
+        : scene(scene), view(view), cellSize(cellSize) {}
     void drawChessboard();
     void drawPossibleMoves(QList<QPointF> coordinates);
     void deletePossibleMoves();
-    QPushButton* addToChessboard(ChessPiece* piece);
+    QPushButton* addToChessboard(ChessPiece* piece, int cellSize = 100);
     void deleteFromChessboard(QPushButton* button);
     void addWhitePawnChooseButtons(QPointF moveTo);
     void addBlackPawnChooseButtons(QPointF moveTo);

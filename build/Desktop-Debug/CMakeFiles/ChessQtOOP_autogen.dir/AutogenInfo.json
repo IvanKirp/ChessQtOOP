@@ -100,6 +100,12 @@
 			null
 		],
 		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/chessnotation.h",
+			"MU",
+			"EWIEGA46WW/moc_chessnotation.cpp",
+			null
+		],
+		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/chesspiece.h",
 			"MU",
 			"EWIEGA46WW/moc_chesspiece.cpp",
@@ -115,6 +121,12 @@
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/classicgame.h",
 			"MU",
 			"EWIEGA46WW/moc_classicgame.cpp",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/customsetupmode.h",
+			"MU",
+			"EWIEGA46WW/moc_customsetupmode.cpp",
 			null
 		],
 		[
@@ -240,6 +252,11 @@
 			null
 		],
 		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/chessnotation.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/chesspiece.cpp",
 			"MU",
 			null
@@ -251,6 +268,11 @@
 		],
 		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/classicgame.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/customsetupmode.cpp",
 			"MU",
 			null
 		],

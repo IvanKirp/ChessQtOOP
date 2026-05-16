@@ -40,10 +40,18 @@ void GameScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
                 pieceMoveTo = QPointF(center.x() - cellSize / 2,
                                       center.y() - cellSize / 2);
                 mouseEventMediator->updateCell(pieceMoveTo);
-                mousePressed();
+                mousePressedToMove();
                 break;
             }
         }
         newBoard->deletePossibleMoves();
+    } else {
+        QPointF scene_pos = event->scenePos();
+        QPointF pieceMoveTo;
+        pieceMoveTo = QPointF(
+            scene_pos.x() - int(scene_pos.x()) % int(newBoard->cellSize),
+            scene_pos.y() - int(scene_pos.y()) % int(newBoard->cellSize));
+        mouseEventMediator->updateCell(pieceMoveTo);
+        mousePressedToChoose();
     }
 }

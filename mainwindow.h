@@ -3,8 +3,10 @@
 
 #include "bishop.h"
 #include "chessboard.h"
+#include "chessnotation.h"
 #include "chesspiece.h"
 #include "classicgame.h"
+#include "customsetupmode.h"
 #include "fischerchess.h"
 #include "gamemode.h"
 #include "gamescene.h"
@@ -35,10 +37,12 @@ class MainWindow : public QMainWindow {
     MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 
+    int cellSize = 100;
     QGraphicsScene* scene = new QGraphicsScene(this);
     QGraphicsView* view = new QGraphicsView(scene);
-    ChessBoard* newBoard = new ChessBoard(scene, view);
-    QTableWidget* notation;
+    ChessBoard* newBoard = new ChessBoard(scene, view, cellSize);
+    QTableWidget* notation = new QTableWidget(this);
+    ChessNotation* chessNotation = new ChessNotation(notation);
     QPushButton *startButton, *readButton, *exitButton;
     QList<QPushButton*> allGameModeButtons;
     QList<GameMode*> allGameModes;

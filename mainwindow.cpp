@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget* parent)
     this->QAbstractButton::move(400, 100);
     setFixedSize(1100, 800);
     setWindowTitle("Chess");
+    notation->hide();
     startWindow();
 }
 
@@ -99,6 +100,47 @@ void MainWindow::chooseGameMode() {
         }
     });
 
+    QPushButton* customButton = new QPushButton("Расставить позицию", this);
+    allGameModeButtons.append(customButton);
+    connect(customButton, &QPushButton::clicked, [this]() {
+        QList<QPushButton*> choosePieceButtons;
+        for (int i = 0; i < 12; i++) {
+            choosePieceButtons.append(new QPushButton(this));
+            if (i < 6)
+                choosePieceButtons[i]->setGeometry(
+                    8 * cellSize + 10, i * cellSize, cellSize, cellSize);
+            else if (i >= 6)
+                choosePieceButtons[i]->setGeometry(
+                    9 * cellSize + 10, (11 - i) * cellSize, cellSize, cellSize);
+        }
+
+        QPushButton* deleteButton = new QPushButton("Удалить фигуру", this);
+        choosePieceButtons.append(deleteButton);
+        deleteButton->setGeometry(8 * cellSize + 10, 6 * cellSize, 2 * cellSize,
+                                  cellSize / 2);
+        QPushButton* startButton =
+            new QPushButton("Продолжить с этой позиции", this);
+        choosePieceButtons.append(startButton);
+        startButton->setGeometry(8 * cellSize + 10, 7 * cellSize + cellSize / 2,
+                                 2 * cellSize, cellSize / 2);
+
+        QPushButton* setCastling = new QPushButton(
+            "Разрешить/запретить\nкоролю/ладье рокировку", this);
+        choosePieceButtons.append(setCastling);
+        setCastling->setGeometry(8 * cellSize + 10, 6 * cellSize + cellSize / 2,
+                                 2 * cellSize, cellSize / 2);
+
+        QPushButton* setPassage =
+            new QPushButton("Разрешить/запретить\nвзятие на проходе", this);
+        choosePieceButtons.append(setPassage);
+        setPassage->setGeometry(8 * cellSize + 10, 7 * cellSize, 2 * cellSize,
+                                cellSize / 2);
+
+        CustomSetupMode* gamemode =
+            new CustomSetupMode(newBoard, choosePieceButtons);
+        drawScene(gamemode);
+    });
+
     for (int i = 0; i < allGameModeButtons.size(); i++) {
         allGameModeButtons[i]->setGeometry(250, 100 * i + 25, 600, 80);
         allGameModeButtons[i]->setStyleSheet(
@@ -114,6 +156,8 @@ void MainWindow::chooseGameMode() {
     }
 }
 void MainWindow::drawScene(GameMode* gamemode) {
+    ChessNotation* chessNotation = new ChessNotation(notation);
+    gamemode->setChessNotation(chessNotation);
     for (int i = 0; i < allGameModeButtons.size(); i++) {
         delete allGameModeButtons[i];
         allGameModeButtons[i] = nullptr;
@@ -123,7 +167,6 @@ void MainWindow::drawScene(GameMode* gamemode) {
         "QMainWindow { border-image: "
         "url(:/images/next_window.png) 0 0 0 0 stretch stretch;}");
     setWindowTitle("Chess");
-    notation = new QTableWidget(this);
 
     GameScene* myScene = new GameScene(scene, view, newBoard, notation);
     view->setScene(myScene);
@@ -131,16 +174,5 @@ void MainWindow::drawScene(GameMode* gamemode) {
     setCentralWidget(view);
     myScene->drawScene();
 
-    /*
-    Scene* myScene = new Scene(scene, view, newBoard, notation);
-    view->setScene(myScene);
-
-    newBoard->scene = myScene;
-
-    setCentralWidget(view);
-    myScene->drawScene();*/
-
-    //ClassicGame* game = new ClassicGame(newBoard, allChessPieceButtons);
-    //FischerChess* game = new FischerChess(newBoard, allChessPieceButtons, 480);
     gamemode->ChessPieceManager();
 }
