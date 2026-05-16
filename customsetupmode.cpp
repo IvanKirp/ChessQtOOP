@@ -45,27 +45,41 @@ void CustomSetupMode::ChessPieceManager() {
     });
 
     connect(choosePieceButtons[13], &QPushButton::clicked, [this]() {
+        for (int i = 0; i < choosenPieceButtons.size(); i++) {
+            if (choosenPieceButtons[i]) {
+                allChessPieces.append(choosenPieces[i]);
+                allChessPieceButtons.append(choosenPieceButtons[i]);
+            }
+        }
+        updateCoordinates();
+
         int counterOfWhiteKings = 0;
         int counterOfBlackKings = 0;
         bool badPawn = false;
-        for (int i = 0; i < choosenPieces.size(); i++) {
-            if (choosenPieces[i]->getName() == "King" &&
-                choosenPieces[i]->isWhite())
+
+        qDebug() << allChessPieces.size();
+        for (int i = 0; i < allChessPieces.size(); i++) {
+            if (allChessPieces[i]->getName() == "King" &&
+                allChessPieces[i]->isWhite())
                 counterOfWhiteKings++;
-            else if (choosenPieces[i]->getName() == "King" &&
-                     choosenPieces[i]->isBlack())
+            else if (allChessPieces[i]->getName() == "King" &&
+                     allChessPieces[i]->isBlack())
                 counterOfBlackKings++;
-            if (choosenPieces[i]->getName() == "Pawn" &&
-                (choosenPieces[i]->position.y() == 0 ||
-                 choosenPieces[i]->position.y() == 7 * cellSize))
+            if (allChessPieces[i]->getName() == "Pawn" &&
+                (allChessPieces[i]->position.y() == 0 ||
+                 allChessPieces[i]->position.y() == 7 * cellSize))
                 badPawn = true;
         }
+        qDebug() << counterOfWhiteKings;
+        qDebug() << counterOfBlackKings;
         if (counterOfWhiteKings != 1 || counterOfBlackKings != 1) {
+            clearAllLists();
             QMessageBox::warning(newBoard->view, "Ошибка",
                                  "Неверное количество\nкоролей на доске!");
             return;
         }
         if (badPawn == true) {
+            clearAllLists();
             QMessageBox::warning(newBoard->view, "Ошибка",
                                  "Неверное положение\nпешек на доске!");
             return;
@@ -88,14 +102,6 @@ void CustomSetupMode::ChessPieceManager() {
             else if (startColor == "ход чёрных")
                 counterOfMoves = 2;
         }
-
-        for (int i = 0; i < choosenPieces.size(); i++) {
-            if (choosenPieces[i]) {
-                allChessPieces.append(choosenPieces[i]);
-                allChessPieceButtons.append(choosenPieceButtons[i]);
-            }
-        }
-        updateCoordinates();
 
         if ((isCheckForWhiteKing() && counterOfMoves == 2) ||
             (isCheckForBlackKing() && counterOfMoves == 1)) {
@@ -163,8 +169,7 @@ void CustomSetupMode::addPiece() {
             if (isDeleting == true) {
                 newBoard->deleteFromChessboard(
                     choosenPieceButtons[indexOfButton]);
-                delete choosenPieces[indexOfPiece];
-                choosenPieces[indexOfPiece] = nullptr;
+                choosenPieceButtons[indexOfButton] = nullptr;
                 return;
             }
             if (setCastling == true) {
