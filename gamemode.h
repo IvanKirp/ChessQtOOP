@@ -41,7 +41,7 @@ class GameMode : public QObject {
     virtual void ChessPieceManager() = 0;
     void updateCoordinates();
     void clearAllLists();
-    QList<QPointF> getPossibleMoves(int index);
+    virtual QList<QPointF> getPossibleMoves(int index);
     bool isCheckForWhiteKing();
     bool isCheckForBlackKing();
     bool isCanMove(int i);
@@ -57,7 +57,7 @@ class GameMode : public QObject {
     bool isCheckMateForBlack();
     bool isStaleMateForWhite();
     bool isStaleMateForBlack();
-    void gameOver();
+    virtual void gameOver();
 
     void chessPieceConnection(int i);
     void castlingHandler(int i);

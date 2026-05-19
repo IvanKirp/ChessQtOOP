@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/antichess.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/antichess.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o"

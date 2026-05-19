@@ -1,10 +1,8 @@
 #include "fischerchess.h"
-#include <QDebug>
 
 void FischerChess::ChessPieceManager() {
     QString startPosition = getStartPosition(numberOfPosition);
     allChessPieces = translator->decryption(startPosition);
-    qDebug() << allChessPieces.size();
     for (int i = 0; i < 32; i++) {
         allChessPieceButtons.append(
             newBoard->addToChessboard(allChessPieces[i]));
@@ -29,15 +27,11 @@ void FischerChess::ChessPieceManager() {
     }
 
     updateCoordinates();
-    qDebug() << coordinatesOfAllPieces;
-    qDebug() << isCheckForWhiteKing();
-    qDebug() << isCheckForBlackKing();
+
     for (int i = 0; i < allChessPieceButtons.size(); i++) {
         connect(allChessPieceButtons[i], &QPushButton::clicked,
                 [this, i]() { chessPieceConnection(i); });
     }
-
-    qDebug() << translator->encryption(allChessPieces);
 }
 
 QString FischerChess::getStartPosition(int number) {

@@ -1,5 +1,6 @@
 /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/moc_predefs.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessnotation.h \

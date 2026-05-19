@@ -88,6 +88,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/antichess.h",
+			"MU",
+			"EWIEGA46WW/moc_antichess.cpp",
+			null
+		],
+		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/bishop.h",
 			"MU",
 			"EWIEGA46WW/moc_bishop.cpp",
@@ -241,6 +247,11 @@
 	"SETTINGS_FILE" : "/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/antichess.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/bishop.cpp",
 			"MU",

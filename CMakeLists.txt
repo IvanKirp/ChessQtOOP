@@ -55,6 +55,7 @@ else()
             fischerchess.h fischerchess.cpp
             customsetupmode.h customsetupmode.cpp
             chessnotation.h chessnotation.cpp
+            antichess.h antichess.cpp
         )
     endif()
 endif()

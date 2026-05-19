@@ -16,5 +16,6 @@
         <file>images/whitePawn.png</file>
         <file>images/whiteQueen.png</file>
         <file>images/whiteRook.png</file>
+        <file>images/choose_gamemode.png</file>
     </qresource>
 </RCC>

@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "ChessQtOOP_autogen/timestamp" "custom" "ChessQtOOP_autogen/deps"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp" "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/mocs_compilation.cpp" "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o.d"
+  "/home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.cpp" "CMakeFiles/ChessQtOOP.dir/antichess.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/antichess.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.cpp" "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/bishop.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.cpp" "CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/chessnotation.cpp" "CMakeFiles/ChessQtOOP.dir/chessnotation.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/chessnotation.cpp.o.d"

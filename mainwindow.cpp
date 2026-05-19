@@ -74,6 +74,9 @@ void MainWindow::startWindow() {
 }
 
 void MainWindow::chooseGameMode() {
+    setStyleSheet(
+        "QMainWindow { border-image: "
+        "url(:/images/choose_gamemode.png) 0 0 0 0 stretch stretch;}");
     delete startButton;
     startButton = nullptr;
     delete readButton;
@@ -98,6 +101,13 @@ void MainWindow::chooseGameMode() {
             FischerChess* gamemode = new FischerChess(newBoard, number);
             drawScene(gamemode);
         }
+    });
+
+    QPushButton* antiChessButton = new QPushButton("Поддавки", this);
+    allGameModeButtons.append(antiChessButton);
+    connect(antiChessButton, &QPushButton::clicked, [this]() {
+        AntiChess* gamemode = new AntiChess(newBoard);
+        drawScene(gamemode);
     });
 
     QPushButton* customButton = new QPushButton("Расставить позицию", this);

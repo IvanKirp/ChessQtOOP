@@ -1,6 +1,4 @@
 #include "classicgame.h"
-#include <QDebug>
-#include "mouseeventmediator.h"
 
 void ClassicGame::ChessPieceManager() {
     QString startPosition =
@@ -15,13 +13,8 @@ void ClassicGame::ChessPieceManager() {
     enableCastling(28, 24);
     enableCastling(28, 31);
     updateCoordinates();
-    qDebug() << coordinatesOfAllPieces;
-    qDebug() << isCheckForWhiteKing();
-    qDebug() << isCheckForBlackKing();
     for (int i = 0; i < allChessPieceButtons.size(); i++) {
         connect(allChessPieceButtons[i], &QPushButton::clicked,
                 [this, i]() { chessPieceConnection(i); });
     }
-
-    qDebug() << translator->encryption(allChessPieces);
 }

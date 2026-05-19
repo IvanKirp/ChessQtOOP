@@ -1,5 +1,4 @@
 #include "chesstranslator.h"
-#include <QDebug>
 #include <QMessageBox>
 #include "bishop.h"
 #include "chesspiece.h"
@@ -62,7 +61,6 @@ QList<ChessPiece*> ChessTranslator::decryption(QString code, int cellSize) {
 
             ChessPiece* piece;
             char p = code.toLower().toStdString()[i];
-            qDebug() << p;
             switch (p) {
                 case 'r':
                     piece = new Rook(cell, color, false);

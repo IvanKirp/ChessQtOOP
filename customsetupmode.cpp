@@ -206,19 +206,26 @@ void CustomSetupMode::addPiece() {
             }
             if (setTakingOnPassage == true) {
                 if (dynamic_cast<Pawn*>(choosenPieces[indexOfPiece])) {
-                    dynamic_cast<Pawn*>(choosenPieces[indexOfPiece])
-                        ->setPassageState(
-                            !dynamic_cast<Pawn*>(choosenPieces[indexOfPiece])
-                                 ->getPassageState());
-                    if (dynamic_cast<Pawn*>(choosenPieces[indexOfPiece])
-                            ->getPassageState())
-                        QMessageBox::information(
-                            newBoard->view, "Инфо",
-                            "Взятие данной пешки\nна проходе разрешено");
-                    else
-                        QMessageBox::information(
-                            newBoard->view, "Инфо",
-                            "Взятие данной пешки\nна проходе запрещено");
+                    if ((choosenPieces[indexOfPiece]->isWhite() &&
+                         choosenPieces[indexOfPiece]->position.y() ==
+                             4 * cellSize) ||
+                        (choosenPieces[indexOfPiece]->isBlack() &&
+                         choosenPieces[indexOfPiece]->position.y() ==
+                             3 * cellSize)) {
+                        dynamic_cast<Pawn*>(choosenPieces[indexOfPiece])
+                            ->setPassageState(!dynamic_cast<Pawn*>(
+                                                   choosenPieces[indexOfPiece])
+                                                   ->getPassageState());
+                        if (dynamic_cast<Pawn*>(choosenPieces[indexOfPiece])
+                                ->getPassageState())
+                            QMessageBox::information(
+                                newBoard->view, "Инфо",
+                                "Взятие данной пешки\nна проходе разрешено");
+                        else
+                            QMessageBox::information(
+                                newBoard->view, "Инфо",
+                                "Взятие данной пешки\nна проходе запрещено");
+                    }
                 }
             }
         });

@@ -1,6 +1,5 @@
-CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o: \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.cpp \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
+CMakeFiles/ChessQtOOP.dir/antichess.cpp.o: \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.cpp \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
@@ -384,41 +383,7 @@ CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsSceneMouseEvent \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicssceneevent.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/include/./ui_mainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QInputDialog \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qinputdialog.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h

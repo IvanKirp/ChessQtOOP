@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "antichess.h"
 #include "bishop.h"
 #include "chessboard.h"
 #include "chessnotation.h"

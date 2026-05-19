@@ -354,6 +354,8 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessnotation.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
@@ -375,8 +377,6 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
@@ -384,6 +384,7 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.h \
