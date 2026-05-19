@@ -74,6 +74,12 @@ QList<QPointF> GameMode::getPossibleMoves(int index) {
     canBeTakenPieces.clear();
     newBoard->deletePossibleMoves();
 
+    qDebug() << "counterOfMoves" << counterOfMoves;
+    qDebug() << "allPositions";
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        qDebug() << i << allChessPieces[i]->getName()
+                 << allChessPieces[i]->position;
+    }
     QList<QPointF> possibleMovesOfThisPiece;
     if (isCanMove(index)) {
         possibleMovesOfThisPiece = allChessPieces[index]->possibleMoves(
@@ -247,6 +253,7 @@ QList<QPointF> GameMode::getPossibleMoves(int index) {
                 canBeTakenPieces.append(possibleMovesOfThisPiece[i]);
         }
     }
+    qDebug() << "this possibleMovesOfThisPiece" << possibleMovesOfThisPiece;
     return possibleMovesOfThisPiece;
 }
 
@@ -665,7 +672,8 @@ bool GameMode::isStaleMateForWhite() {
     if (isCheckForWhiteKing())
         return false;
     for (int i = 0; i < allChessPieces.size(); i++) {
-        if (allChessPieces[i]->isWhite() &&
+        if (allChessPieces[i]->position != QPointF(-1, -1) &&
+            allChessPieces[i]->isWhite() &&
             !GameMode::getPossibleMoves(i).isEmpty())
             return false;
     }
@@ -675,7 +683,8 @@ bool GameMode::isStaleMateForBlack() {
     if (isCheckForBlackKing())
         return false;
     for (int i = 0; i < allChessPieces.size(); i++) {
-        if (allChessPieces[i]->isBlack() &&
+        if (allChessPieces[i]->position != QPointF(-1, -1) &&
+            allChessPieces[i]->isBlack() &&
             !GameMode::getPossibleMoves(i).isEmpty())
             return false;
     }
