@@ -1,5 +1,6 @@
 #include "antichess.h"
 #include <QDebug>
+#include <QMessageBox>
 
 void AntiChess::ChessPieceManager() {
     QString startPosition =
@@ -45,5 +46,59 @@ QList<QPointF> AntiChess::getPossibleMoves(int index) {
                 possibleMoves.removeAt(i);
         }
         return possibleMoves;
+    }
+}
+
+bool AntiChess::whiteWin() {
+    int counterOfWhitePieces = 0;
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        if (allChessPieces[i]->position != QPointF(-1, -1) &&
+            allChessPieces[i]->isWhite())
+            counterOfWhitePieces++;
+        if (counterOfWhitePieces > 1)
+            return false;
+    }
+    return true;
+}
+
+bool AntiChess::blackWin() {
+    int counterOfBlackPieces = 0;
+    for (int i = 0; i < allChessPieces.size(); i++) {
+        if (allChessPieces[i]->position != QPointF(-1, -1) &&
+            allChessPieces[i]->isBlack())
+            counterOfBlackPieces++;
+        if (counterOfBlackPieces > 1)
+            return false;
+    }
+    return true;
+}
+
+void AntiChess::gameOver() {
+    if (counterOfMoves % 2 == 1) {
+        if (isCheckMateForWhite()) {
+            QMessageBox::information(newBoard->view, "Победа белых!",
+                                     "Белым объявлен мат!");
+        } else if (isStaleMateForWhite()) {
+            QMessageBox::information(newBoard->view, "Ничья!",
+                                     "Белым поставили пат!");
+        }
+    } else if (counterOfMoves % 2 == 0) {
+        if (isCheckMateForBlack()) {
+            QMessageBox::information(newBoard->view, "Победа чёрных!",
+                                     "Чёрным объявлен мат!");
+        } else if (isStaleMateForBlack()) {
+            QMessageBox::information(newBoard->view, "Ничья!",
+                                     "Чёрным поставили пат!");
+        }
+    }
+
+    if (whiteWin()) {
+        QMessageBox::information(newBoard->view, "Победа белых!",
+                                 "Белые отдали все фигуры!");
+        disableAllButtons();
+    } else if (blackWin()) {
+        QMessageBox::information(newBoard->view, "Победа чёрных!",
+                                 "Чёрные отдали все фигуры!");
+        disableAllButtons();
     }
 }

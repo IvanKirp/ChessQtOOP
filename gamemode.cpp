@@ -710,3 +710,9 @@ void GameMode::gameOver() {
         }
     }
 }
+
+void GameMode::disableAllButtons() {
+    for (int i = 0; i < allChessPieceButtons.size(); i++) {
+        allChessPieceButtons[i]->setEnabled(false);
+    }
+}

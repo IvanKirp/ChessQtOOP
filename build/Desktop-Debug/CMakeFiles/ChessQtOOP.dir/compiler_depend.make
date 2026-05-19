@@ -1277,6 +1277,7 @@ CMakeFiles/ChessQtOOP.dir/antichess.cpp.o: /home/ivan/Документы/453503/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
@@ -1285,10 +1286,12 @@ CMakeFiles/ChessQtOOP.dir/antichess.cpp.o: /home/ivan/Документы/453503/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \

@@ -58,6 +58,7 @@ class GameMode : public QObject {
     bool isStaleMateForWhite();
     bool isStaleMateForBlack();
     virtual void gameOver();
+    void disableAllButtons();
 
     void chessPieceConnection(int i);
     void castlingHandler(int i);
