@@ -110,6 +110,13 @@ void MainWindow::chooseGameMode() {
         drawScene(gamemode);
     });
 
+    QPushButton* threeChecksButton = new QPushButton("Три шаха", this);
+    allGameModeButtons.append(threeChecksButton);
+    connect(threeChecksButton, &QPushButton::clicked, [this]() {
+        ThreeChecks* gamemode = new ThreeChecks(newBoard);
+        drawScene(gamemode);
+    });
+
     QPushButton* customButton = new QPushButton("Расставить позицию", this);
     allGameModeButtons.append(customButton);
     connect(customButton, &QPushButton::clicked, [this]() {

@@ -22,6 +22,7 @@ ChessQtOOP: \
   CMakeFiles/ChessQtOOP.dir/customsetupmode.cpp.o \
   CMakeFiles/ChessQtOOP.dir/chessnotation.cpp.o \
   CMakeFiles/ChessQtOOP.dir/antichess.cpp.o \
+  CMakeFiles/ChessQtOOP.dir/threechecks.cpp.o \
   CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o \
   /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13 \
   /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13 \
@@ -137,6 +138,8 @@ CMakeFiles/ChessQtOOP.dir/customsetupmode.cpp.o:
 CMakeFiles/ChessQtOOP.dir/chessnotation.cpp.o:
 
 CMakeFiles/ChessQtOOP.dir/antichess.cpp.o:
+
+CMakeFiles/ChessQtOOP.dir/threechecks.cpp.o:
 
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o:
 

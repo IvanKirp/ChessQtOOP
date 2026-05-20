@@ -39,7 +39,7 @@ class GameMode : public QObject {
     QList<QPointF> coordinatesOfBlackPieces;
 
     virtual void ChessPieceManager() = 0;
-    void updateCoordinates();
+    virtual void updateCoordinates();
     void clearAllLists();
     virtual QList<QPointF> getPossibleMoves(int index);
     bool isCheckForWhiteKing();

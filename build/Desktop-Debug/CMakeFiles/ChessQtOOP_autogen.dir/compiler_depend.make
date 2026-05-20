@@ -45,6 +45,8 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
   /home/ivan/Документы/453503/ООП/ChessQtOOP/resources.qrc \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.cpp \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.cpp \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.h \
   /snap/cmake/1531/bin/cmake \
   /snap/cmake/1531/share/cmake-4.3/Modules/CMakeCXXInformation.cmake \
   /snap/cmake/1531/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake \
@@ -704,6 +706,8 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h:
+
 /usr/include/c++/13/bits/stl_uninitialized.h:
 
 /usr/include/c++/13/bits/stl_tree.h:
@@ -906,6 +910,12 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
+
+/usr/include/c++/13/backward/binders.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
 /usr/include/c++/13/bits/stl_algobase.h:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h:
@@ -974,12 +984,6 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/c++/13/typeinfo:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
-
-/usr/include/c++/13/backward/binders.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
 /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp:
 
 /snap/cmake/1531/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake:
@@ -1038,6 +1042,14 @@ ChessQtOOP_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h:
+
+/usr/include/c++/13/backward/auto_ptr.h:
+
+/snap/cmake/1531/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/CMakeLists.txt:
+
 /snap/cmake/1531/share/cmake-4.3/Modules/Platform/Linux-GNU-CXX.cmake:
 
 /usr/include/locale.h:
@@ -1072,6 +1084,8 @@ CMakeFiles/4.3.2/CMakeSystem.cmake:
 
 /snap/cmake/1531/bin/cmake:
 
+/home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.h:
+
 /usr/include/c++/13/bits/range_access.h:
 
 /usr/include/c++/13/cstddef:
@@ -1092,19 +1106,9 @@ CMakeFiles/4.3.2/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/c++/13/bits/streambuf.tcc:
-
 /snap/cmake/1531/share/cmake-4.3/Modules/CMakeParseArguments.cmake:
 
 /usr/include/c++/13/ext/alloc_traits.h:
-
-/usr/include/c++/13/bits/refwrap.h:
-
-/usr/include/c++/13/bits/align.h:
-
-/usr/include/c++/13/bits/stream_iterator.h:
-
-/usr/include/c++/13/vector:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h:
 
@@ -1115,6 +1119,12 @@ CMakeFiles/4.3.2/CMakeSystem.cmake:
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/13/numeric:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h:
+
+/snap/cmake/1531/share/cmake-4.3/Modules/Linker/GNU.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h:
 
@@ -1129,8 +1139,6 @@ CMakeFiles/4.3.2/CMakeSystem.cmake:
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h:
 
@@ -1182,19 +1190,17 @@ CMakeFiles/4.3.2/CMakeSystem.cmake:
 
 /usr/include/c++/13/debug/debug.h:
 
-/snap/cmake/1531/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake:
+/usr/include/c++/13/bits/refwrap.h:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/CMakeLists.txt:
+/usr/include/c++/13/bits/align.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h:
+/usr/include/c++/13/bits/stream_iterator.h:
 
-/usr/include/c++/13/backward/auto_ptr.h:
+/usr/include/c++/13/vector:
+
+/usr/include/c++/13/bits/streambuf.tcc:
 
 /usr/include/c++/13/bits/streambuf_iterator.h:
-
-/snap/cmake/1531/share/cmake-4.3/Modules/Linker/GNU.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h:
 
 /usr/include/c++/13/bits/ranges_cmp.h:
 

@@ -16,6 +16,7 @@
 #include "pawn.h"
 #include "queen.h"
 #include "rook.h"
+#include "threechecks.h"
 
 #include <QAbstractButton>
 #include <QGraphicsScene>

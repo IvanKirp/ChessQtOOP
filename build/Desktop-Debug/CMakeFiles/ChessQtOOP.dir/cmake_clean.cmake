@@ -45,6 +45,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChessQtOOP.dir/queen.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/rook.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/rook.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/threechecks.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/threechecks.cpp.o.d"
   "ChessQtOOP"
   "ChessQtOOP.pdb"
   "ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp"

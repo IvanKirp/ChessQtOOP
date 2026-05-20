@@ -56,6 +56,7 @@ else()
             customsetupmode.h customsetupmode.cpp
             chessnotation.h chessnotation.cpp
             antichess.h antichess.cpp
+            threechecks.h threechecks.cpp
         )
     endif()
 endif()

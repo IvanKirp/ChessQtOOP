@@ -30,6 +30,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.cpp" "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp" "CMakeFiles/ChessQtOOP.dir/queen.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/queen.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/rook.cpp" "CMakeFiles/ChessQtOOP.dir/rook.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/rook.cpp.o.d"
+  "/home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.cpp" "CMakeFiles/ChessQtOOP.dir/threechecks.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/threechecks.cpp.o.d"
   "" "ChessQtOOP" "gcc" "CMakeFiles/ChessQtOOP.dir/link.d"
   )
 

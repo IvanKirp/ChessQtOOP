@@ -42,6 +42,8 @@ ChessQtOOP_autogen/timestamp: \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/resources.qrc \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/rook.cpp \
 	/home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
+	/home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.cpp \
+	/home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.h \
 	/snap/cmake/1531/share/cmake-4.3/Modules/CMakeCXXInformation.cmake \
 	/snap/cmake/1531/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake \
 	/snap/cmake/1531/share/cmake-4.3/Modules/CMakeGenericSystem.cmake \

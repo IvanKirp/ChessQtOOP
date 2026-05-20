@@ -194,6 +194,12 @@
 			"MU",
 			"EWIEGA46WW/moc_rook.cpp",
 			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/threechecks.h",
+			"MU",
+			"EWIEGA46WW/moc_threechecks.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -339,6 +345,11 @@
 		],
 		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/rook.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/threechecks.cpp",
 			"MU",
 			null
 		]

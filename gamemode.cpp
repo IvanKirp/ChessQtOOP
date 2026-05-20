@@ -74,12 +74,6 @@ QList<QPointF> GameMode::getPossibleMoves(int index) {
     canBeTakenPieces.clear();
     newBoard->deletePossibleMoves();
 
-    qDebug() << "counterOfMoves" << counterOfMoves;
-    qDebug() << "allPositions";
-    for (int i = 0; i < allChessPieces.size(); i++) {
-        qDebug() << i << allChessPieces[i]->getName()
-                 << allChessPieces[i]->position;
-    }
     QList<QPointF> possibleMovesOfThisPiece;
     if (isCanMove(index)) {
         possibleMovesOfThisPiece = allChessPieces[index]->possibleMoves(
@@ -253,7 +247,6 @@ QList<QPointF> GameMode::getPossibleMoves(int index) {
                 canBeTakenPieces.append(possibleMovesOfThisPiece[i]);
         }
     }
-    qDebug() << "this possibleMovesOfThisPiece" << possibleMovesOfThisPiece;
     return possibleMovesOfThisPiece;
 }
 
