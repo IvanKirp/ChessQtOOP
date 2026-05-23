@@ -47,7 +47,7 @@ class GameMode : public QObject {
     bool isCanMove(int i);
     void clearPawnStates(int indexOfNowButton);
     bool castlingIsPossible(int indexOfKing, QPointF kingMoveTo);
-    void pawnConvertion(int indexOfNowButton, QPointF moveTo);
+    void pawnConversion(int indexOfNowButton, QPointF moveTo);
     void taking(int indexOfTakingPiece);
 
     void universalCastling(int indexOfKing, int indexOfRook);
@@ -59,6 +59,7 @@ class GameMode : public QObject {
     bool isStaleMateForBlack();
     virtual void gameOver();
     void disableAllButtons();
+    void enableAllButtons();
 
     void chessPieceConnection(int i);
     void castlingHandler(int i);

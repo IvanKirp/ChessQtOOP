@@ -26,8 +26,6 @@ void ThreeChecks::updateCountersOfCheck() {
         counterOfChecksToWhite++;
     else if (isCheckForBlackKing())
         counterOfChecksToBlack++;
-    qDebug() << "counterOfChecksToWhite" << counterOfChecksToWhite;
-    qDebug() << "counterOfChecksToBlack" << counterOfChecksToBlack;
 }
 
 void ThreeChecks::updateCoordinates() {

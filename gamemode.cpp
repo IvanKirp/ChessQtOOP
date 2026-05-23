@@ -334,7 +334,8 @@ void GameMode::move() {
         if ((allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) ||
             (allChessPieces[indexOfNowButton]->isBlack() &&
              moveTo.y() == 7 * cellSize)) {
-            pawnConvertion(indexOfNowButton, moveTo);
+            pawnConversion(indexOfNowButton, moveTo);
+            return;
         } else if (std::abs(moveTo.y() -
                             allChessPieces[indexOfNowButton]->position.y()) ==
                    2 * cellSize) {
@@ -392,7 +393,8 @@ void GameMode::taking(int indexOfTakingPiece) {
         if ((allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) ||
             (allChessPieces[indexOfNowButton]->isBlack() &&
              moveTo.y() == 7 * cellSize)) {
-            pawnConvertion(indexOfNowButton, moveTo);
+            pawnConversion(indexOfNowButton, moveTo);
+            return;
         }
     }
 
@@ -501,8 +503,8 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     allChessPieces[indexOfRook]->position = rookMoveTo;
     dynamic_cast<King*>(allChessPieces[indexOfKing])->setCastlingState(false);
     dynamic_cast<Rook*>(allChessPieces[indexOfRook])->setCastlingState(false);
-    updateCoordinates();
 
+    updateCoordinates();
     clearPawnStates(indexOfKing);
     counterOfMoves++;
     gameOver();
@@ -602,7 +604,8 @@ void GameMode::clearPawnStates(int indexOfNowButton) {
         return;
 }
 
-void GameMode::pawnConvertion(int indexOfPawn, QPointF moveTo) {
+void GameMode::pawnConversion(int indexOfPawn, QPointF moveTo) {
+    disableAllButtons();
     QString color;
 
     if (allChessPieces[indexOfPawn]->isWhite()) {
@@ -637,8 +640,12 @@ void GameMode::pawnConvertion(int indexOfPawn, QPointF moveTo) {
                         &QPushButton::clicked, [this, indexOfPawn]() {
                             chessPieceConnection(indexOfPawn);
                         });
-                ;
                 newBoard->deletePawnChooseButtons();
+                enableAllButtons();
+                clearPawnStates(indexOfPawn);
+                updateCoordinates();
+                counterOfMoves++;
+                gameOver();
             });
     }
 }
@@ -707,5 +714,11 @@ void GameMode::gameOver() {
 void GameMode::disableAllButtons() {
     for (int i = 0; i < allChessPieceButtons.size(); i++) {
         allChessPieceButtons[i]->setEnabled(false);
+    }
+}
+
+void GameMode::enableAllButtons() {
+    for (int i = 0; i < allChessPieceButtons.size(); i++) {
+        allChessPieceButtons[i]->setEnabled(true);
     }
 }
