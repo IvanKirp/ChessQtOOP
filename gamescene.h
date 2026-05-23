@@ -15,6 +15,7 @@ class GameScene : public QGraphicsScene {
     Q_OBJECT
 
    public:
+    QWidget* window = nullptr;
     QGraphicsScene* scene;
     QGraphicsView* view;
     ChessBoard* newBoard;
@@ -22,8 +23,18 @@ class GameScene : public QGraphicsScene {
     MouseEventMediator* mouseEventMediator = MouseEventMediator::getInstance();
 
     GameScene(QGraphicsScene* scene, QGraphicsView* view, ChessBoard* newBoard,
-              QTableWidget* notation)
-        : scene(scene), view(view), newBoard(newBoard), notation(notation) {
+              QTableWidget* notation, QWidget* parent)
+        : scene(scene),
+          view(view),
+          newBoard(newBoard),
+          notation(notation),
+          window(parent) {
+        giveUpButton = new QPushButton("сдаться", window);
+        giveUpButton->hide();
+        drawButton = new QPushButton("ничья", window);
+        drawButton->hide();
+        homeButton = new QPushButton("Выйти в главное меню", window);
+        homeButton->hide();
         mouseEventMediator->setScene(this);
         mouseEventMediator->setConnection();
     }
@@ -38,6 +49,10 @@ class GameScene : public QGraphicsScene {
    signals:
     void mousePressedToMove();
     void mousePressedToChoose();
+
+   public slots:
+    void showStopButtons();
+    void hideStopButtons();
 };
 
 #endif	// GAMESCENE_H

@@ -17,5 +17,5 @@ void ClassicGame::ChessPieceManager() {
         connect(allChessPieceButtons[i], &QPushButton::clicked,
                 [this, i]() { chessPieceConnection(i); });
     }
-    moveIsMade();
+    startGame();
 }

@@ -113,11 +113,12 @@ void CustomSetupMode::ChessPieceManager() {
             connect(allChessPieceButtons[i], &QPushButton::clicked,
                     [this, i]() { chessPieceConnection(i); });
         }
-        moveIsMade();
+        startGame();
 
         for (int i = 0; i < choosePieceButtons.size(); i++) {
             choosePieceButtons[i]->hide();
         }
+        chessNotation->notation->show();
     });
 
     connect(choosePieceButtons[14], &QPushButton::clicked, [this]() {

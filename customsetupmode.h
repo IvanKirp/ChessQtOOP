@@ -1,10 +1,9 @@
 #ifndef CUSTOMSETUPMODE_H
 #define CUSTOMSETUPMODE_H
 
-#include "gamemode.h"
-
 #include <QList>
 #include <QPointF>
+#include "gamemode.h"
 
 class CustomSetupMode : public GameMode {
    public:
@@ -12,6 +11,7 @@ class CustomSetupMode : public GameMode {
                     QList<QPushButton*> choosePieceButtons)
         : GameMode(newBoard), choosePieceButtons(choosePieceButtons) {
         mouseEventMediator->setCustom(this);
+        mouseEventMediator->setConnection();
     }
 
     void ChessPieceManager() override;

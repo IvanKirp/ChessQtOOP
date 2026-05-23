@@ -46,6 +46,7 @@ class MainWindow : public QMainWindow {
     ChessBoard* newBoard = new ChessBoard(scene, view, cellSize);
     QTableWidget* notation = new QTableWidget(this);
     ChessNotation* chessNotation = new ChessNotation(notation);
+    GameScene* myScene = new GameScene(scene, view, newBoard, notation, this);
     QPushButton *startButton, *readButton, *exitButton;
     QList<QPushButton*> allGameModeButtons;
     void startWindow();

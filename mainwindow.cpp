@@ -77,12 +77,9 @@ void MainWindow::chooseGameMode() {
     setStyleSheet(
         "QMainWindow { border-image: "
         "url(:/images/choose_gamemode.png) 0 0 0 0 stretch stretch;}");
-    delete startButton;
-    startButton = nullptr;
-    delete readButton;
-    readButton = nullptr;
-    delete exitButton;
-    exitButton = nullptr;
+    startButton->hide();
+    readButton->hide();
+    exitButton->hide();
 
     QPushButton* classicButton = new QPushButton("Классические шахматы", this);
     allGameModeButtons.append(classicButton);
@@ -175,7 +172,7 @@ void MainWindow::chooseGameMode() {
 
 void MainWindow::drawScene(GameMode* gamemode) {
     ColorObserver* colorObserver = new ColorObserver();
-    connect(gamemode, &GameMode::moveIsMade, [this, gamemode, colorObserver] {
+    auto newColor = [this, gamemode, colorObserver]() {
         int number = gamemode->counterOfMoves;
         QList<QPushButton*> buttons = gamemode->allChessPieceButtons;
         QList<QString> colors;
@@ -184,7 +181,17 @@ void MainWindow::drawScene(GameMode* gamemode) {
         }
         bool isGameOver = gamemode->isGameOver;
         colorObserver->setNewColor(buttons, colors, number, isGameOver);
+    };
+    connect(gamemode, &GameMode::moveIsMade, this, newColor);
+    connect(gamemode, &GameMode::startGame, this, newColor);
+
+    connect(gamemode, &GameMode::home, [this, gamemode] {
+        gamemode->clearAllLists();
+        view->hide();
+        notation->hide();
+        startWindow();
     });
+
     ChessNotation* chessNotation = new ChessNotation(notation);
     gamemode->setChessNotation(chessNotation);
     for (int i = 0; i < allGameModeButtons.size(); i++) {
@@ -197,7 +204,6 @@ void MainWindow::drawScene(GameMode* gamemode) {
         "url(:/images/next_window.png) 0 0 0 0 stretch stretch;}");
     setWindowTitle("Chess");
 
-    GameScene* myScene = new GameScene(scene, view, newBoard, notation);
     view->setScene(myScene);
     newBoard->scene = myScene;
     setCentralWidget(view);

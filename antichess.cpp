@@ -19,7 +19,7 @@ void AntiChess::ChessPieceManager() {
         connect(allChessPieceButtons[i], &QPushButton::clicked,
                 [this, i]() { chessPieceConnection(i); });
     }
-    moveIsMade();
+    startGame();
 }
 
 void AntiChess::checkForTaking() {

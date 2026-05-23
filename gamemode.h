@@ -77,6 +77,8 @@ class GameMode : public QObject {
 
    signals:
     void moveIsMade();
+    void startGame();
+    void home();
 };
 
 #endif	// GAMEMODE_H

@@ -11,6 +11,7 @@ void GameScene::drawScene() {
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     newBoard->drawChessboard();
     view->setMouseTracking(true);
+    view->show();
 
     notation->setGeometry(850, 0, 223, 625);
     notation->setRowCount(20);
@@ -24,6 +25,19 @@ void GameScene::drawScene() {
     notation->show();
     notation->setFocusPolicy(Qt::NoFocus);
 }
+
+void GameScene::showStopButtons() {
+    giveUpButton->setGeometry(850, 640, 100, 50);
+    giveUpButton->show();
+
+    drawButton->setGeometry(970, 640, 100, 50);
+    drawButton->show();
+
+    homeButton->setGeometry(850, 740, 220, 50);
+    homeButton->show();
+}
+
+void GameScene::hideStopButtons() {}
 
 void GameScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
     if (scene && !newBoard->circle.isEmpty()) {

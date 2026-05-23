@@ -67,7 +67,11 @@ void GameMode::clearAllLists() {
     coordinatesOfWhitePieces.clear();
     coordinatesOfBlackPieces.clear();
     allChessPieces.clear();
+    for (int i = 0; i < allChessPieceButtons.size(); i++) {
+        allChessPieceButtons[i]->hide();
+    }
     allChessPieceButtons.clear();
+    canBeTakenPieces.clear();
 }
 
 QList<QPointF> GameMode::getPossibleMoves(int index) {
@@ -118,8 +122,6 @@ QList<QPointF> GameMode::getPossibleMoves(int index) {
                 } else
                     nearPawns.removeAt(i);
             }
-            //if (nearPawns.isEmpty())
-            //  mouseEventMediator->updateIndexOfTakingOnPassage(-1);
         }
 
         for (int i = 0; i < possibleMovesOfThisPiece.size(); i++) {
@@ -371,6 +373,7 @@ void GameMode::move() {
 
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
+    qDebug() << "я в муве и увеличился до" << counterOfMoves;
     gameOver();
     moveIsMade();
 }
