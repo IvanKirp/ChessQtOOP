@@ -7,6 +7,7 @@
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \

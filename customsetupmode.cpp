@@ -57,7 +57,6 @@ void CustomSetupMode::ChessPieceManager() {
         int counterOfBlackKings = 0;
         bool badPawn = false;
 
-        qDebug() << allChessPieces.size();
         for (int i = 0; i < allChessPieces.size(); i++) {
             if (allChessPieces[i]->getName() == "King" &&
                 allChessPieces[i]->isWhite())
@@ -70,8 +69,7 @@ void CustomSetupMode::ChessPieceManager() {
                  allChessPieces[i]->position.y() == 7 * cellSize))
                 badPawn = true;
         }
-        qDebug() << counterOfWhiteKings;
-        qDebug() << counterOfBlackKings;
+
         if (counterOfWhiteKings != 1 || counterOfBlackKings != 1) {
             clearAllLists();
             QMessageBox::warning(newBoard->view, "Ошибка",
@@ -115,6 +113,7 @@ void CustomSetupMode::ChessPieceManager() {
             connect(allChessPieceButtons[i], &QPushButton::clicked,
                     [this, i]() { chessPieceConnection(i); });
         }
+        moveIsMade();
 
         for (int i = 0; i < choosePieceButtons.size(); i++) {
             choosePieceButtons[i]->hide();

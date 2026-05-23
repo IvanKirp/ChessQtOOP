@@ -372,6 +372,7 @@ void GameMode::move() {
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
     gameOver();
+    moveIsMade();
 }
 
 void GameMode::taking(int indexOfTakingPiece) {
@@ -415,6 +416,7 @@ void GameMode::taking(int indexOfTakingPiece) {
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
     gameOver();
+    moveIsMade();
 }
 
 void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
@@ -508,6 +510,7 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     clearPawnStates(indexOfKing);
     counterOfMoves++;
     gameOver();
+    moveIsMade();
 }
 
 void GameMode::enableCastling(int indexOfKing, int indexOfRook) {
@@ -646,6 +649,7 @@ void GameMode::pawnConversion(int indexOfPawn, QPointF moveTo) {
                 updateCoordinates();
                 counterOfMoves++;
                 gameOver();
+                moveIsMade();
             });
     }
 }
@@ -696,17 +700,21 @@ void GameMode::gameOver() {
         if (isCheckMateForWhite()) {
             QMessageBox::information(newBoard->view, "Победа чёрных!",
                                      "Белым объявлен мат!");
+            isGameOver = true;
         } else if (isStaleMateForWhite()) {
             QMessageBox::information(newBoard->view, "Ничья!",
                                      "Белым поставили пат!");
+            isGameOver = true;
         }
     } else if (counterOfMoves % 2 == 0) {
         if (isCheckMateForBlack()) {
             QMessageBox::information(newBoard->view, "Победа белых!",
                                      "Чёрным объявлен мат!");
+            isGameOver = true;
         } else if (isStaleMateForBlack()) {
             QMessageBox::information(newBoard->view, "Ничья!",
                                      "Чёрным поставили пат!");
+            isGameOver = true;
         }
     }
 }

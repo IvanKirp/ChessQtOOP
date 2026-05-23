@@ -57,6 +57,7 @@ else()
             chessnotation.h chessnotation.cpp
             antichess.h antichess.cpp
             threechecks.h threechecks.cpp
+            colorobserver.h colorobserver.cpp
         )
     endif()
 endif()

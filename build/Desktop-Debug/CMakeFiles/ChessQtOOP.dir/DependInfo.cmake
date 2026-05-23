@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp" "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/chesspiece.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.cpp" "CMakeFiles/ChessQtOOP.dir/chesstranslator.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/chesstranslator.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.cpp" "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o.d"
+  "/home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.cpp" "CMakeFiles/ChessQtOOP.dir/colorobserver.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/colorobserver.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.cpp" "CMakeFiles/ChessQtOOP.dir/customsetupmode.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/customsetupmode.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.cpp" "CMakeFiles/ChessQtOOP.dir/fischerchess.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/fischerchess.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp" "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o.d"

@@ -172,7 +172,19 @@ void MainWindow::chooseGameMode() {
         allGameModeButtons[i]->show();
     }
 }
+
 void MainWindow::drawScene(GameMode* gamemode) {
+    ColorObserver* colorObserver = new ColorObserver();
+    connect(gamemode, &GameMode::moveIsMade, [this, gamemode, colorObserver] {
+        int number = gamemode->counterOfMoves;
+        QList<QPushButton*> buttons = gamemode->allChessPieceButtons;
+        QList<QString> colors;
+        for (int i = 0; i < buttons.size(); i++) {
+            colors.append(gamemode->allChessPieces[i]->getColor());
+        }
+        bool isGameOver = gamemode->isGameOver;
+        colorObserver->setNewColor(buttons, colors, number, isGameOver);
+    });
     ChessNotation* chessNotation = new ChessNotation(notation);
     gamemode->setChessNotation(chessNotation);
     for (int i = 0; i < allGameModeButtons.size(); i++) {

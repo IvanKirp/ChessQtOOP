@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChessQtOOP.dir/chesstranslator.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/colorobserver.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/colorobserver.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/customsetupmode.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/customsetupmode.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/fischerchess.cpp.o"

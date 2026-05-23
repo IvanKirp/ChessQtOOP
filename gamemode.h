@@ -19,7 +19,8 @@ class GameMode : public QObject {
     ChessBoard* newBoard;
     ChessTranslator* translator = new ChessTranslator();
     int cellSize = newBoard->cellSize;
-    int counterOfMoves = 1;
+    int counterOfMoves;
+    bool isGameOver;
     int indexOfLastButton = 0;
     QList<QPointF> canBeTakenPieces;
     QList<ChessPiece*> allChessPieces;
@@ -32,6 +33,8 @@ class GameMode : public QObject {
     GameMode(ChessBoard* newBoard) : newBoard(newBoard) {
         mouseEventMediator->setGameMode(this);
         mouseEventMediator->setConnection();
+        counterOfMoves = 1;
+        isGameOver = false;
     }
 
     QList<QPointF> coordinatesOfAllPieces;
@@ -71,6 +74,9 @@ class GameMode : public QObject {
     ChessNotation* chessNotation;
    public slots:
     void move();
+
+   signals:
+    void moveIsMade();
 };
 
 #endif	// GAMEMODE_H

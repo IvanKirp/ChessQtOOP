@@ -385,6 +385,7 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.h \

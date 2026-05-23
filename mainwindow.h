@@ -7,6 +7,7 @@
 #include "chessnotation.h"
 #include "chesspiece.h"
 #include "classicgame.h"
+#include "colorobserver.h"
 #include "customsetupmode.h"
 #include "fischerchess.h"
 #include "gamemode.h"
@@ -47,7 +48,6 @@ class MainWindow : public QMainWindow {
     ChessNotation* chessNotation = new ChessNotation(notation);
     QPushButton *startButton, *readButton, *exitButton;
     QList<QPushButton*> allGameModeButtons;
-    QList<GameMode*> allGameModes;
     void startWindow();
     void chooseGameMode();
     void drawScene(GameMode* gamemode);

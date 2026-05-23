@@ -19,6 +19,7 @@ void ThreeChecks::ChessPieceManager() {
         connect(allChessPieceButtons[i], &QPushButton::clicked,
                 [this, i]() { chessPieceConnection(i); });
     }
+    moveIsMade();
 }
 
 void ThreeChecks::updateCountersOfCheck() {
