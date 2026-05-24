@@ -4,7 +4,7 @@
 #include <QMessageBox>
 
 void CustomSetupMode::ChessPieceManager() {
-    chessNotation->notation->hide();
+    chessNotation->hideNotation();
     QList<QString> names = {"Pawn",	 "Knight", "Bishop", "Rook",
                             "Queen", "King",   "King",	 "Queen",
                             "Rook",	 "Bishop", "Knight", "Pawn"};
@@ -119,7 +119,7 @@ void CustomSetupMode::ChessPieceManager() {
             choosePieceButtons[i]->hide();
         }
         choosePieceButtons.clear();
-        chessNotation->notation->show();
+        chessNotation->showNotation();
     });
 
     connect(choosePieceButtons[14], &QPushButton::clicked, [this]() {

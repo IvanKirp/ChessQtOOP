@@ -23,6 +23,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.cpp" "CMakeFiles/ChessQtOOP.dir/fischerchess.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/fischerchess.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp" "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp" "CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o.d"
+  "/home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.cpp" "CMakeFiles/ChessQtOOP.dir/inotation.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/inotation.cpp.o.d"
+  "/home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.cpp" "CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/king.cpp" "CMakeFiles/ChessQtOOP.dir/king.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/king.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/knight.cpp" "CMakeFiles/ChessQtOOP.dir/knight.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/knight.cpp.o.d"
   "/home/ivan/Документы/453503/ООП/ChessQtOOP/main.cpp" "CMakeFiles/ChessQtOOP.dir/main.cpp.o" "gcc" "CMakeFiles/ChessQtOOP.dir/main.cpp.o.d"

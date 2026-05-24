@@ -12,6 +12,8 @@
   /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \

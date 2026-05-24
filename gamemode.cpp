@@ -326,8 +326,10 @@ bool GameMode::isCanMove(int i) {
 }
 
 void GameMode::move() {
+    bool isTakingOnPassage = false;
     QPointF moveTo = mouseEventMediator->getCell();
     int indexOfNowButton = mouseEventMediator->getIndex();
+    QPointF from = allChessPieces[indexOfNowButton]->position;
 
     if (allChessPieces[indexOfNowButton]->getName() == "Pawn") {
         if ((allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) ||
@@ -349,6 +351,7 @@ void GameMode::move() {
             newBoard->deleteFromChessboard(
                 allChessPieceButtons[indexOfTakingOnPassage]);
             allChessPieces[indexOfTakingOnPassage]->position = QPointF(-1, -1);
+            isTakingOnPassage = true;
         }
     }
 
@@ -368,6 +371,9 @@ void GameMode::move() {
             ->setCastlingState(false);
 
 
+    chessNotation->writeMove(from, moveTo,
+                             allChessPieces[indexOfNowButton]->getName(),
+                             isTakingOnPassage);
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
     gameOver();
@@ -382,6 +388,7 @@ void GameMode::taking(int indexOfTakingPiece) {
 
     QPointF moveTo = allChessPieces[indexOfTakingPiece]->position;
     int indexOfNowButton = mouseEventMediator->getIndex();
+    QPointF from = allChessPieces[indexOfNowButton]->position;
 
     if (!isCanMove(indexOfNowButton))
         return;
@@ -393,7 +400,7 @@ void GameMode::taking(int indexOfTakingPiece) {
         if ((allChessPieces[indexOfNowButton]->isWhite() && moveTo.y() == 0) ||
             (allChessPieces[indexOfNowButton]->isBlack() &&
              moveTo.y() == 7 * cellSize)) {
-            pawnConversion(indexOfNowButton, moveTo);
+            pawnConversion(indexOfNowButton, moveTo, true);
             return;
         }
     }
@@ -412,6 +419,8 @@ void GameMode::taking(int indexOfTakingPiece) {
         dynamic_cast<King*>(allChessPieces[indexOfNowButton])
             ->setCastlingState(false);
 
+    chessNotation->writeMove(from, moveTo,
+                             allChessPieces[indexOfNowButton]->getName(), true);
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
     gameOver();
@@ -420,6 +429,7 @@ void GameMode::taking(int indexOfTakingPiece) {
 
 void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     newBoard->deletePossibleMoves();
+    bool isLong = false;
     if (dynamic_cast<King*>(allChessPieces[indexOfKing])->getCastlingState() ==
             false ||
         dynamic_cast<Rook*>(allChessPieces[indexOfRook])->getCastlingState() ==
@@ -487,6 +497,7 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
                     needToBeEmptyCoordinates.append(cell);
             }
         }
+        isLong = true;
     }
 
     for (int i = 0; i < needToBeEmptyCoordinates.size(); i++) {
@@ -506,6 +517,7 @@ void GameMode::universalCastling(int indexOfKing, int indexOfRook) {
     dynamic_cast<Rook*>(allChessPieces[indexOfRook])->setCastlingState(false);
 
     updateCoordinates();
+    chessNotation->writeCastling(isLong);
     clearPawnStates(indexOfKing);
     counterOfMoves++;
     gameOver();
@@ -606,10 +618,10 @@ void GameMode::clearPawnStates(int indexOfNowButton) {
         return;
 }
 
-void GameMode::pawnConversion(int indexOfPawn, QPointF moveTo) {
+void GameMode::pawnConversion(int indexOfPawn, QPointF moveTo, bool isTaking) {
     disableAllButtons();
     QString color;
-
+    QPointF from = allChessPieces[indexOfPawn]->position;
     if (allChessPieces[indexOfPawn]->isWhite()) {
         color = "white";
         newBoard->addWhitePawnChooseButtons(moveTo);
@@ -621,7 +633,7 @@ void GameMode::pawnConversion(int indexOfPawn, QPointF moveTo) {
     for (int i = 0; i < 4; i++) {
         QAbstractButton::connect(
             newBoard->pawnChooseButtons[i], &QPushButton::clicked,
-            [this, i, moveTo, indexOfPawn, color]() {
+            [this, i, moveTo, indexOfPawn, color, from, isTaking]() {
                 ChessPiece* choosenPiece;
                 if (i == 0) {
                     choosenPiece = new Queen(moveTo, color);
@@ -644,8 +656,11 @@ void GameMode::pawnConversion(int indexOfPawn, QPointF moveTo) {
                         });
                 newBoard->deletePawnChooseButtons();
                 enableAllButtons();
-                clearPawnStates(indexOfPawn);
                 updateCoordinates();
+
+                chessNotation->writeMove(from, moveTo, "Pawn", isTaking,
+                                         choosenPiece->getName());
+                clearPawnStates(indexOfPawn);
                 counterOfMoves++;
                 gameOver();
                 moveIsMade();

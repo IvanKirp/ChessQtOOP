@@ -12,6 +12,7 @@
 #include "fischerchess.h"
 #include "gamemode.h"
 #include "gamescene.h"
+#include "internationalnotation.h"
 #include "king.h"
 #include "knight.h"
 #include "pawn.h"
@@ -45,7 +46,7 @@ class MainWindow : public QMainWindow {
     QGraphicsView* view = new QGraphicsView(scene);
     ChessBoard* newBoard = new ChessBoard(scene, view, cellSize);
     QTableWidget* notation = new QTableWidget(this);
-    ChessNotation* chessNotation = new ChessNotation(notation);
+    ChessNotation* chessNotation;
     GameScene* myScene = new GameScene(scene, view, newBoard, notation, this);
     QPushButton *startButton, *readButton, *exitButton;
     QList<QPushButton*> allGameModeButtons;

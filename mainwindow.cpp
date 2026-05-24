@@ -198,7 +198,10 @@ void MainWindow::drawScene(GameMode* gamemode) {
         notation->hide();
         startWindow();
     });
-    ChessNotation* chessNotation = new ChessNotation(notation);
+
+    //выбор языка шахматной нотации
+    InternationalNotation* lang = new InternationalNotation();
+    ChessNotation* chessNotation = new ChessNotation(notation, lang);
     gamemode->setChessNotation(chessNotation);
     for (int i = 0; i < allGameModeButtons.size(); i++) {
         delete allGameModeButtons[i];

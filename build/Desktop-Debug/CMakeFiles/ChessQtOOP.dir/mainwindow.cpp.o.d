@@ -377,6 +377,7 @@ CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
@@ -398,6 +399,7 @@ CMakeFiles/ChessQtOOP.dir/mainwindow.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \

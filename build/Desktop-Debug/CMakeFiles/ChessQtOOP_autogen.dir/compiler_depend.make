@@ -30,6 +30,10 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.cpp \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.cpp \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.cpp \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.cpp \
@@ -50,89 +54,27 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
   /home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.cpp \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.h \
   /snap/cmake/1544/bin/cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp \
   /snap/cmake/1544/share/cmake-4.3/Modules/CMakeCXXInformation.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/CMakeGenericSystem.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseArguments.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeSystem.cmake.in \
   /snap/cmake/1544/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-CXX.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-FindBinUtils.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/GNU.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/GNUInstallDirs.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Internal/CMakeInspectCXXLinker.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Linker/GNU-CXX.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Linker/GNU.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/Linux-GNU-CXX.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/Linux-GNU.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-Clang-CXX.cmake \
-  /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-Determine-CXX.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-GNU-CXX.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-GNU.cmake \
   /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-Initialize.cmake \
@@ -634,15 +576,17 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/lib/llvm-18/lib/clang/18/include/__stdarg___gnuc_va_list.h:
 
+/usr/include/x86_64-linux-gnu/sys/syscall.h:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h:
 
 /usr/lib/llvm-18/lib/clang/18/include/__stdarg___va_copy.h:
 
@@ -682,6 +626,8 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h:
@@ -706,6 +652,10 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h:
@@ -724,6 +674,8 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h:
@@ -737,6 +689,8 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h:
 
@@ -758,6 +712,10 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h:
@@ -766,251 +724,113 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h:
+/usr/include/c++/13/bits/stl_numeric.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h:
+/usr/include/c++/13/bits/functexcept.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h:
+/usr/include/c++/13/bits/stl_multimap.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h:
+/usr/include/c++/13/bits/stl_bvector.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h:
+/usr/include/c++/13/bits/std_mutex.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QString:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QList:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/lib/llvm-18/lib/clang/18/include/stdarg.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/13/ostream:
-
-/usr/include/c++/13/bits/charconv.h:
-
-/usr/include/c++/13/bits/concept_check.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake:
+/usr/include/c++/13/bits/stl_function.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene:
 
 /usr/include/c++/13/bits/shared_ptr_atomic.h:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.cpp:
+/usr/include/c++/13/bits/concept_check.h:
 
-/usr/include/c++/13/bits/atomic_lockfree_defines.h:
+/usr/include/c++/13/bits/requires_hosted.h:
 
-/usr/include/c++/13/bits/atomic_base.h:
+/usr/include/c++/13/bits/functional_hash.h:
 
-/usr/include/stdc-predef.h:
+/usr/include/c++/13/bits/exception_defines.h:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
+/usr/include/features-time64.h:
 
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+/usr/include/assert.h:
+
+/usr/include/c++/13/cwctype:
+
+/usr/include/c++/13/bits/ostream_insert.h:
+
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF:
+
+/usr/include/c++/13/bits/move_only_function.h:
+
+/usr/include/c++/13/bits/max_size_type.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem:
+
+/usr/include/c++/13/bits/locale_classes.tcc:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/resources.qrc:
+
+/usr/include/c++/13/iterator:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h:
+
+/usr/include/c++/13/bits/list.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
 /usr/include/c++/13/bits/allocator.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h:
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h:
 
-/usr/include/c++/13/bits/iterator_concepts.h:
+/usr/include/c++/13/bits/ios_base.h:
 
-/usr/include/c++/13/functional:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/include/asm-generic/errno.h:
+/usr/include/c++/13/bits/locale_facets.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake:
+/usr/include/c++/13/bits/exception_ptr.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/UnixPaths.cmake:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/include/c++/13/bits/utility.h:
+/usr/include/c++/13/bits/memory_resource.h:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-Initialize.cmake:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-Determine-CXX.cmake:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.cpp:
 
-/usr/include/c++/13/bits/stl_tree.h:
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/Linux-GNU-CXX.cmake:
+/usr/include/c++/13/ostream:
 
-/usr/include/c++/13/pstl/execution_defs.h:
+/usr/include/c++/13/bits/locale_classes.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Linker/GNU.cmake:
+/usr/include/c++/13/bits/cxxabi_forced.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Internal/CMakeInspectCXXLinker.cmake:
+/usr/include/c++/13/bits/charconv.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-GNU.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake:
-
-/usr/include/c++/13/debug/debug.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/GNUInstallDirs.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp:
-
-/usr/include/c++/13/optional:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake:
-
-/usr/include/c++/13/ext/alloc_traits.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseArguments.cmake:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
-
-/usr/include/c++/13/bits/algorithmfwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
-
-/usr/include/c++/13/bits/atomic_wait.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/GNU.cmake:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/CMakeLists.txt:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/c++/13/bits/basic_string.tcc:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake:
-
-/usr/include/strings.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QString:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake:
 
@@ -1018,51 +838,53 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/c++/13/bits/mofunc_impl.h:
 
-/usr/include/c++/13/bits/vector.tcc:
+/usr/include/c++/13/bits/memoryfwd.h:
 
-/usr/include/c++/13/cstdint:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.cpp:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.cpp:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.cpp:
+/usr/include/c++/13/bits/atomic_wait.h:
 
-/usr/lib/llvm-18/lib/clang/18/include/__stddef_offsetof.h:
+/usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h:
+/usr/include/c++/13/bits/atomic_base.h:
 
-/usr/include/c++/13/algorithm:
+/usr/include/stdc-predef.h:
 
-/usr/include/x86_64-linux-gnu/bits/syscall.h:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/c++/13/bits/enable_special_members.h:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang.cmake:
+/usr/include/c++/13/bits/localefwd.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h:
 
 /usr/include/c++/13/bits/string_view.tcc:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
+/usr/include/c++/13/bits/ptr_traits.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-FindBinUtils.cmake:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
+/usr/include/c++/13/backward/binders.h:
 
-/usr/include/c++/13/limits:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
-/usr/include/x86_64-linux-gnu/sys/syscall.h:
+/usr/include/asm-generic/errno.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake:
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/Platform/UnixPaths.cmake:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
+/usr/include/c++/13/bits/utility.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h:
+
+/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h:
 
@@ -1072,51 +894,57 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.cpp:
 
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
 /home/ivan/Документы/453503/ООП/ChessQtOOP/king.cpp:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake:
+/usr/include/c++/13/functional:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux.cmake:
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
 
-/usr/include/c++/13/bits/ranges_uninitialized.h:
+/usr/include/c++/13/bits/basic_ios.tcc:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp:
+
+/usr/include/c++/13/stdexcept:
+
+/usr/include/c++/13/cstdlib:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h:
+
+/usr/include/c++/13/array:
+
+/snap/cmake/1544/share/cmake-4.3/Modules/CMakeGenericSystem.cmake:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.h:
+
+/usr/include/c++/13/bits/stl_construct.h:
+
+/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/GNU.cmake:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp:
 
-/usr/include/c++/13/bits/localefwd.h:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/resources.qrc:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/c++/13/clocale:
-
-/usr/include/c++/13/iterator:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeSystem.cmake.in:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-Clang-CXX.cmake:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/main.cpp:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake:
+/usr/include/c++/13/bits/node_handle.h:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.cpp:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake:
+
+/usr/include/c++/13/bits/stl_iterator.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /snap/cmake/1544/share/cmake-4.3/Modules/Linker/GNU-CXX.cmake:
 
@@ -1128,41 +956,33 @@ ChessQtOOP_autogen/timestamp: /home/ivan/Документы/453503/ООП/ChessQ
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.cpp:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h:
-
-/usr/include/c++/13/bits/basic_ios.tcc:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake:
-
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake:
 
 /usr/include/c++/13/bits/alloc_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
 /snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-GNU-CXX.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 CMakeFiles/4.3.3/CMakeCXXCompiler.cmake:
 
 /usr/include/wctype.h:
 
+/usr/include/c++/13/bits/iterator_concepts.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h:
+
+/usr/lib/llvm-18/lib/clang/18/include/__stddef_offsetof.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h:
+
 /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h:
+/usr/include/pthread.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeGenericSystem.cmake:
-
-/usr/include/c++/13/array:
-
-/usr/include/c++/13/bits/move_only_function.h:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.cpp:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
@@ -1172,17 +992,17 @@ CMakeFiles/4.3.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/backward/auto_ptr.h:
 
+/home/ivan/Документы/453503/ООП/ChessQtOOP/CMakeLists.txt:
+
 ChessQtOOP_autogen/moc_predefs.h:
 
 /usr/include/c++/13/ext/atomicity.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h:
+
+/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-GNU.cmake:
+
 /usr/include/locale.h:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.cpp:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h:
 
@@ -1190,31 +1010,41 @@ ChessQtOOP_autogen/moc_predefs.h:
 
 /usr/include/c++/13/unordered_map:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h:
+/usr/include/c++/13/pstl/glue_numeric_defs.h:
 
-/usr/include/c++/13/bits/allocated_ptr.h:
+/usr/include/c++/13/bits/std_abs.h:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.cpp:
+/usr/include/c++/13/bits/char_traits.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
+/usr/include/c++/13/bits/move.h:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.cpp:
+/usr/include/c++/13/bits/postypes.h:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.ui:
+/snap/cmake/1544/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake:
+
+/usr/include/c++/13/bits/ranges_util.h:
+
+/usr/include/c++/13/bits/c++0x_warning.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h:
+
+/snap/cmake/1544/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h:
+
+/usr/include/c++/13/debug/assertions.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h:
 
 CMakeFiles/4.3.3/CMakeSystem.cmake:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake:
-
-/usr/include/c++/13/bits/memory_resource.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
-
 /usr/include/c++/13/bits/erase_if.h:
+
+/usr/include/c++/13/bits/locale_facets.tcc:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h:
 
@@ -1224,61 +1054,65 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /snap/cmake/1544/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.cpp:
-
-/usr/include/c++/13/bits/cxxabi_forced.h:
-
-/usr/include/c++/13/bits/locale_classes.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.h:
-
-/usr/include/c++/13/bits/ptr_traits.h:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.cpp:
-
-/usr/include/pthread.h:
-
 /home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
+/usr/include/c++/13/bits/range_access.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
-
-/usr/include/c++/13/bits/node_handle.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
+/usr/include/c++/13/cstddef:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/chessnotation.h:
 
+/usr/include/c++/13/bits/basic_string.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
 /usr/include/c++/13/bits/basic_ios.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.cpp:
+
+/usr/include/c++/13/bits/allocated_ptr.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/main.cpp:
+
+/usr/include/c++/13/ext/string_conversions.h:
+
+/usr/include/c++/13/bits/stl_heap.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/c++/13/bits/stl_algobase.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h:
+
+/usr/include/c++/13/bits/stl_tempbuf.h:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-CXX.cmake:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/knight.cpp:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/asm-generic/errno-base.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/Linker/GNU.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:
 
 /usr/include/c++/13/list:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake:
+/snap/cmake/1544/bin/cmake:
 
-/usr/include/c++/13/bits/uniform_int_dist.h:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.cpp:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/queen.cpp:
+
+/usr/include/c++/13/optional:
+
+/usr/include/c++/13/bits/stl_map.h:
+
+/usr/include/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -1288,221 +1122,91 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/sched.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake:
-
-/usr/include/c++/13/bits/stl_list.h:
-
-/snap/cmake/1544/bin/cmake:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/c++/13/bits/ostream.tcc:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h:
-
-/usr/include/c++/13/bits/std_mutex.h:
-
-/usr/include/c++/13/bits/stl_function.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
-
-/usr/include/c++/13/backward/binders.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:
-
-/usr/include/c++/13/concepts:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.cpp:
 
 /snap/cmake/1544/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/Linux-GNU.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake:
-
 /snap/cmake/1544/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton:
-
-/usr/include/assert.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/usr/include/c++/13/cwctype:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem:
-
-/usr/include/c++/13/bits/locale_classes.tcc:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake:
-
-/usr/include/c++/13/bits/stl_algobase.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:
-
-/usr/include/c++/13/bits/functexcept.h:
-
-/usr/include/c++/13/bits/stl_numeric.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp:
-
-/usr/include/c++/13/numbers:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake:
-
-/usr/include/c++/13/bits/max_size_type.h:
-
-/usr/include/c++/13/bits/exception_defines.h:
-
-/usr/include/c++/13/bits/functional_hash.h:
-
-/usr/include/c++/13/bits/exception_ptr.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h:
-
-/usr/include/c++/13/bits/ios_base.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake:
-
-/usr/include/c++/13/bits/list.tcc:
-
-/usr/include/c++/13/bits/locale_facets.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/c++/13/bits/locale_facets.tcc:
-
-/usr/include/c++/13/bits/memoryfwd.h:
-
-/usr/include/c++/13/bits/char_traits.h:
-
-/usr/include/c++/13/bits/move.h:
-
-/usr/include/c++/13/bits/new_allocator.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake:
-
-/usr/include/c++/13/cstdlib:
-
-/usr/include/c++/13/stdexcept:
-
-/usr/include/c++/13/bits/ostream_insert.h:
-
-/usr/include/c++/13/bits/range_access.h:
-
-/usr/include/c++/13/cstddef:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake:
 
 /usr/include/c++/13/bits/ranges_algobase.h:
 
-/usr/include/features-time64.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
 
-/usr/include/c++/13/bits/c++0x_warning.h:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/knight.cpp:
 
-/usr/include/c++/13/bits/ranges_util.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang-CXX.cmake:
 
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-Clang-CXX.cmake:
 
-/usr/include/c++/13/bits/requires_hosted.h:
+/usr/include/c++/13/ext/alloc_traits.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in:
-
-/usr/include/c++/13/bits/shared_ptr.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h:
-
-/usr/include/c++/13/debug/assertions.h:
-
-/usr/include/c++/13/bits/ranges_algo.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/CMakeParseArguments.cmake:
 
 /usr/include/c++/13/bits/shared_ptr_base.h:
 
-/usr/include/c++/13/pstl/glue_numeric_defs.h:
+/usr/include/c++/13/bits/ranges_algo.h:
 
-/usr/include/c++/13/bits/std_abs.h:
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
 
-/usr/include/c++/13/bits/std_function.h:
+/usr/include/c++/13/bits/enable_special_members.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton:
 
-/usr/include/c++/13/bits/stl_algo.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Clang.cmake:
 
-/usr/include/c++/13/bits/stl_tempbuf.h:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.cpp:
 
-/usr/include/c++/13/bits/stl_bvector.h:
+/home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.ui:
 
-/usr/include/c++/13/bits/stl_construct.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
 
-/usr/include/c++/13/ext/string_conversions.h:
+/usr/include/x86_64-linux-gnu/bits/syscall.h:
 
-/usr/include/c++/13/bits/stl_heap.h:
+/usr/include/c++/13/algorithm:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake:
+/usr/include/c++/13/debug/debug.h:
 
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
-
-/usr/include/c++/13/bits/stl_iterator.h:
-
-/usr/include/wchar.h:
-
-/usr/include/c++/13/bits/stl_map.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h:
-
-/usr/include/c++/13/bits/stl_multimap.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/GNUInstallDirs.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h:
 
+/usr/include/c++/13/bits/stl_pair.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
-/usr/include/c++/13/bits/stl_pair.h:
+/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/Linux-GNU-CXX.cmake:
+
+/usr/include/c++/13/pstl/execution_defs.h:
+
+/usr/include/c++/13/bits/stl_list.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linker/Linux-GNU.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.cpp:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake:
+
+/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux-Initialize.cmake:
+
+/usr/include/c++/13/bits/stl_algo.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/c++/13/bits/ranges_uninitialized.h:
+
+/snap/cmake/1544/share/cmake-4.3/Modules/Platform/Linux.cmake:
 
 /home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.cpp:
 
@@ -1512,19 +1216,19 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/bits/stl_relops.h:
 
+/usr/include/c++/13/bits/stl_tree.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
+
 /usr/include/c++/13/bits/stl_uninitialized.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h:
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/string.h:
-
-/usr/include/c++/13/bits/stl_vector.h:
-
-/usr/include/c++/13/bits/align.h:
+/usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/13/bits/refwrap.h:
+
+/usr/include/c++/13/bits/align.h:
 
 /usr/include/c++/13/bits/stream_iterator.h:
 
@@ -1538,6 +1242,8 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/bits/stringfwd.h:
 
+/usr/include/c++/13/bits/uniform_int_dist.h:
+
 /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h:
 
 /usr/include/c++/13/bits/unique_ptr.h:
@@ -1546,13 +1252,9 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/bits/uses_allocator.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+/usr/include/c++/13/bits/vector.tcc:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.cpp:
-
-/usr/include/c++/13/bits/uses_allocator_args.h:
-
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake:
+/usr/include/c++/13/cstdint:
 
 /usr/include/c++/13/cctype:
 
@@ -1564,21 +1266,29 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
+/usr/include/c++/13/concepts:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
 /usr/include/c++/13/cwchar:
 
 /usr/include/c++/13/ext/concurrence.h:
 
-/home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h:
-
 /usr/include/c++/13/bits/hash_bytes.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h:
 
 /usr/include/stdio.h:
 
 /usr/include/c++/13/climits:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake:
-
 /usr/include/c++/13/ext/numeric_traits.h:
+
+/usr/include/c++/13/bits/shared_ptr.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h:
 
 /usr/include/c++/13/exception:
 
@@ -1595,6 +1305,8 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h:
 
 /usr/include/c++/13/iosfwd:
+
+/usr/include/c++/13/limits:
 
 /usr/include/c++/13/map:
 
@@ -1614,6 +1326,8 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/pstl/glue_memory_defs.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug:
 
 /usr/include/c++/13/stdlib.h:
@@ -1626,23 +1340,19 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/string:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake:
-
 /usr/include/c++/13/string_view:
 
-/usr/include/c++/13/bits/predefined_ops.h:
+/usr/include/c++/13/clocale:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/c++/13/bits/exception.h:
+
+/usr/include/c++/13/bits/predefined_ops.h:
 
 /usr/include/c++/13/type_traits:
 
 /usr/include/c++/13/typeinfo:
-
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
-
-/usr/include/c++/13/bits/invoke.h:
-
-/usr/include/c++/13/utility:
 
 /usr/include/c++/13/bits/nested_exception.h:
 
@@ -1652,9 +1362,15 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/features.h:
 
-/snap/cmake/1544/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:
-
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QList:
+
+/usr/include/strings.h:
 
 /usr/include/syscall.h:
 
@@ -1680,6 +1396,8 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -1688,11 +1406,27 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
+/home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.cpp:
+
+/usr/include/c++/13/numbers:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h:
+
+/usr/include/string.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/c++/13/compare:
 
@@ -1703,3 +1437,95 @@ CMakeFiles/4.3.3/CMakeSystem.cmake:
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/lib/llvm-18/lib/clang/18/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/c++/13/bits/ostream.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/c++/13/bits/invoke.h:
+
+/usr/include/c++/13/utility:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
+
+/usr/include/c++/13/bits/algorithmfwd.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+
+/home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.cpp:
+
+/usr/include/c++/13/bits/uses_allocator_args.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h:
+
+/usr/include/c++/13/bits/std_function.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h:

@@ -58,6 +58,8 @@ else()
             antichess.h antichess.cpp
             threechecks.h threechecks.cpp
             colorobserver.h colorobserver.cpp
+            inotation.h inotation.cpp
+            internationalnotation.h internationalnotation.cpp
         )
     endif()
 endif()
