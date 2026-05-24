@@ -49,6 +49,7 @@ class MainWindow : public QMainWindow {
     GameScene* myScene = new GameScene(scene, view, newBoard, notation, this);
     QPushButton *startButton, *readButton, *exitButton;
     QList<QPushButton*> allGameModeButtons;
+    QList<QPushButton*> choosePieceButtons;
     void startWindow();
     void chooseGameMode();
     void drawScene(GameMode* gamemode);

@@ -70,13 +70,14 @@ void MainWindow::startWindow() {
     connect(startButton, &QPushButton::clicked, this,
             &MainWindow::chooseGameMode);
     //connect(readButton, &QPushButton::clicked, this, &MainWindow::getFromFile);
-    //connect(exitButton, &QPushButton::clicked, this, &MainWindow::exit);
+    connect(exitButton, &QPushButton::clicked, [this] { this->close(); });
 }
 
 void MainWindow::chooseGameMode() {
     setStyleSheet(
         "QMainWindow { border-image: "
         "url(:/images/choose_gamemode.png) 0 0 0 0 stretch stretch;}");
+
     startButton->hide();
     readButton->hide();
     exitButton->hide();
@@ -117,7 +118,7 @@ void MainWindow::chooseGameMode() {
     QPushButton* customButton = new QPushButton("Расставить позицию", this);
     allGameModeButtons.append(customButton);
     connect(customButton, &QPushButton::clicked, [this]() {
-        QList<QPushButton*> choosePieceButtons;
+        //QList<QPushButton*> choosePieceButtons;
         for (int i = 0; i < 12; i++) {
             choosePieceButtons.append(new QPushButton(this));
             if (i < 6)
@@ -153,6 +154,7 @@ void MainWindow::chooseGameMode() {
         CustomSetupMode* gamemode =
             new CustomSetupMode(newBoard, choosePieceButtons);
         drawScene(gamemode);
+        choosePieceButtons.clear();
     });
 
     for (int i = 0; i < allGameModeButtons.size(); i++) {
@@ -186,12 +188,16 @@ void MainWindow::drawScene(GameMode* gamemode) {
     connect(gamemode, &GameMode::startGame, this, newColor);
 
     connect(gamemode, &GameMode::home, [this, gamemode] {
+        for (int i = 0; i < gamemode->allChessPieceButtons.size(); i++) {
+            newBoard->deleteFromChessboard(gamemode->allChessPieceButtons[i]);
+        }
         gamemode->clearAllLists();
+        MouseEventMediator::getInstance()->clearGamemode();
+        gamemode->deleteLater();
         view->hide();
         notation->hide();
         startWindow();
     });
-
     ChessNotation* chessNotation = new ChessNotation(notation);
     gamemode->setChessNotation(chessNotation);
     for (int i = 0; i < allGameModeButtons.size(); i++) {

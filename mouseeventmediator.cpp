@@ -28,12 +28,15 @@ void MouseEventMediator::setConnection() {
     QObject::disconnect(_scene, nullptr, nullptr, nullptr);
     QObject::disconnect(_gamemode, nullptr, nullptr, nullptr);
     QObject::disconnect(_customSetupMode, nullptr, nullptr, nullptr);
+    QObject::disconnect(_scene->homeButton, nullptr, nullptr, nullptr);
 
     if (_gamemode != nullptr && _scene != nullptr) {
         QObject::connect(_scene, &GameScene::mousePressedToMove, _gamemode,
                          &GameMode::move);
         QObject::connect(_gamemode, &GameMode::startGame, _scene,
                          &GameScene::showStopButtons);
+        QObject::connect(_gamemode, &GameMode::home, _scene,
+                         &GameScene::hideStopButtons);
         if (_scene->homeButton) {
             QObject::connect(_scene->homeButton, &QPushButton::clicked,
                              _gamemode, [this] { emit _gamemode->home(); });

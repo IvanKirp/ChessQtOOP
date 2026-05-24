@@ -37,7 +37,11 @@ void GameScene::showStopButtons() {
     homeButton->show();
 }
 
-void GameScene::hideStopButtons() {}
+void GameScene::hideStopButtons() {
+    giveUpButton->hide();
+    drawButton->hide();
+    homeButton->hide();
+}
 
 void GameScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
     if (scene && !newBoard->circle.isEmpty()) {

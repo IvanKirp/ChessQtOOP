@@ -20,6 +20,10 @@ class MouseEventMediator {
     void updateCell(QPointF coordinates);
     void updateIndex(int i);
     void updateIndexOfTakingOnPassage(int i);
+    void clearGamemode() {
+        _gamemode = nullptr;
+        _customSetupMode = nullptr;
+    }
 
    private:
     GameMode* _gamemode = nullptr;

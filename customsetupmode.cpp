@@ -118,6 +118,7 @@ void CustomSetupMode::ChessPieceManager() {
         for (int i = 0; i < choosePieceButtons.size(); i++) {
             choosePieceButtons[i]->hide();
         }
+        choosePieceButtons.clear();
         chessNotation->notation->show();
     });
 

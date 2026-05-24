@@ -1,11 +1,10 @@
 #include "colorobserver.h"
-#include <QDebug>
+
 ColorObserver::ColorObserver() {}
 
 void ColorObserver::setNewColor(QList<QPushButton*> buttons,
                                 QList<QString> colors, int counterOfMoves,
                                 bool isGameOver) {
-    qDebug() << "counterOfMoves" << counterOfMoves;
     if (buttons.size() != colors.size())
         return;
     if (isGameOver) {
