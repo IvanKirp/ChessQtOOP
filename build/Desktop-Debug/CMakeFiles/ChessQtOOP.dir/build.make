@@ -439,10 +439,38 @@ CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.s"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.cpp -o CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.s
 
+CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
+CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.cpp
+CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o -MF CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.cpp
+
+CMakeFiles/ChessQtOOP.dir/datastorage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/datastorage.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.cpp > CMakeFiles/ChessQtOOP.dir/datastorage.cpp.i
+
+CMakeFiles/ChessQtOOP.dir/datastorage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/datastorage.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.cpp -o CMakeFiles/ChessQtOOP.dir/datastorage.cpp.s
+
+CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
+CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o: /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.cpp
+CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o -MF CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.cpp
+
+CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.cpp > CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.i
+
+CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.cpp -o CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.s
+
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/ChessQtOOP.dir/flags.make
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o -MF CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o.d -o CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o -c /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp
 
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
@@ -479,6 +507,8 @@ ChessQtOOP_OBJECTS = \
 "CMakeFiles/ChessQtOOP.dir/colorobserver.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/inotation.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.o" \
+"CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o" \
+"CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o" \
 "CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 
 # External object files for target ChessQtOOP
@@ -508,6 +538,8 @@ ChessQtOOP: CMakeFiles/ChessQtOOP.dir/threechecks.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/colorobserver.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/inotation.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.o
+ChessQtOOP: CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o
+ChessQtOOP: CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/build.make
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/compiler_depend.ts
@@ -515,7 +547,7 @@ ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 ChessQtOOP: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 ChessQtOOP: CMakeFiles/ChessQtOOP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable ChessQtOOP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable ChessQtOOP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChessQtOOP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

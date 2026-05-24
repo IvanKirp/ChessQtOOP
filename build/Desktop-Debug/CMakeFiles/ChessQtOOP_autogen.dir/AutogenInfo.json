@@ -142,6 +142,18 @@
 			null
 		],
 		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/datastorage.h",
+			"MU",
+			"EWIEGA46WW/moc_datastorage.cpp",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/filetxtdatastorage.h",
+			"MU",
+			"EWIEGA46WW/moc_filetxtdatastorage.cpp",
+			null
+		],
+		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/fischerchess.h",
 			"MU",
 			"EWIEGA46WW/moc_fischerchess.cpp",
@@ -313,6 +325,16 @@
 		],
 		[
 			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/customsetupmode.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/datastorage.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ivan/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/453503/\u041e\u041e\u041f/ChessQtOOP/filetxtdatastorage.cpp",
 			"MU",
 			null
 		],

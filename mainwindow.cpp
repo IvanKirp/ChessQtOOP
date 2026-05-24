@@ -203,6 +203,11 @@ void MainWindow::drawScene(GameMode* gamemode) {
     InternationalNotation* lang = new InternationalNotation();
     ChessNotation* chessNotation = new ChessNotation(notation, lang);
     gamemode->setChessNotation(chessNotation);
+
+    //выбор варианта сохранения/загрузки
+    FiletxtDataStorage* filetxtDataStorage = new FiletxtDataStorage();
+    gamemode->setDataStorage(filetxtDataStorage);
+
     for (int i = 0; i < allGameModeButtons.size(); i++) {
         delete allGameModeButtons[i];
         allGameModeButtons[i] = nullptr;

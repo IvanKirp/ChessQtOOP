@@ -379,6 +379,7 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/mouseeventmediator.h \
@@ -388,6 +389,7 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \

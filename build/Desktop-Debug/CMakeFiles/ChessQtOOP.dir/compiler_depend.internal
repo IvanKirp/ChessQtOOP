@@ -25,6 +25,10 @@
  /home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.h
  /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.cpp
  /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.cpp
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.h
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.cpp
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.h
  /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.cpp
  /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h
  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.cpp
@@ -4228,6 +4232,15 @@ CMakeFiles/ChessQtOOP.dir/customsetupmode.cpp.o
  /usr/lib/llvm-18/lib/clang/18/include/stdarg.h
  /usr/lib/llvm-18/lib/clang/18/include/stddef.h
  /usr/lib/llvm-18/lib/clang/18/include/stdint.h
+
+CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.cpp
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.h
+
+CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.cpp
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.h
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.h
 
 CMakeFiles/ChessQtOOP.dir/fischerchess.cpp.o
  /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.cpp
@@ -9095,6 +9108,8 @@ ChessQtOOP
  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir/classicgame.cpp.o
  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir/colorobserver.cpp.o
  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir/customsetupmode.cpp.o
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o
+ /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o
  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir/fischerchess.cpp.o
  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir/gamemode.cpp.o
  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o

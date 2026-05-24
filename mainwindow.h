@@ -9,6 +9,7 @@
 #include "classicgame.h"
 #include "colorobserver.h"
 #include "customsetupmode.h"
+#include "filetxtdatastorage.h"
 #include "fischerchess.h"
 #include "gamemode.h"
 #include "gamescene.h"

@@ -6,6 +6,7 @@
 #include "chessnotation.h"
 #include "chesspiece.h"
 #include "chesstranslator.h"
+#include "datastorage.h"
 #include "king.h"
 #include "knight.h"
 #include "mouseeventmediator.h"
@@ -26,8 +27,13 @@ class GameMode : public QObject {
     QList<ChessPiece*> allChessPieces;
     QList<QPushButton*> allChessPieceButtons;
     MouseEventMediator* mouseEventMediator = MouseEventMediator::getInstance();
+
     void setChessNotation(ChessNotation* _chessNotation) {
         chessNotation = _chessNotation;
+    }
+
+    void setDataStorage(DataStorage* _dataStorage) {
+        dataStorage = _dataStorage;
     }
 
     GameMode(ChessBoard* newBoard) : newBoard(newBoard) {
@@ -73,6 +79,7 @@ class GameMode : public QObject {
 
    protected:
     ChessNotation* chessNotation;
+    DataStorage* dataStorage;
    public slots:
     void move();
 

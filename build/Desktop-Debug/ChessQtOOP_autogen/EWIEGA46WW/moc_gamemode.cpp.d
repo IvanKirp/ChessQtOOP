@@ -5,6 +5,7 @@
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessnotation.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/king.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/knight.h \

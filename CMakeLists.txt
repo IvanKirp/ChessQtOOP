@@ -60,6 +60,8 @@ else()
             colorobserver.h colorobserver.cpp
             inotation.h inotation.cpp
             internationalnotation.h internationalnotation.cpp
+            datastorage.h datastorage.cpp
+            filetxtdatastorage.h filetxtdatastorage.cpp
         )
     endif()
 endif()
