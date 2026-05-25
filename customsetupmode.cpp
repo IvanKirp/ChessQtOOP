@@ -113,6 +113,7 @@ void CustomSetupMode::ChessPieceManager() {
             connect(allChessPieceButtons[i], &QPushButton::clicked,
                     [this, i]() { chessPieceConnection(i); });
         }
+        startPosition = translator->encryption(allChessPieces);
         startGame();
 
         for (int i = 0; i < choosePieceButtons.size(); i++) {

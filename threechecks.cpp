@@ -3,7 +3,7 @@
 #include <QMessageBox>
 
 void ThreeChecks::ChessPieceManager() {
-    QString startPosition =
+    startPosition =
         "rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR";
     allChessPieces = translator->decryption(startPosition);
     for (int i = 0; i < 32; i++) {
@@ -40,9 +40,11 @@ void ThreeChecks::gameOver() {
         QMessageBox::information(newBoard->view, "Победа чёрных!",
                                  "Белым объявили три шаха!");
         disableAllButtons();
+        isGameOver = true;
     } else if (counterOfChecksToBlack == 3) {
         QMessageBox::information(newBoard->view, "Победа белых!",
                                  "Чёрным объявили три шаха!");
         disableAllButtons();
+        isGameOver = true;
     }
 }

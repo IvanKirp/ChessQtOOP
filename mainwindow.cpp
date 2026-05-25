@@ -192,6 +192,7 @@ void MainWindow::drawScene(GameMode* gamemode) {
             newBoard->deleteFromChessboard(gamemode->allChessPieceButtons[i]);
         }
         gamemode->clearAllLists();
+        notation->clearContents();
         MouseEventMediator::getInstance()->clearGamemode();
         gamemode->deleteLater();
         view->hide();

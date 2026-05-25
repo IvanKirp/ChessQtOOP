@@ -1,7 +1,7 @@
 #include "fischerchess.h"
 
 void FischerChess::ChessPieceManager() {
-    QString startPosition = getStartPosition(numberOfPosition);
+    startPosition = getStartPosition(numberOfPosition);
     allChessPieces = translator->decryption(startPosition);
     for (int i = 0; i < 32; i++) {
         allChessPieceButtons.append(

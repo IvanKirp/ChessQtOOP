@@ -3,7 +3,7 @@
 #include <QMessageBox>
 
 void AntiChess::ChessPieceManager() {
-    QString startPosition =
+    startPosition =
         "rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR";
     allChessPieces = translator->decryption(startPosition);
     for (int i = 0; i < 32; i++) {

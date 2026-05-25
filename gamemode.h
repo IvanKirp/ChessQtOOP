@@ -18,7 +18,6 @@ class GameMode : public QObject {
     Q_OBJECT
    public:
     ChessBoard* newBoard;
-    ChessTranslator* translator = new ChessTranslator();
     int cellSize = newBoard->cellSize;
     int counterOfMoves;
     bool isGameOver;
@@ -78,8 +77,21 @@ class GameMode : public QObject {
     void takingHandler(int i);
 
    protected:
+    ChessTranslator* translator = new ChessTranslator();
     ChessNotation* chessNotation;
+
     DataStorage* dataStorage;
+    void setDataToSave() {
+        DataToSave data;
+        data.startPosition = startPosition;
+        data.result = result;
+        data.moves = moves;
+        dataStorage->setDataToSave(data);
+    }
+    QString startPosition;
+    QString result;
+    QList<QString> moves;
+
    public slots:
     void move();
 

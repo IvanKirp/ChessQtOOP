@@ -53,3 +53,18 @@ QString ChessNotation::getTextFromCell(QPointF cell, int cellSize) {
     result[1] = allNumbers[7 - y / cellSize];
     return result;
 }
+
+QList<QString> ChessNotation::getMovesFromNotation() {
+    QList<QString> result;
+    int rows = notation->rowCount();
+    int columns = notation->columnCount();
+    for (int row = 0; row < rows; ++row) {
+        for (int col = 0; col < columns; ++col) {
+            QTableWidgetItem* item = notation->item(row, col);
+            if (item != nullptr && !item->text().isEmpty()) {
+                result.append(item->text());
+            }
+        }
+    }
+    return result;
+}

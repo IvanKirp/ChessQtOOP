@@ -731,6 +731,16 @@ void GameMode::gameOver() {
             isGameOver = true;
         }
     }
+
+    if (isGameOver) {
+        moves = chessNotation->getMovesFromNotation();
+        qDebug() << moves;
+        qDebug() << startPosition;
+        setDataToSave();
+        dataStorage->save();
+        qDebug() << "save";
+        moves.clear();
+    }
 }
 
 void GameMode::disableAllButtons() {
