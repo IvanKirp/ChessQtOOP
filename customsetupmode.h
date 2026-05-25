@@ -12,6 +12,7 @@ class CustomSetupMode : public GameMode {
         : GameMode(newBoard), choosePieceButtons(choosePieceButtons) {
         mouseEventMediator->setCustom(this);
         mouseEventMediator->setConnection();
+        nameOfMode = "Редактор доски";
     }
 
     void ChessPieceManager() override;

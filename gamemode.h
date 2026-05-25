@@ -82,12 +82,23 @@ class GameMode : public QObject {
 
     DataStorage* dataStorage;
     void setDataToSave() {
-        DataToSave data;
+        GameData data;
+        data.nameOfMode = nameOfMode;
         data.startPosition = startPosition;
         data.result = result;
         data.moves = moves;
         dataStorage->setDataToSave(data);
     }
+
+    void getDataFromLoad() {
+        GameData data = dataStorage->getDataFromLoad();
+        nameOfMode = data.nameOfMode;
+        startPosition = data.startPosition;
+        result = data.result;
+        moves = data.moves;
+    }
+
+    QString nameOfMode;
     QString startPosition;
     QString result;
     QList<QString> moves;

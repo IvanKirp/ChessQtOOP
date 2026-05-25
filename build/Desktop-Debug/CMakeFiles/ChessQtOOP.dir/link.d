@@ -28,6 +28,7 @@ ChessQtOOP: \
   CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.o \
   CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o \
   CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o \
+  CMakeFiles/ChessQtOOP.dir/readonlymode.cpp.o \
   CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o \
   /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13 \
   /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13 \
@@ -155,6 +156,8 @@ CMakeFiles/ChessQtOOP.dir/internationalnotation.cpp.o:
 CMakeFiles/ChessQtOOP.dir/datastorage.cpp.o:
 
 CMakeFiles/ChessQtOOP.dir/filetxtdatastorage.cpp.o:
+
+CMakeFiles/ChessQtOOP.dir/readonlymode.cpp.o:
 
 CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/EWIEGA46WW/qrc_resources.cpp.o:
 

@@ -9,7 +9,9 @@
 class FischerChess : public GameMode {
    public:
     FischerChess(ChessBoard* newBoard, int numberOfPosition)
-        : GameMode(newBoard), numberOfPosition(numberOfPosition) {}
+        : GameMode(newBoard), numberOfPosition(numberOfPosition) {
+        nameOfMode = "Шахматы Фишера (960)";
+    }
 
     void ChessPieceManager() override;
     QString getStartPosition(int number);

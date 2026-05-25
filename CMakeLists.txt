@@ -62,6 +62,7 @@ else()
             internationalnotation.h internationalnotation.cpp
             datastorage.h datastorage.cpp
             filetxtdatastorage.h filetxtdatastorage.cpp
+            readonlymode.h readonlymode.cpp
         )
     endif()
 endif()

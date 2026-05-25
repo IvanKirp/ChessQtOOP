@@ -97,8 +97,11 @@ void CustomSetupMode::ChessPieceManager() {
         if (ok) {
             if (startColor == "ход белых")
                 counterOfMoves = 1;
-            else if (startColor == "ход чёрных")
+            else if (startColor == "ход чёрных") {
                 counterOfMoves = 2;
+                chessNotation->writeString("---------");
+                moves.append("---------");
+            }
         }
 
         if ((isCheckForWhiteKing() && counterOfMoves == 2) ||

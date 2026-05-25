@@ -715,30 +715,33 @@ void GameMode::gameOver() {
             QMessageBox::information(newBoard->view, "Победа чёрных!",
                                      "Белым объявлен мат!");
             isGameOver = true;
+            result = "0:1";
         } else if (isStaleMateForWhite()) {
             QMessageBox::information(newBoard->view, "Ничья!",
                                      "Белым поставили пат!");
             isGameOver = true;
+            result = "1/2:1/2";
         }
     } else if (counterOfMoves % 2 == 0) {
         if (isCheckMateForBlack()) {
             QMessageBox::information(newBoard->view, "Победа белых!",
                                      "Чёрным объявлен мат!");
             isGameOver = true;
+            result = "1:0";
         } else if (isStaleMateForBlack()) {
             QMessageBox::information(newBoard->view, "Ничья!",
                                      "Чёрным поставили пат!");
             isGameOver = true;
+            result = "1/2:1/2";
         }
     }
 
     if (isGameOver) {
         moves = chessNotation->getMovesFromNotation();
-        qDebug() << moves;
-        qDebug() << startPosition;
+        if (moves.size() % 2 == 1)
+            moves.append("");
         setDataToSave();
         dataStorage->save();
-        qDebug() << "save";
         moves.clear();
     }
 }

@@ -1,10 +1,11 @@
-CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.cpp \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
+CMakeFiles/ChessQtOOP.dir/readonlymode.cpp.o: \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/readonlymode.cpp \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/readonlymode.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/type_traits \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -121,16 +122,9 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/string.h /usr/include/strings.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/stdlib.h \
@@ -230,6 +224,8 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
@@ -272,6 +268,18 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
@@ -295,7 +303,6 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
@@ -349,14 +356,6 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/chesspiece.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/mainwindow.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/antichess.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessnotation.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
@@ -386,25 +385,7 @@ CMakeFiles/ChessQtOOP.dir/chessboard.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/pawn.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/queen.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/rook.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/classicgame.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/colorobserver.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/customsetupmode.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/filetxtdatastorage.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/fischerchess.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/gamescene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsSceneMouseEvent \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicssceneevent.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/internationalnotation.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/readonlymode.h \
-  /home/ivan/Документы/453503/ООП/ChessQtOOP/threechecks.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h

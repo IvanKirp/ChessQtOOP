@@ -24,6 +24,13 @@ void ChessNotation::writeCastling(bool isLong) {
     notation->setItem(nowRow, nowCol, item);
 }
 
+void ChessNotation::writeString(QString str) {
+    getCurrentTablePos();
+    QTableWidgetItem* item = new QTableWidgetItem();
+    item->setText(str);
+    notation->setItem(nowRow, nowCol, item);
+}
+
 void ChessNotation::getCurrentTablePos() {
     int rows = notation->rowCount();
     int columns = notation->columnCount();

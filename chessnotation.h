@@ -14,6 +14,7 @@ class ChessNotation {
                    bool isTaking = false, QString pawnConvertTo = "",
                    int cellSize = 100);
     void writeCastling(bool isLong = false);
+    void writeString(QString str);
     QList<QString> getMovesFromNotation();
 
    protected:

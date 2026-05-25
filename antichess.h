@@ -8,7 +8,9 @@
 
 class AntiChess : public GameMode {
    public:
-    AntiChess(ChessBoard* newBoard) : GameMode(newBoard) {}
+    AntiChess(ChessBoard* newBoard) : GameMode(newBoard) {
+        nameOfMode = "Поддавки";
+    }
 
     void ChessPieceManager() override;
 

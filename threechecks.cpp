@@ -35,16 +35,18 @@ void ThreeChecks::updateCoordinates() {
 }
 
 void ThreeChecks::gameOver() {
-    GameMode::gameOver();
     if (counterOfChecksToWhite == 3) {
         QMessageBox::information(newBoard->view, "Победа чёрных!",
                                  "Белым объявили три шаха!");
         disableAllButtons();
         isGameOver = true;
+        result = "0:1";
     } else if (counterOfChecksToBlack == 3) {
         QMessageBox::information(newBoard->view, "Победа белых!",
                                  "Чёрным объявили три шаха!");
         disableAllButtons();
         isGameOver = true;
+        result = "1:0";
     }
+    GameMode::gameOver();
 }

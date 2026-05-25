@@ -8,7 +8,9 @@
 
 class ClassicGame : public GameMode {
    public:
-    ClassicGame(ChessBoard* newBoard) : GameMode(newBoard) {}
+    ClassicGame(ChessBoard* newBoard) : GameMode(newBoard) {
+        nameOfMode = "Классические шахматы";
+    }
 
     void ChessPieceManager() override;
 };

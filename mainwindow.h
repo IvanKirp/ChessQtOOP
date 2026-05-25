@@ -18,6 +18,7 @@
 #include "knight.h"
 #include "pawn.h"
 #include "queen.h"
+#include "readonlymode.h"
 #include "rook.h"
 #include "threechecks.h"
 

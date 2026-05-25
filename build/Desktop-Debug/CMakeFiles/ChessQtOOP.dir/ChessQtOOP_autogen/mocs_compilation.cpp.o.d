@@ -404,6 +404,7 @@ CMakeFiles/ChessQtOOP.dir/ChessQtOOP_autogen/mocs_compilation.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../filetxtdatastorage.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../fischerchess.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../internationalnotation.h \
+  /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../readonlymode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/build/Desktop-Debug/ChessQtOOP_autogen/EWIEGA46WW/../../../../threechecks.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \

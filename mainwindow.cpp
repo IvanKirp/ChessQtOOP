@@ -69,7 +69,13 @@ void MainWindow::startWindow() {
 
     connect(startButton, &QPushButton::clicked, this,
             &MainWindow::chooseGameMode);
-    //connect(readButton, &QPushButton::clicked, this, &MainWindow::getFromFile);
+    connect(readButton, &QPushButton::clicked, [this] {
+        startButton->hide();
+        readButton->hide();
+        exitButton->hide();
+        ReadOnlyMode* gamemode = new ReadOnlyMode(newBoard);
+        drawScene(gamemode);
+    });
     connect(exitButton, &QPushButton::clicked, [this] { this->close(); });
 }
 

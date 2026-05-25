@@ -8,7 +8,9 @@
 
 class ThreeChecks : public GameMode {
    public:
-    ThreeChecks(ChessBoard* newBoard) : GameMode(newBoard) {}
+    ThreeChecks(ChessBoard* newBoard) : GameMode(newBoard) {
+        nameOfMode = "Три шаха";
+    }
 
     void ChessPieceManager() override;
 

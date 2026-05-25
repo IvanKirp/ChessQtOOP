@@ -333,7 +333,7 @@
 					],
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-305095165485a67d125b.json",
+					"jsonFile" : "directory-.-Debug-7a2922fad818a5b8aeeb.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -413,7 +413,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ChessQtOOP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ChessQtOOP-Debug-d5c416fb81ddcebd93f9.json",
+					"jsonFile" : "target-ChessQtOOP-Debug-6e4ebfaf39ae0c54321e.json",
 					"name" : "ChessQtOOP",
 					"projectIndex" : 0
 				},

@@ -53,6 +53,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChessQtOOP.dir/pawn.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/queen.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/queen.cpp.o.d"
+  "CMakeFiles/ChessQtOOP.dir/readonlymode.cpp.o"
+  "CMakeFiles/ChessQtOOP.dir/readonlymode.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/rook.cpp.o"
   "CMakeFiles/ChessQtOOP.dir/rook.cpp.o.d"
   "CMakeFiles/ChessQtOOP.dir/threechecks.cpp.o"

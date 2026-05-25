@@ -79,27 +79,48 @@ void AntiChess::gameOver() {
         if (isCheckMateForWhite()) {
             QMessageBox::information(newBoard->view, "Победа белых!",
                                      "Белым объявлен мат!");
+            isGameOver = true;
+            result = "1:0";
         } else if (isStaleMateForWhite()) {
             QMessageBox::information(newBoard->view, "Ничья!",
                                      "Белым поставили пат!");
+            isGameOver = true;
+            result = "1/2:1/2";
         }
     } else if (counterOfMoves % 2 == 0) {
         if (isCheckMateForBlack()) {
             QMessageBox::information(newBoard->view, "Победа чёрных!",
                                      "Чёрным объявлен мат!");
+            isGameOver = true;
+            result = "0:1";
         } else if (isStaleMateForBlack()) {
             QMessageBox::information(newBoard->view, "Ничья!",
                                      "Чёрным поставили пат!");
+            isGameOver = true;
+            result = "1/2:1/2";
         }
     }
 
     if (whiteWin()) {
         QMessageBox::information(newBoard->view, "Победа белых!",
                                  "Белые отдали все фигуры!");
+        isGameOver = true;
+        result = "1:0";
         disableAllButtons();
     } else if (blackWin()) {
         QMessageBox::information(newBoard->view, "Победа чёрных!",
                                  "Чёрные отдали все фигуры!");
+        isGameOver = true;
+        result = "0:1";
         disableAllButtons();
+    }
+
+    if (isGameOver) {
+        moves = chessNotation->getMovesFromNotation();
+        if (moves.size() % 2 == 1)
+            moves.append("");
+        setDataToSave();
+        dataStorage->save();
+        moves.clear();
     }
 }
