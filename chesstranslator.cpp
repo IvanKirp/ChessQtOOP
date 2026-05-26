@@ -91,3 +91,11 @@ QList<ChessPiece*> ChessTranslator::decryption(QString code, int cellSize) {
     }
     return result;
 }
+
+QString ChessTranslator::stringMove(QString str, int from, int to) {
+    if (str.size() != 64 || from > 63 || to > 63 || from < 0 || to < 0)
+        return str;
+    str[to] = str[from];
+    str[from] = '-';
+    return str;
+}

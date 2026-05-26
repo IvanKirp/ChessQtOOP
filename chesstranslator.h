@@ -10,6 +10,7 @@ class ChessTranslator {
     ChessTranslator();
     QString encryption(QList<ChessPiece*> allChessPieces, int cellSize = 100);
     QList<ChessPiece*> decryption(QString code, int cellSize = 100);
+    QString stringMove(QString str, int from, int to);
 };
 
 #endif	// CHESSTRANSLATOR_H

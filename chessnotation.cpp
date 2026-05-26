@@ -61,6 +61,40 @@ QString ChessNotation::getTextFromCell(QPointF cell, int cellSize) {
     return result;
 }
 
+QPair<QPointF, QPointF> ChessNotation::getFromAndToPos(QString move,
+                                                       int cellSize) {
+    QPair<QPointF, QPointF> result;
+    QString from, to;
+    QPointF fromPos, toPos;
+
+    if (move.size() == 5) {
+        from.append(move[0]);
+        from.append(move[1]);
+        to.append(move[3]);
+        to.append(move[4]);
+    } else if (move.size() == 6) {
+        from.append(move[1]);
+        from.append(move[2]);
+        to.append(move[4]);
+        to.append(move[5]);
+    }
+
+    fromPos = getCellFromText(from, cellSize);
+    toPos = getCellFromText(to, cellSize);
+    result = qMakePair(fromPos, toPos);
+    return result;
+}
+
+QPointF ChessNotation::getCellFromText(QString text, int cellSize) {
+    QPointF result;
+    QString allCells = "abcdefgh";
+    QString allNumbers = "12345678";
+    int x = allCells.indexOf(text[0]) * cellSize;
+    int y = (7 - allNumbers.indexOf(text[1])) * cellSize;
+    result = QPointF(x, y);
+    return result;
+}
+
 QList<QString> ChessNotation::getMovesFromNotation() {
     QList<QString> result;
     int rows = notation->rowCount();
@@ -74,4 +108,64 @@ QList<QString> ChessNotation::getMovesFromNotation() {
         }
     }
     return result;
+}
+
+void ChessNotation::right() {
+    int currentRow = notation->currentRow();
+    int currentCol = notation->currentColumn();
+
+    if (currentRow == -1 && currentCol == -1) {
+        notation->setCurrentCell(0, 0);
+        currentMove = 0;
+        return;
+    }
+
+    int newRow = currentRow;
+    int newCol = currentCol + 1;
+
+    if (newCol >= notation->columnCount()) {
+        newCol = 0;
+        newRow++;
+    }
+
+    if (newRow >= notation->rowCount()) {
+        return;
+    }
+
+    QTableWidgetItem* item = notation->item(newRow, newCol);
+    if (item && !item->text().isEmpty() && item->text() != " ") {
+        notation->setCurrentCell(newRow, newCol);
+        currentMove = 2 * newRow + newCol;
+    }
+}
+
+void ChessNotation::left() {
+    int currentRow = notation->currentRow();
+    int currentCol = notation->currentColumn();
+
+    if (currentRow == -1 && currentCol == -1) {
+        return;
+    }
+
+    if (currentRow == 0 && currentCol == 0) {
+        notation->setCurrentCell(-1, -1);
+        notation->clearSelection();
+        currentMove = -1;
+        return;
+    }
+
+    int newRow = currentRow;
+    int newCol = currentCol - 1;
+
+    if (newCol < 0) {
+        newCol = notation->columnCount() - 1;
+        newRow--;
+    }
+
+    if (newRow < 0) {
+        return;
+    }
+
+    notation->setCurrentCell(newRow, newCol);
+    currentMove = 2 * newRow + newCol;
 }

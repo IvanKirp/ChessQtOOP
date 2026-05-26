@@ -1,5 +1,6 @@
 #ifndef CHESSNOTATION_H
 #define CHESSNOTATION_H
+#include <QPair>
 #include <QTableWidget>
 #include "inotation.h"
 
@@ -16,6 +17,11 @@ class ChessNotation {
     void writeCastling(bool isLong = false);
     void writeString(QString str);
     QList<QString> getMovesFromNotation();
+    QPair<QPointF, QPointF> getFromAndToPos(QString move, int cellSize = 100);
+
+    void right();
+    void left();
+    int currentMove = 0;
 
    protected:
     QTableWidget* notation;
@@ -24,6 +30,7 @@ class ChessNotation {
 
     void getCurrentTablePos();
     QString getTextFromCell(QPointF cell, int cellSize);
+    QPointF getCellFromText(QString text, int cellSize);
 };
 
 #endif	// CHESSNOTATION_H

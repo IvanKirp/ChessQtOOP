@@ -43,6 +43,25 @@ void GameScene::hideStopButtons() {
     homeButton->hide();
 }
 
+void GameScene::showReadOnlyMenu() {
+    view->setFocusPolicy(Qt::StrongFocus);
+    view->setFocus();
+    text->setGeometry(850, 640, 220, 75);
+    text->setText(QString("Режим игры: %1\nРезультат: %2")
+                      .arg(mouseEventMediator->getNameOfMode())
+                      .arg(mouseEventMediator->getResult()));
+    text->setReadOnly(true);
+    text->show();
+    homeButton->setGeometry(850, 740, 220, 50);
+    homeButton->show();
+}
+
+void GameScene::hideReadOnlyMenu() {
+    text->clear();
+    text->hide();
+    homeButton->hide();
+}
+
 void GameScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
     if (scene && !newBoard->circle.isEmpty()) {
         int cellSize = newBoard->cellSize;
@@ -72,4 +91,13 @@ void GameScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
         mouseEventMediator->updateCell(pieceMoveTo);
         mousePressedToChoose();
     }
+}
+
+void GameScene::keyPressEvent(QKeyEvent* event) {
+    if (event->key() == Qt::Key_Right) {
+        right();
+    } else if (event->key() == Qt::Key_Left) {
+        left();
+    } else
+        QGraphicsScene::keyPressEvent(event);
 }

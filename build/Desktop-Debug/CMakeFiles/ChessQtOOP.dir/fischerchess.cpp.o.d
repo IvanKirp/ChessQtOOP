@@ -357,6 +357,7 @@ CMakeFiles/ChessQtOOP.dir/fischerchess.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessnotation.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \

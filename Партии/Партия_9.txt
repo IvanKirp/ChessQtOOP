@@ -1,0 +1,12 @@
+startPosition: rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR
+Режим игры: Классические шахматы
+1. e2-e4 e7-e6
+2. Nb1-c3 Ng8-f6
+3. d2-d3 Bf8-d6
+4. Bc1-f4 0-0
+5. Qd1-d2 c7-c6
+6. 0-0-0 Qd8-a5
+7. Nc3-e2 Qa5xa2
+8. Ng1-f3 Qa2-a1
+
+Результат: 0:1

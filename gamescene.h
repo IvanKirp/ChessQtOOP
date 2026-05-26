@@ -6,8 +6,10 @@
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsView>
 #include <QHeaderView>
+#include <QKeyEvent>
 #include <QPushButton>
 #include <QTableWidget>
+#include <QTextEdit>
 #include "chessboard.h"
 #include "mouseeventmediator.h"
 
@@ -35,24 +37,32 @@ class GameScene : public QGraphicsScene {
         drawButton->hide();
         homeButton = new QPushButton("Выйти в главное меню", window);
         homeButton->hide();
+        text = new QTextEdit(window);
+        text->hide();
         mouseEventMediator->setScene(this);
         mouseEventMediator->setConnection();
     }
 
     QPushButton *giveUpButton, *drawButton, *homeButton;
+    QTextEdit* text;
 
     void drawScene();
 
    protected:
     void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
 
    signals:
     void mousePressedToMove();
     void mousePressedToChoose();
+    void left();
+    void right();
 
    public slots:
     void showStopButtons();
     void hideStopButtons();
+    void showReadOnlyMenu();
+    void hideReadOnlyMenu();
 };
 
 #endif	// GAMESCENE_H

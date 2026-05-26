@@ -109,6 +109,7 @@ class GameMode : public QObject {
    signals:
     void moveIsMade();
     void startGame();
+    void startReadOnlyMode();
     void home();
 };
 

@@ -46,14 +46,11 @@ void FiletxtDataStorage::save() {
 }
 
 void FiletxtDataStorage::load() {
-    // Открываем диалог выбора файла
     QString filePath = QFileDialog::getOpenFileName(
-        nullptr,  // parent (можно передать указатель на MainWindow, если есть)
-        "Выберите файл с партией",
+        nullptr, "Выберите файл с партией",
         "/home/ivan/Документы/453503/ООП/ChessQtOOP/Партии",
         "Текстовые файлы (*.txt)");
 
-    // Если пользователь отменил выбор
     if (filePath.isEmpty()) {
         qDebug() << "Выбор файла отменён";
     }
@@ -70,32 +67,24 @@ void FiletxtDataStorage::load() {
         QString line = in.readLine().trimmed();
 
         if (line.isEmpty()) {
-            continue;  // Пропускаем пустые строки
+            continue;
         }
 
-        // Парсим startPosition
         if (line.startsWith("startPosition:")) {
             startPosition =
                 line.mid(QString("startPosition:").length()).trimmed();
-        }
-        // Парсим режим игры
-        else if (line.startsWith("Режим игры:")) {
+        } else if (line.startsWith("Режим игры:")) {
             nameOfMode = line.mid(QString("Режим игры:").length()).trimmed();
-        }
-        // Парсим результат
-        else if (line.startsWith("Результат:")) {
+        } else if (line.startsWith("Результат:")) {
             result = line.mid(QString("Результат:").length()).trimmed();
-        }
-        // Парсим ходы (строки вида "1. e2-e4 e7-e5")
-        else if (line.contains(QRegularExpression("^\\d+\\."))) {
-            // Разделяем строку на части
+        } else if (line.contains(QRegularExpression("^\\d+\\."))) {
             QStringList parts = line.split(QRegularExpression("\\s+"));
 
             if (parts.size() >= 2) {
-                moves.append(parts[1]);	 // Добавляем ход белых
+                moves.append(parts[1]);
             }
             if (parts.size() >= 3) {
-                moves.append(parts[2]);	 // Добавляем ход чёрных
+                moves.append(parts[2]);
             }
         }
     }

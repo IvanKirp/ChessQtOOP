@@ -102,6 +102,9 @@ void CustomSetupMode::ChessPieceManager() {
                 chessNotation->writeString("---------");
                 moves.append("---------");
             }
+        } else {
+            clearAllLists();
+            return;
         }
 
         if ((isCheckForWhiteKing() && counterOfMoves == 2) ||

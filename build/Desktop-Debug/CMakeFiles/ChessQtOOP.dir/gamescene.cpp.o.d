@@ -368,12 +368,24 @@ CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QKeyEvent \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessboard.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
@@ -386,6 +398,7 @@ CMakeFiles/ChessQtOOP.dir/gamescene.cpp.o: \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/gamemode.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/bishop.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chessnotation.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/inotation.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/chesstranslator.h \
   /home/ivan/Документы/453503/ООП/ChessQtOOP/datastorage.h \

@@ -10,7 +10,6 @@ class CustomSetupMode : public GameMode {
     CustomSetupMode(ChessBoard* newBoard,
                     QList<QPushButton*> choosePieceButtons)
         : GameMode(newBoard), choosePieceButtons(choosePieceButtons) {
-        mouseEventMediator->setCustom(this);
         mouseEventMediator->setConnection();
         nameOfMode = "Редактор доски";
     }

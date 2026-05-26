@@ -2,6 +2,7 @@
 #include "customsetupmode.h"
 #include "gamemode.h"
 #include "gamescene.h"
+#include "readonlymode.h"
 MouseEventMediator* MouseEventMediator::instance = nullptr;
 MouseEventMediator::MouseEventMediator() {}
 
@@ -27,7 +28,6 @@ void MouseEventMediator::updateIndexOfTakingOnPassage(int i) {
 void MouseEventMediator::setConnection() {
     QObject::disconnect(_scene, nullptr, nullptr, nullptr);
     QObject::disconnect(_gamemode, nullptr, nullptr, nullptr);
-    QObject::disconnect(_customSetupMode, nullptr, nullptr, nullptr);
     QObject::disconnect(_scene->homeButton, nullptr, nullptr, nullptr);
 
     if (_gamemode != nullptr && _scene != nullptr) {
@@ -42,8 +42,24 @@ void MouseEventMediator::setConnection() {
                              _gamemode, [this] { emit _gamemode->home(); });
         }
     }
-    if (_customSetupMode != nullptr && _scene != nullptr) {
+    if (dynamic_cast<CustomSetupMode*>(_gamemode) != nullptr &&
+        _scene != nullptr) {
         QObject::connect(_scene, &GameScene::mousePressedToChoose,
-                         _customSetupMode, &CustomSetupMode::addPiece);
+                         dynamic_cast<CustomSetupMode*>(_gamemode),
+                         &CustomSetupMode::addPiece);
+    }
+    if (dynamic_cast<ReadOnlyMode*>(_gamemode) != nullptr &&
+        _scene != nullptr) {
+        QObject::connect(dynamic_cast<ReadOnlyMode*>(_gamemode),
+                         &ReadOnlyMode::startReadOnlyMode, _scene,
+                         &GameScene::showReadOnlyMenu);
+        QObject::connect(_gamemode, &GameMode::home, _scene,
+                         &GameScene::hideReadOnlyMenu);
+        QObject::connect(_scene, &GameScene::right,
+                         dynamic_cast<ReadOnlyMode*>(_gamemode),
+                         &ReadOnlyMode::right);
+        QObject::connect(_scene, &GameScene::left,
+                         dynamic_cast<ReadOnlyMode*>(_gamemode),
+                         &ReadOnlyMode::left);
     }
 }
