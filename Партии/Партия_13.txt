@@ -1,0 +1,24 @@
+startPosition: rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR
+Режим игры: Поддавки
+1. b2-b4 a7-a5
+2. b4xa5 Ra8xa5
+3. Nb1-c3 Ra5xa2
+4. Ra1xa2 Nb8-a6
+5. Ra2xa6 b7xa6
+6. e2-e4 d7-d5
+7. Bf1xa6 d5xe4
+8. Ba6xc8 Qd8xc8
+9. Nc3xe4 Qc8-h3
+10. Ng1xh3 g7-g5
+11. Nh3xg5 Ke8-d7
+12. Ng5xf7 e7-e5
+13. Nf7xh8 Bf8-c5
+14. Ne4xc5 Kd7-e8
+15. Qd1-e2 Ng8-f6
+16. Qe2xe5 Ke8-d8
+17. Qe5xf6 Kd8-c8
+18. Qf6-e7 Kc8-b8
+19. Qe7xh7 Kb8-a8
+20. Qh7xc7 
+
+Результат: 0:1

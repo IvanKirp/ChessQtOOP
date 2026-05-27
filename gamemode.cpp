@@ -6,6 +6,8 @@ void GameMode::chessPieceConnection(int i) {
     moveIsMade();
     castlingHandler(i);
     selectCheckedKing();
+    if (isCanMove(i) && !isGameOver)
+        newBoard->selectButton(allChessPieceButtons[i], "rgb(0, 255, 4)");
     return;
 }
 void GameMode::castlingHandler(int i) {
@@ -392,9 +394,9 @@ void GameMode::move() {
                              isTakingOnPassage);
     clearPawnStates(indexOfNowButton);
     counterOfMoves++;
-    gameOver();
     moveIsMade();
     selectCheckedKing();
+    gameOver();
 }
 
 void GameMode::taking(int indexOfTakingPiece) {

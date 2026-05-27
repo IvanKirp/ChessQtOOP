@@ -1,0 +1,6 @@
+startPosition: rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR
+Режим игры: Классические шахматы
+1. g2-g4 e7-e5
+2. f2-f4 Qd8-h4
+
+Результат: 0:1

@@ -1,0 +1,5 @@
+startPosition: rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR
+Режим игры: Классические шахматы
+1. e2-e4 
+
+Результат: 1:0

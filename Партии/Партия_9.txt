@@ -1,0 +1,8 @@
+startPosition: rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR
+Режим игры: Три шаха
+1. e2-e4 d7-d5
+2. Bf1-b5 c7-c6
+3. Bb5xc6 Bc8-d7
+4. Bc6xd7 
+
+Результат: 1:0

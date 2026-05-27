@@ -1,0 +1,4 @@
+startPosition: rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR
+Режим игры: Классические шахматы
+
+Результат: 0:1
