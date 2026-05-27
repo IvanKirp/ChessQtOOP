@@ -3,6 +3,7 @@
 #include "gamemode.h"
 #include "gamescene.h"
 #include "readonlymode.h"
+
 MouseEventMediator* MouseEventMediator::instance = nullptr;
 MouseEventMediator::MouseEventMediator() {}
 
@@ -29,6 +30,8 @@ void MouseEventMediator::setConnection() {
     QObject::disconnect(_scene, nullptr, nullptr, nullptr);
     QObject::disconnect(_gamemode, nullptr, nullptr, nullptr);
     QObject::disconnect(_scene->homeButton, nullptr, nullptr, nullptr);
+    QObject::disconnect(_scene->giveUpButton, nullptr, nullptr, nullptr);
+    QObject::disconnect(_scene->drawButton, nullptr, nullptr, nullptr);
 
     if (_gamemode != nullptr && _scene != nullptr) {
         QObject::connect(_scene, &GameScene::mousePressedToMove, _gamemode,
@@ -40,6 +43,20 @@ void MouseEventMediator::setConnection() {
         if (_scene->homeButton) {
             QObject::connect(_scene->homeButton, &QPushButton::clicked,
                              _gamemode, [this] { emit _gamemode->home(); });
+        }
+        if (_scene->giveUpButton) {
+            QObject::connect(_scene->giveUpButton, &QPushButton::clicked,
+                             _gamemode, [this] {
+                                 _gamemode->giveUp();
+                                 emit _gamemode->home();
+                             });
+        }
+        if (_scene->drawButton) {
+            QObject::connect(_scene->drawButton, &QPushButton::clicked,
+                             _gamemode, [this] {
+                                 _gamemode->draw();
+                                 emit _gamemode->home();
+                             });
         }
     }
     if (dynamic_cast<CustomSetupMode*>(_gamemode) != nullptr &&

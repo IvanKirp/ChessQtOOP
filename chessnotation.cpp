@@ -72,11 +72,16 @@ QPair<QPointF, QPointF> ChessNotation::getFromAndToPos(QString move,
         from.append(move[1]);
         to.append(move[3]);
         to.append(move[4]);
-    } else if (move.size() == 6) {
+    } else if (move.size() == 6 && move[0] == move[0].toUpper()) {
         from.append(move[1]);
         from.append(move[2]);
         to.append(move[4]);
         to.append(move[5]);
+    } else if (move.size() == 6 && move[5] == move[5].toUpper()) {
+        from.append(move[0]);
+        from.append(move[1]);
+        to.append(move[3]);
+        to.append(move[4]);
     }
 
     fromPos = getCellFromText(from, cellSize);

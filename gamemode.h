@@ -76,7 +76,12 @@ class GameMode : public QObject {
     void blackMoveHandler(int i);
     void takingHandler(int i);
 
+    void giveUp();
+    void draw();
+
    protected:
+    void selectCheckedKing();
+
     ChessTranslator* translator = new ChessTranslator();
     ChessNotation* chessNotation;
 

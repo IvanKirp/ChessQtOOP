@@ -3,7 +3,9 @@
 #include <QDebug>
 #include <QMessageBox>
 void GameMode::chessPieceConnection(int i) {
+    moveIsMade();
     castlingHandler(i);
+    selectCheckedKing();
     return;
 }
 void GameMode::castlingHandler(int i) {
@@ -25,6 +27,13 @@ void GameMode::whiteMoveHandler(int i) {
         newBoard->drawPossibleMoves(getPossibleMoves(i));
         mouseEventMediator->updateIndex(i);
         indexOfLastButton = i;
+        for (int i = 0; i < canBeTakenPieces.size(); i++) {
+            int index = -1;
+            index = coordinatesOfAllPieces.indexOf(canBeTakenPieces[i]);
+            if (index != -1)
+                newBoard->selectButton(allChessPieceButtons[index],
+                                       "rgb(255, 115, 112)");
+        }
         return;
     } else {
         blackMoveHandler(i);
@@ -37,6 +46,13 @@ void GameMode::blackMoveHandler(int i) {
         newBoard->drawPossibleMoves(getPossibleMoves(i));
         mouseEventMediator->updateIndex(i);
         indexOfLastButton = i;
+        for (int i = 0; i < canBeTakenPieces.size(); i++) {
+            int index = -1;
+            index = coordinatesOfAllPieces.indexOf(canBeTakenPieces[i]);
+            if (index != -1)
+                newBoard->selectButton(allChessPieceButtons[index],
+                                       "rgb(255, 115, 112)");
+        }
         return;
     } else {
         takingHandler(i);
@@ -378,6 +394,7 @@ void GameMode::move() {
     counterOfMoves++;
     gameOver();
     moveIsMade();
+    selectCheckedKing();
 }
 
 void GameMode::taking(int indexOfTakingPiece) {
@@ -709,6 +726,28 @@ bool GameMode::isStaleMateForBlack() {
     return true;
 }
 
+void GameMode::selectCheckedKing() {
+    if (counterOfMoves % 2 == 1 && isCheckForWhiteKing()) {
+        int indexOfKing;
+        for (int i = 0; i < allChessPieces.size(); i++) {
+            if (allChessPieces[i]->getName() == "King" &&
+                allChessPieces[i]->isWhite())
+                indexOfKing = i;
+        }
+        newBoard->selectButton(allChessPieceButtons[indexOfKing],
+                               "rgb(255, 6, 0)");
+    } else if (counterOfMoves % 2 == 0 && isCheckForBlackKing()) {
+        int indexOfKing;
+        for (int i = 0; i < allChessPieces.size(); i++) {
+            if (allChessPieces[i]->getName() == "King" &&
+                allChessPieces[i]->isBlack())
+                indexOfKing = i;
+        }
+        newBoard->selectButton(allChessPieceButtons[indexOfKing],
+                               "rgb(255, 6, 0)");
+    }
+}
+
 void GameMode::gameOver() {
     if (counterOfMoves % 2 == 1) {
         if (isCheckMateForWhite()) {
@@ -737,6 +776,51 @@ void GameMode::gameOver() {
     }
 
     if (isGameOver) {
+        newBoard->deleteAllSelections(allChessPieceButtons);
+        moves = chessNotation->getMovesFromNotation();
+        if (moves.size() % 2 == 1)
+            moves.append("");
+        setDataToSave();
+        dataStorage->save();
+        moves.clear();
+    }
+}
+
+void GameMode::giveUp() {
+    if (isGameOver)
+        return;
+    if (counterOfMoves % 2 == 1) {
+        QMessageBox::information(newBoard->view, "Победа чёрных!",
+                                 "Белые сдались!");
+        isGameOver = true;
+        result = "0:1";
+    } else if (counterOfMoves % 2 == 0) {
+        QMessageBox::information(newBoard->view, "Победа белых!",
+                                 "Чёрные сдались!");
+        isGameOver = true;
+        result = "1:0";
+    }
+    if (isGameOver) {
+        newBoard->deleteAllSelections(allChessPieceButtons);
+        moves = chessNotation->getMovesFromNotation();
+        if (moves.size() % 2 == 1)
+            moves.append("");
+        setDataToSave();
+        dataStorage->save();
+        moves.clear();
+    }
+}
+
+void GameMode::draw() {
+    if (isGameOver)
+        return;
+    QMessageBox::information(newBoard->view, "Ничья!",
+                             "Ничья по обоюдному согласию!");
+    isGameOver = true;
+    result = "1/2:1/2";
+
+    if (isGameOver) {
+        newBoard->deleteAllSelections(allChessPieceButtons);
         moves = chessNotation->getMovesFromNotation();
         if (moves.size() % 2 == 1)
             moves.append("");

@@ -25,5 +25,7 @@ class ChessBoard {
     void addWhitePawnChooseButtons(QPointF moveTo);
     void addBlackPawnChooseButtons(QPointF moveTo);
     void deletePawnChooseButtons();
+    void selectButton(QPushButton* button, QString color);
+    void deleteAllSelections(QList<QPushButton*> allButtons);
 };
 #endif	// CHESSBOARD_H

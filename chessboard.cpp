@@ -121,3 +121,13 @@ void ChessBoard::deletePawnChooseButtons() {
     }
     pawnChooseButtons.clear();
 }
+
+void ChessBoard::selectButton(QPushButton* button, QString color) {
+    QString style = "background: " + color + "; border: none;";
+    button->setStyleSheet(style);
+}
+void ChessBoard::deleteAllSelections(QList<QPushButton*> allButtons) {
+    for (int i = 0; i < allButtons.size(); i++) {
+        allButtons[i]->setStyleSheet("background: transparent; border: none;");
+    }
+}

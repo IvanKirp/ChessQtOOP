@@ -21,6 +21,9 @@ void ReadOnlyMode::ChessPieceManager() {
 }
 
 void ReadOnlyMode::right() {
+    if (allPositions.size() == 1)
+        return;
+
     chessNotation->right();
 
     if (chessNotation->currentMove >= 0 &&
@@ -127,7 +130,17 @@ void ReadOnlyMode::getAllPositions() {
                 allPositions.append(newPosition);
             }
         } else if (pieces.contains(moves[i][moves[i].size() - 1])) {
-
+            QPair<QPointF, QPointF> from_to =
+                chessNotation->getFromAndToPos(moves[i]);
+            int from = positionToIndexInString(from_to.first);
+            int to = positionToIndexInString(from_to.second);
+            QString newPosition =
+                translator->stringMove(allPositions.last(), from, to);
+            if ((i + 1) % 2 == 1)
+                newPosition[to] = moves[i][moves[i].size() - 1].toLower();
+            else if ((i + 1) % 2 == 0)
+                newPosition[to] = moves[i][moves[i].size() - 1].toUpper();
+            allPositions.append(newPosition);
         } else {
             QPair<QPointF, QPointF> from_to =
                 chessNotation->getFromAndToPos(moves[i]);
@@ -135,6 +148,10 @@ void ReadOnlyMode::getAllPositions() {
             int to = positionToIndexInString(from_to.second);
             QString newPosition =
                 translator->stringMove(allPositions.last(), from, to);
+
+            if (moves[i].size() == 5 && moves[i][2] == 'x')
+                newPosition[to - 8] = '-';
+
             allPositions.append(newPosition);
         }
     }
